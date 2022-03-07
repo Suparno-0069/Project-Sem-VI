@@ -219,7 +219,7 @@ section{
     display: flex;
     align-items: center;
     justify-content: center;
-    background:rgba(255,255,255,.9);
+    background:rgba(180, 166, 212, 0.9);
     position:fixed;
     top:0; right:-105%;
     z-index: 10000;
@@ -232,7 +232,7 @@ section{
 }
 
 .login-form-container form{
-    background:#fff;
+    background:white;
     border:var(--border);
     width:40rem;
     padding:2rem;
@@ -244,7 +244,7 @@ section{
 .login-form-container form h3{
     font-size: 2.5rem;
     text-transform: uppercase;
-    color:var(--black);
+    color:goldenrod;
     text-align: center;
 }
 
@@ -282,6 +282,7 @@ section{
     text-align: center;
     width:100%;
     margin:1.5rem 0;
+    color: #444;
 }
 
 .login-form-container form p{
@@ -299,7 +300,7 @@ section{
     position: absolute;
     top:1.5rem; right:2.5rem;
     font-size: 5rem;
-    color:var(--black);
+    color:red;
     cursor: pointer;
 }
 
