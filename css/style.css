@@ -7,7 +7,7 @@
     --border:.1rem solid rgba(0,0,0,.1);
     --border-hover:.1rem solid var(--black);
     --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
-    background-color: ;
+    /* background-color: ; */
 }
 
 *{
@@ -453,7 +453,7 @@ Sidebar Nav
 ----------------*/
 .sidebar-nav {
   position: absolute;
-  //width: 13em;
+  width: 13em;
   background-color: #19222a;
   height: 100%;
   font-weight: 412; 
@@ -463,6 +463,7 @@ Sidebar Nav
   z-index: 0;
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
+  /* margin-top: ; */
 }
 
 .sidebar-nav ul{
@@ -915,6 +916,7 @@ Hover
 
     .header .header-2{
         display:none;
+        /* margin-bottom: 0%; */
     }
 
     .bottom-navbar{
