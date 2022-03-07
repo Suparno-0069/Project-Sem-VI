@@ -109,7 +109,7 @@ section{
 }
 
 .header .header-1 .logo i{
-    color:var(--yellow);
+    color:chocolate;
 }
 .header .header-2 .navbar .head-logo{
     cursor: pointer;
