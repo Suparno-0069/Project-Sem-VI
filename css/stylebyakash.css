@@ -1,6 +1,6 @@
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
@@ -9,7 +9,7 @@
     font-family: montserrat;
   }
   nav{
-    background: #0082e6;
+    background:gray;
     height: 80px;
     width: 100%;
   }
@@ -21,8 +21,8 @@
     font-weight: bold;
   }
   nav ul{
-    float: right;
-    margin-right: 20px;
+    float: left;
+    margin-left: 25px;
   }
   nav ul li{
     display: inline-block;
@@ -30,15 +30,37 @@
     margin: 0 5px;
   }
   nav ul li a{
-    color: white;
+    color: black;
     font-size: 17px;
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
   }
   a.active,a:hover{
-    background: #1b9bff;
+    background:white;
     transition: .5s;
+  }
+  nav .search-form{
+    margin: 12px;
+    width:20rem;
+    height:2.5rem;
+    /* border:var(--border); */
+    overflow: hidden;
+    background:#fff;
+    /* display:flex; */
+    align-content: center;
+    /* border-radius: .5rem; */
+    justify-content: right;
+    float:right;
+    margin-right: 30%;
+  }
+  nav .search-form input{
+    font-size: 1.6rem;
+    padding:0 1.2rem;
+    height:100%;
+    width:100%;
+    text-transform: none;
+    color:var(--black);
   }
   .checkbtn{
     font-size: 30px;
@@ -53,9 +75,9 @@
     display: none;
   }
 
-/*  */
+/* media quaries */
 
-  @media (max-width: 952px){
+  /* @media (max-width: 952px){
     label.logo{
       font-size: 30px;
       padding-left: 50px;
@@ -98,4 +120,4 @@
     background: url(bg1.jpg) no-repeat;
     background-size: cover;
     height: calc(100vh - 80px);
-  }
+  } */
