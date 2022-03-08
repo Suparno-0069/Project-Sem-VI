@@ -398,7 +398,7 @@ body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
   text-rendering: optimizeLegibility;
-  background-color: white;
+  background-color: rgb(233, 211, 211);
 }
 a{
   text-decoration: none;
