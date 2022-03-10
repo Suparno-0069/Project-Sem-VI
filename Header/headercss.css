@@ -1,3 +1,6 @@
+@media screen {
+    
+}
 *{
     margin: 0;
     padding: 0;
@@ -20,8 +23,8 @@
     height: 300px;
     text-align: left;
     margin: 0px;
+    margin-left: 40px;
     width: 650;
-    background-image: url("abstract-png-5311abstract-png-5311.png");
 }
 .navbar{
     background-color: gray;
