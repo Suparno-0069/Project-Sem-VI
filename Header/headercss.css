@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    height:450px;
+    background: #000000;
+    background-image: url("e36098c5-fa4c-4879-8da7-43ff0925fec1_rw_1920.gif");
+    background-size:cover;
+    overflow: visible;
+}
+#uctxt{
+    height: 350px;
+    width: 800px;
+    margin-left: 100px;
+    text-align: right;
+}
+#logo{
+    width: 360px;
+    height: 300px;
+    text-align: left;
+    margin: 0px;
+    width: 650;
+    background-image: url("abstract-png-5311abstract-png-5311.png");
+}
+.navbar{
+    background-color: gray;
+    height: 80px;
+    text-align: left;
+}
