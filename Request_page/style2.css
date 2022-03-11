@@ -1,0 +1,87 @@
+/*FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Raleway:ital,wght@0,400;0,500;0,700;1,500&display=swap');
+
+
+
+
+
+
+
+/*GLOABAL STYLE*****************/
+body{
+    font-size: 16px;
+    line-height: 1.5;
+    overflow: hidden;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+*:not(i){
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+
+}
+:before, :after{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+img{
+    vertical-align: middle;
+    max-width: 100%;
+}
+.container{
+    max-width: 1140px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap:wrap;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+
+
+/*hader*/
+.header{
+    background-color: gray;
+    padding: 20px 15px;
+    position: absolute;
+    width:100%;
+    top:0;
+    left: 0;
+    z-index: 99;;
+}
+.header .logo{
+    height: 40px;
+    width:40px;
+    font-size: 24px;
+    background-color: violet;
+
+}
+/* .header .logo a{
+    display: inline-block;
+    text-align: center;
+    line-height: 36px;
+    height: 40px;
+    width:40px;
+    font-size: 24px;
+    color:var(--skin-color);
+    border-radius: 50%;
+    border: 2px solid var(--skin-color);
+} */
+.header.hamburger-btn{
+    height:40px;
+    width:30px;
+    background-color: blue;
+}
