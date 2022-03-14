@@ -1,36 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" type="text/css" href="css/stylereg.css"/>
+    <link rel="stylesheet" type="text/css" href="css/stylereg.css" />
 </head>
+
 <body>
     <h1> Register </h1>
     <div class="register">
-        <form id="reg" method="post" action="register.php">
+        <form id="reg" method="post" action="../php/register.php">
             <label>
-            <b>First Name</b>
+                <b>First Name</b>
             </label>
             <br>
             <input type="text" name="fname" id="fname" placeholder="First Name">
             <br><br>
             <label>
-            <b>Middle Name<div class="optional">(optional)</div></b>
-            </label>
-            <input type="text" name="mname" id="mname" placeholder="Middle Name">
-            <br><br>
-            <label>
-            <b>Last Name</b>
+                <b>Last Name</b>
             </label>
             <br>
             <input type="text" name="lname" id="lname" placeholder="Last Name">
             <br><br>
-            <input type="checkbox" id="checkm"><span>Male</span>
-            <input type="checkbox" id="checkf"><span>Female</span>
-            <input type="checkbox" id="checko"><span>Other</span>
+            <input type="checkbox" id="checkm" name="chkGen[]" value="M"><span style="color: #6a52f1;">Male</span>
+            <input type="checkbox" id="checkf" name="chkGen[]" value="F"><span style="color: #6a52f1;">Female</span>
+            <input type="checkbox" id="checko" name="chkGen[]" value="O"><span style="color: #6a52f1;">Other</span>
             <br><br>
             <label>Enter DOB :</label>
             <input type="date" name="dob" id="dob">
@@ -173,7 +170,8 @@
                 <option value="Lithuania">Lithuania</option>
                 <option value="Luxembourg">Luxembourg</option>
                 <option value="Macao">Macao</option>
-                <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of</option>
+                <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of
+                </option>
                 <option value="Madagascar">Madagascar</option>
                 <option value="Malawi">Malawi</option>
                 <option value="Malaysia">Malaysia</option>
@@ -246,7 +244,8 @@
                 <option value="Solomon Islands">Solomon Islands</option>
                 <option value="Somalia">Somalia</option>
                 <option value="South Africa">South Africa</option>
-                <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option>
+                <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich
+                    Islands</option>
                 <option value="Spain">Spain</option>
                 <option value="Sri Lanka">Sri Lanka</option>
                 <option value="Sudan">Sudan</option>
@@ -290,17 +289,21 @@
                 <option value="Zimbabwe">Zimbabwe</option>
             </select>
             <br><br>
+            <label><b>Username :</b></label>
+            <input type="text" name="uname" id="uname">
+            <br><br>
             <label><b>Enter Password :</b></label>
             <input type="password" name="pass" id="pass">
             <br><br>
-            <label><b>Re-enter Password :</b></label>
+            <!-- <label><b>Re-enter Password :</b></label>
             <input type="password" name="pass" id="pass">
             <br><br>
             <label for="img">Select image:</label>
             <input type="file" id="img" name="img" accept="image/*">
-            <br><br>
-            <input type="submit">
+            <br><br> -->
+            <input type="submit" name="submitReg">
         </form>
     </div>
 </body>
+
 </html>
