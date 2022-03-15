@@ -24,6 +24,7 @@ if ($_POST) {
 
     // if ($conn->query($sql)) {
     //     echo "Login success!";
+    //     header("Location: userProfile.php");
 
     // } else {
     //     echo "there is an error" . $conn->error;
