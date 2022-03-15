@@ -1,128 +1,247 @@
 *{
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-  }
-  body{
-    font-family: montserrat;
-    background-image: url("/image/umberto-FewHpO4VC9Y-unsplash.jpg");
-    background-color: black;
-    background-size: cover;
-  }
-  nav{
-    background:rgb(67, 175, 218);
-    height: 70px;
-    width: 100%;
-    border-top: 1px solid;
-  }
-  label.logo{
-    color: white;
-    font-size: 35px;
-    line-height: 80px;
-    padding: 0 100px;
-    font-weight: bold;
-  }
-  nav ul{
-    float: left;
-    margin-left: 25px;
-  }
-  nav ul li{
-    display: inline-block;
-    line-height: 80px;
-    margin:0px;
-  }
-  nav ul li a{
-    color: black;
-    font-size: 17px;
-    padding: 7px 13px;
-    border-radius: 3px;
-    text-transform: uppercase;
-  }
-  a.active,a:hover{
-    background:white;
-    transition: .5s;
-  }
-  nav .search-form{
-    margin: 15px;
-    width: 460px;
-    height:2.5rem;
-    /* border:var(--border); */
-    overflow: hidden;
-    background:rgb(18, 198, 204);
-    /* display:flex; */
-    align-content: center;
-    border-radius: 10px;
-    justify-content: right;
-    float:right;
-    margin-right: 30%;
-    border: 2px solid rgb(4, 7, 7);
-  }
-  nav .search-form input{
-    font-size: 1.6rem;
-    padding:0 1.2rem;
-    height:100%;
-    width:100%;
-    text-transform: none;
-    color:var(--black);
-  }
-  .checkbtn{
-    font-size: 30px;
-    color: white;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-    display: none;
-  }
-  #check{
-    display: none;
-  }
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+/* body{
+  font-family: montserrat;
+  background-image: url("/image/umberto-FewHpO4VC9Y-unsplash.jpg");
+  background-color: black;
+  background-size: cover;
+} */
+nav{
+  background:rgb(67, 175, 218);
+  height: 70px;
+  width: 100%;
+  border-top: 1px solid;
+}
+label.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+nav ul{
+  float: left;
+  margin-left: 25px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin:0px;
+}
+nav ul li a{
+  color: black;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a.active,a:hover{
+  background:white;
+  transition: .5s;
+}
+nav .search-form{
+  margin: 15px;
+  width: 460px;
+  height:2.5rem;
+  /* border:var(--border); */
+  overflow: hidden;
+  background:rgb(18, 198, 204);
+  /* display:flex; */
+  align-content: center;
+  border-radius: 10px;
+  justify-content: right;
+  float:right;
+  margin-right: 30%;
+  border: 2px solid rgb(4, 7, 7);
+}
+nav .search-form input{
+  font-size: 1.6rem;
+  padding:0 1.2rem;
+  height:100%;
+  width:100%;
+  text-transform: none;
+  color:var(--black);
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+
+/* side menubar starts */
+@import "bourbon";
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600);
+
+body{
+font-family: "Lato";
+font-size: 100%; 
+overflow-y: scroll; 
+font-family: sans-serif; 
+-ms-text-size-adjust: 100%; 
+-webkit-text-size-adjust: 100%; 
+-ms-text-size-adjust: 100%;
+-webkit-text-size-adjust: 100%;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale; 
+text-rendering: optimizeLegibility;
+background-color:blueviolet;
+background-image: url("/image/wp3004476-light-teal-background.jpg");
+background-size: cover;
+}
+a{
+text-decoration: none;
+@include transition(all 0.6s ease);
+}
+/* a:hover{
+   @include transition(all 0.6s ease);
+} */
+
+#categories{
+  font-size: larger;
+
+}
+.app{
+height: 750px;
+}
+/* -------------Sidebar----------------*/
+.sidebar {
+margin: 0;
+padding: 0;
+position: bottom;
+width: 33.3333%;
+width: 15em;
+height: 105%;
+top: 0;
+
+/* overflow:hidden; */
+background-color: #19222a;
+-webkit-transform: translateZ(0);
+visibility: visible;
+-webkit-backface-visibility: hidden;
+}
+header{
+background-color: rgb(14, 76, 78);
+width: 104%;
+display:block;
+padding: 0.75em	1em;
+text-align: center;
+}
+/* -------------Sidebar Nav----------------*/
+.sidebar-nav {
+position: fixed;
+width: 13em;
+background-color: #19222a;
+height: 100%;
+/* font-weight: 200;  */
+font-size: 1.2em;
+overflow: auto;
+padding-bottom: 6em;
+z-index: 9;
+overflow: hidden;
+-webkit-overflow-scrolling: touch;
+}
+
+
+.sidebar-nav ul{
+  list-style:none;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+  
+.sidebar-nav ul li{
+margin-left: 0;
+padding-left: 0;
+min-width: 13em;
+/* display:inline-block; */
+width: 90%;
+}
+    
+.sidebar-nav ul li a{
+color:blue;
+font-size: 0.80em;
+padding: 0px;
+position: relative;
+display:block;
+text-align: center;
+}
+      
+.sidebar-nav ul li a:hover{
+background: whitesmoke;
+}
+
+/* -------------
+Chev elements
+----------------*/ 
+/* .sidebar-nav > ul > li > a:after {
+  content: '\f125';
+  font-family: ionicons;
+  font-size: 0.5em;
+  width: 10px;
+  color: red;
+  position: absolute;
+  right: 0.75em;
+  top: 45%;
+} */
+
+
+/* side menubar ends */
 
 /* media quaries */
 
-  /* @media (max-width: 952px){
-    label.logo{
-      font-size: 30px;
-      padding-left: 50px;
-    }
-    nav ul li a{
-      font-size: 16px;
-    }
+/* @media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
   }
-  @media (max-width: 858px){
-    .checkbtn{
-      display: block;
-    }
-    ul{
-      position: fixed;
-      width: 100%;
-      height: 100vh;
-      background: #2c3e50;
-      top: 80px;
-      left: -100%;
-      text-align: center;
-      transition: all .5s;
-    }
-    nav ul li{
-      display: block;
-      margin: 50px 0;
-      line-height: 30px;
-    }
-    nav ul li a{
-      font-size: 20px;
-    }
-    a:hover,a.active{
-      background: none;
-      color: #0082e6;
-    }
-    #check:checked ~ ul{
-      left: 0;
-    }
+  nav ul li a{
+    font-size: 16px;
   }
-  section{
-    background: url(bg1.jpg) no-repeat;
-    background-size: cover;
-    height: calc(100vh - 80px);
-  } */
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+section{
+  background: url(bg1.jpg) no-repeat;
+  background-size: cover;
+  height: calc(100vh - 80px);
+} */
