@@ -202,35 +202,82 @@ header{
 .home .row .books-slider .stand{
   margin-top: -2rem;
 }
-.icons-container{
-  display: flex;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  gap:1.5rem;
-  background-color:rgb(236, 222, 93);
+
+.featured .heading{
+  text-align: center;
+  font-size: 35px;
+}
+.featured .featured-slider .box{
+  margin:2rem 0;
+  position: relative;
+  overflow: hidden;
+  border:var(--border);
+  text-align: center;
 }
 
-.icons-container .icons{
-  display: flex;
-  align-items: center;
-  gap:1.5rem;
-  padding:2rem 0;
+.featured .featured-slider .box:hover{
+  border:var(--border-hover);
 }
 
-.icons-container .icons i{
-  font-size: 3.5rem;
-  color:var(--green);
+.featured .featured-slider .box .image{
+  padding:1rem;
+  background: linear-gradient(15deg, #eee 30%, #fff 30.1%);
 }
 
-.icons-container .icons h3{
+.featured .featured-slider .box:hover .image{
+  transform: translateY(6rem);
+}
+
+.featured .featured-slider .box .image img{
+  height: 25rem;
+}
+
+.featured .featured-slider .box .icons{
+  border-bottom: var(--border-hover);
+  position: absolute;
+  top:0; left:0; right: 0;
+  background:blueviolet;
+  z-index: 1;
+  transform: translateY(-105%);
+}
+
+.featured .featured-slider .box:hover .icons{
+  transform: translateY(0%);
+}
+
+.featured .featured-slider .box .icons a{
+  color:var(--black);
+  font-size: 2.2rem;
+  padding:1.3rem 1.5rem;
+}
+
+.featured .featured-slider .box .icons a:hover{
+  background:var(--green);
+  color:#fff;
+}
+
+.featured .featured-slider .box .content{
+  background:#eee;
+  padding:1.5rem;
+}
+
+.featured .featured-slider .box .content h3{
+  font-size: 2rem;
+  color:var(--black);
+}
+
+.featured .featured-slider .box .content .price{
   font-size: 2.2rem;
   color:var(--black);
-  padding-bottom: .5rem;
+  padding-top: 1rem;
 }
 
-.icons-container .icons p{
-  font-size: 1.4rem;
+.featured .featured-slider .box .content .price span{
+  font-size: 1.5rem;
   color:var(--light-color);
+  text-decoration: line-through;
 }
+/* .featured .featured-slider .{} */
 
 /* books slider end */
 /* -------------

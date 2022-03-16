@@ -1,89 +1,165 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap'); */
-*{
+* {
     margin: 0;
-    padding:0;
+    padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    /* display: flex; */
 }
-nav{
-    background:rgb(67, 175, 218);
-    height: 70px;
-    width: 100%;
-    border-top: 1px solid;
-    position: sticky;  
-   
-    
-  }
-body{
+
+body {
     /* background:#07FEC1; */
     background-color: #000;
-    background-image:url(".vscode/a48b39096e02d4bc661a48c3326c80e4.jpg");
+    background-image: url(".vscode/a48b39096e02d4bc661a48c3326c80e4.jpg");
     background-size: cover;
-    padding:0 10px;/*to generate space around an element's content, inside of any defined borders. */
-    
+    padding: 0 10px;
+    /*to generate space around an element's content, inside of any defined borders. */
+
 }
-.wrapper{
-    max-width: 500px;/*sets the maximum width of an element.*/
-    width: 100%;/*sets an element's width*/
-    background-image: url(tumblr_pu0ndkstCx1uzwgsuo1_400.gif);
-    margin: 20px auto;/*used to create space around elements, outside of any defined borders.*/
-    padding: 30px;
-    box-shadow: 1px 2px 2px rgba(0,0,0,0.125);/*attaches one or more shadows to an element.*/
-    border-radius: 20px;
+
+nav {
+    background: rgb(67, 175, 218);
+    height: 70px;
+    /* width: 100%; */
+    border-top: 1px solid;
+    margin-left: -20px;
+    margin-right: -20px;
+    width: auto;
+}
+
+label.logo {
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul {
+    float: left;
+    margin-left: 25px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0px;
+}
+
+nav ul li a {
+    color: black;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active, a:hover {
+    background: white;
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+
+.wrapper {
+    max-width: 500px;
+    /*sets the maximum width of an element.*/
+    width: 100%;
+    /*sets an element's width*/
+    /* background-image: url(""); */
+    background-color: white;
+    margin: 20px auto;
+    /*used to create space around elements, outside of any defined borders.*/
+    padding: 90px;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.125);
+    /*attaches one or more shadows to an element.  */
+    border-radius: -10px;
     background-size: cover;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-color: #000;
+
+
 }
-.wrapper .title{
-    font-size: 24px;
+
+.wrapper .title {
+    font-size: 36px;
     font-weight: 700;
     margin-bottom: 25px;
-    color:rgb(91, 248, 248);
+    color: rgba(15, 49, 49, 0.377);
     text-transform: uppercase;
     text-align: center;
 }
-.wrapper .form{
-    width:100%;
+
+.wrapper .form {
+    width: 100%;
 }
-.wrapper .form .input_field{
-    margin-bottom: 15px;
+
+.wrapper .form .input_field {
+    margin-bottom: 30px;
     display: flex;
     align-items: center;
 
 }
-.wrapper .form .input_field label{
-    width:200px;
-    color: #757575;
+
+.wrapper .form .input_field label {
+    width: 200px;
+    color: grey;
     margin-right: 10px;
     font-size: 24px;
 }
-.wrapper .form .input_field textarea{
+
+.wrapper .form .input_field textarea {
     width: 100%;
-    outline: none;/*sets the amount of space between an outline and the edge or border of an element.*/
+    outline: none;
+    /*sets the amount of space between an outline and the edge or border of an element.*/
     border: 1px solid #d5dbd9;
     font-size: 15px;
     padding: 8px 10px;
     border-radius: 3px;
-    transition: all 0.3s ease;/*he transition-timing-function property specifies the speed curve of the transition effect*/
+    transition: all 0.3s ease;
+    /*he transition-timing-function property specifies the speed curve of the transition effect*/
 
 }
-.wrapper .form .input_field .textarea{
+
+.wrapper .form .input_field .textarea {
     resize: none;
     height: 125px;
 }
-.wrapper .form .input_field .textarea:focus{
-    border:1px solid #fec107
+
+.wrapper .form .input_field .textarea:focus {
+    border: 1px solid #fec107
 }
-.wrapper .form .input_field p{
+
+.wrapper .form .input_field p {
     font-size: 14px;
-    color:#757575
+    color: #757575;
 }
-.wrapper .form .input_field .check{
+
+.wrapper .form .input_field .check {
     width: 15px;
-    height:15px;
-    position:relative;
+    height: 15px;
+    position: relative;
     display: block;
-    cursor: pointer;/*sets the type of mouse cursor, if any, to show when the mouse pointer is over an element*/
+    cursor: pointer;
+    /*sets the type of mouse cursor, if any, to show when the mouse pointer is over an element*/
 }
-.wrapper .form .input_field .check input[type="checkbox"]{
+
+/* .wrapper .form .input_field .check input[type="checkbox"]{
     position: absolute;
     top:0;
     left: 0;
@@ -110,20 +186,20 @@ body{
     border-color: transparent transparent black black;
     transform: rotate(-45deg);
     display: none;
-}
-.wrapper .form .input_field .check input[type="checkbox"]:checked~.checkmark{
+} */
+/* .wrapper .form .input_field .check input[type="checkbox"]:checked~.checkmark{
     background: #fec107;
 }
 .wrapper .form .input_field .check input[type="checkbox"]:checked~
 .checkmark:before{
     display: block;
-}
-.wrapper .form .input_field .btn{
-    width: 100%;
-    padding: 8px 10 px;
+} */
+.wrapper .form .input_field .btn {
+    width: 20%;
+    padding: 1px 2px;
     font-size: 15px;
-    border:0;
-    background:#555;
+    border: 0;
+    background: #555;
     color: #fff;
     cursor: pointer;
     border-radius: 3px;
@@ -131,144 +207,150 @@ body{
 
 
 }
-nav{
+
+nav {
     text-align: right;
 }
-/* nav{
-    flex: 1;/*sets how a flex item will grow or shrink to fit the space available in its flex container.*/
-    /* text-align: right;
-    background-color: olive;
-} */ 
-/* nav ul{
-    display: inline-block;
-    list-style-type: none;
-} */
-/* nav ul li{
-    display: inline-block;
-    margin-right: 20px;
-}
-a{
-    text-decoration: none;
-    color: white;
-} */
 
-.wrapper .form .input_field :last-child{
+
+.wrapper .form .input_field :last-child {
     margin-bottom: 0;
 }
 
-.wrapper .form .input_field .btn:hover{
+.wrapper .form .input_field .btn:hover {
     background: #07FEC1;
 }
-@media(max-width:420px){
-    .wrapper .form .input_field{
+
+@media(max-width:420px) {
+    .wrapper .form .input_field {
         flex-direction: column;
-        align-items:flex-start;
+        align-items: flex-start;
 
     }
-    .wrapper .form .input_field label{
+
+    .wrapper .form .input_field label {
         margin-bottom: 5px;
     }
-    .wrapper .form .input_field.terms{
+
+    .wrapper .form .input_field.terms {
         flex-direction: row;
     }
 
 }
+
 /*footer*/
-.footer{
+.footer {
     background: #000;
     color: #8a8a8a;
     font-size: 14 px;
-    padding:60px 0 20px;
+    padding: 60px 0 20px;
 }
-.footer h3{
-    color:#fff;
+
+.footer h3 {
+    color: #fff;
     margin-bottom: 20px;
 }
-.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
+
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4 {
     min-width: 250px;
     margin-bottom: 20px;
 }
-.footer-col-1{
+
+.footer-col-1 {
     flex-basis: 30%;
 }
-.footer-col-2{
+
+.footer-col-2 {
     flex: 1;
     text-align: center;
 }
-.footer-col-2{
+
+.footer-col-2 {
     width: 180px;
     margin-bottom: 20px;
 }
-.footer-col-3, .footer-col-4{
+
+.footer-col-3, .footer-col-4 {
     flex-basis: 12%;
-    text-align:center;
+    text-align: center;
 }
-ul{
+
+ul {
     list-style-type: none;
 }
-label{
+
+label {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #07FEC1;
 }
-label.logo{
+
+label.logo {
     color: white;
     font-size: 35px;
     line-height: 80px;
     padding: 0 100px;
     font-weight: bold;
-  }
-  nav ul{
+}
+
+nav ul {
     float: left;
     margin-left: 25px;
-  }
-  nav ul li{
+}
+
+nav ul li {
     display: inline-block;
     line-height: 80px;
-    margin:0px;
-  }
-  nav ul li a{
+    margin: 0px;
+}
+
+nav ul li a {
     color: black;
     font-size: 17px;
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
-  }
-  a.active,a:hover{
-    background:white;
+}
+
+a.active, a:hover {
+    background: white;
     transition: .5s;
-  }
-  nav .search-form{
+}
+
+nav .search-form {
     margin: 15px;
     width: 460px;
-    height:2.5rem;
+    height: 2.5rem;
     /* border:var(--border); */
     overflow: hidden;
-    background:rgb(18, 198, 204);
+    background: rgb(18, 198, 204);
     /* display:flex; */
     align-content: center;
     border-radius: 10px;
     justify-content: right;
-    float:right;
+    float: right;
     margin-right: 30%;
     border: 2px solid rgb(4, 7, 7);
-  }
-  nav .search-form input{
+}
+
+nav .search-form input {
     font-size: 1.6rem;
-    padding:0 1.2rem;
-    height:100%;
-    width:100%;
+    padding: 0 1.2rem;
+    height: 100%;
+    width: 100%;
     text-transform: none;
-    color:var(--black);
-  }
-  .checkbtn{
-    font-size: 30px;
+    color: var(--black);
+}
+
+.checkbtn {
+    font-size: 10px;
     color: white;
     float: right;
     line-height: 80px;
     margin-right: 40px;
     cursor: pointer;
     display: none;
-  }
-  #check{
+}
+
+#check {
     display: none;
-  }
+}
