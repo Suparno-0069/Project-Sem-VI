@@ -96,7 +96,8 @@ body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
   text-rendering: optimizeLegibility;
-  background-color:blueviolet;
+  background-image: url(wp3004476-light-teal-background.jpg);
+  background-size: cover;
 }
 a{
   text-decoration: none;
