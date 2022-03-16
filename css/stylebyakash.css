@@ -176,35 +176,62 @@ header{
 .sidebar-nav ul li a:hover{
   background: whitesmoke;
 }
-/* books slider */
+/* books slider start*/
 .home{
-  background-color:bisque;
-  background-size: cover;
+  background-color: bisque;
   background-position: center;
 }
 .home .row{
-  display:flex;
+  display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap:1.5rem;
+  gap: 1.5px;
 }
 .home .row .books-slider{
-  flex:1 1 42rem;
+  flex: 1 1 42 rem;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 50px;
 }
 .home .row .books-slider a img{
-  height: 250px;
+  height: 200px;
 }
-
 .home .row .books-slider a:hover img{
-  transform: scale(.9);
+  transform:scale(.9);
 }
 .home .row .books-slider .stand{
-  width:100%;
   margin-top: -2rem;
 }
+.icons-container{
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap:1.5rem;
+  background-color:rgb(236, 222, 93);
+}
 
+.icons-container .icons{
+  display: flex;
+  align-items: center;
+  gap:1.5rem;
+  padding:2rem 0;
+}
+
+.icons-container .icons i{
+  font-size: 3.5rem;
+  color:var(--green);
+}
+
+.icons-container .icons h3{
+  font-size: 2.2rem;
+  color:var(--black);
+  padding-bottom: .5rem;
+}
+
+.icons-container .icons p{
+  font-size: 1.4rem;
+  color:var(--light-color);
+}
+
+/* books slider end */
 /* -------------
 Chev elements
 ----------------*/ 
