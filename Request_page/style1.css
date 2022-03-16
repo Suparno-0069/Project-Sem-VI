@@ -9,10 +9,11 @@ nav{
     background:rgb(67, 175, 218);
     height: 70px;
     width: 100%;
-    border-top: 1px solid;
-    position: sticky;  
-   
-    
+    /* border-top: 1px solid; */
+    position:sticky;
+    margin-left: -20px; 
+    margin-right: -20px; 
+    width:auto;
   }
 body{
     /* background:#07FEC1; */
@@ -25,18 +26,24 @@ body{
 .wrapper{
     max-width: 500px;/*sets the maximum width of an element.*/
     width: 100%;/*sets an element's width*/
-    background-image: url(tumblr_pu0ndkstCx1uzwgsuo1_400.gif);
+    /* background-image: url(""); */
+    background-color: white;
     margin: 20px auto;/*used to create space around elements, outside of any defined borders.*/
-    padding: 30px;
-    box-shadow: 1px 2px 2px rgba(0,0,0,0.125);/*attaches one or more shadows to an element.*/
-    border-radius: 20px;
+    padding: 90px;
+    box-shadow: 1px 2px 2px rgba(0,0,0,0.125);/*attaches one or more shadows to an element.  */
+    border-radius: -10px;
     background-size: cover;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-color: #000;
+    
+
 }
 .wrapper .title{
-    font-size: 24px;
+    font-size: 36px;
     font-weight: 700;
     margin-bottom: 25px;
-    color:rgb(91, 248, 248);
+    color:rgba(15, 49, 49, 0.377);
     text-transform: uppercase;
     text-align: center;
 }
@@ -44,14 +51,14 @@ body{
     width:100%;
 }
 .wrapper .form .input_field{
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     display: flex;
     align-items: center;
 
 }
 .wrapper .form .input_field label{
     width:200px;
-    color: #757575;
+    color:grey;
     margin-right: 10px;
     font-size: 24px;
 }
@@ -74,7 +81,7 @@ body{
 }
 .wrapper .form .input_field p{
     font-size: 14px;
-    color:#757575
+    color:#757575;
 }
 .wrapper .form .input_field .check{
     width: 15px;
@@ -83,7 +90,7 @@ body{
     display: block;
     cursor: pointer;/*sets the type of mouse cursor, if any, to show when the mouse pointer is over an element*/
 }
-.wrapper .form .input_field .check input[type="checkbox"]{
+/* .wrapper .form .input_field .check input[type="checkbox"]{
     position: absolute;
     top:0;
     left: 0;
@@ -110,17 +117,17 @@ body{
     border-color: transparent transparent black black;
     transform: rotate(-45deg);
     display: none;
-}
-.wrapper .form .input_field .check input[type="checkbox"]:checked~.checkmark{
+} */
+/* .wrapper .form .input_field .check input[type="checkbox"]:checked~.checkmark{
     background: #fec107;
 }
 .wrapper .form .input_field .check input[type="checkbox"]:checked~
 .checkmark:before{
     display: block;
-}
+} */
 .wrapper .form .input_field .btn{
-    width: 100%;
-    padding: 8px 10 px;
+    width: 20%;
+    padding: 1px 2px;
     font-size: 15px;
     border:0;
     background:#555;
@@ -134,23 +141,7 @@ body{
 nav{
     text-align: right;
 }
-/* nav{
-    flex: 1;/*sets how a flex item will grow or shrink to fit the space available in its flex container.*/
-    /* text-align: right;
-    background-color: olive;
-} */ 
-/* nav ul{
-    display: inline-block;
-    list-style-type: none;
-} */
-/* nav ul li{
-    display: inline-block;
-    margin-right: 20px;
-}
-a{
-    text-decoration: none;
-    color: white;
-} */
+
 
 .wrapper .form .input_field :last-child{
     margin-bottom: 0;
@@ -261,7 +252,7 @@ label.logo{
     color:var(--black);
   }
   .checkbtn{
-    font-size: 30px;
+    font-size: 10px;
     color: white;
     float: right;
     line-height: 80px;
