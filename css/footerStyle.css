@@ -11,16 +11,16 @@
 }
 
 .footer .box-container .box h3{
-    font-size: 2.2rem;
+    font-size: 12px;
     color:var(--black);
     padding:1rem 0;
 }
 
 .footer .box-container .box a{
     display: block;
-    font-size: 1.4rem;
+    font-size: 12px;
     color:var(--light-color);
-    padding:1rem 0;
+    padding:5px 1px;
 }
 
 .footer .box-container .box a i{
@@ -32,16 +32,12 @@
     padding-right: 2rem;
 }
 
-.footer .box-container .box .map{
-    width:100%;
-}
-
-.footer .share{
+.footer .box-container .share{
     padding:1rem 0;
     text-align: center;
 }
 
-.footer .share a{
+.footer .box-container .share i{
     height: 5rem;
     width: 5rem;
     line-height: 5rem;
@@ -50,9 +46,13 @@
     background:var(--green);
     margin:0 .3rem;
     border-radius: 50%; 
+    justify-content: center;
+    
 }
 
-.footer .share a:hover{
+.footer .share i:hover{
     background:var(--black);
 }
-
+.share{
+    
+}
