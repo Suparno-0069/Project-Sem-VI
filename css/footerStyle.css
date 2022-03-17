@@ -1,9 +1,13 @@
-
+.footer{
+    align-items: bottom;
+}
 
 .footer .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap:1.5rem;
+    background-color: rgb(66, 80, 90);
+    margin-bottom: 0px;
 }
 
 .footer .box-container .box h3{
@@ -42,7 +46,7 @@
     width: 5rem;
     line-height: 5rem;
     font-size: 2rem;
-    color:#fff;
+    color:rgb(245, 245, 245);
     background:var(--green);
     margin:0 .3rem;
     border-radius: 50%; 

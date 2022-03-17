@@ -96,8 +96,7 @@ font-family: sans-serif;
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale; 
 text-rendering: optimizeLegibility;
-background-color:blueviolet;
-background-image: url("/image/wp3004476-light-teal-background.jpg");
+background-image: url(wp3004476-light-teal-background.jpg);
 background-size: cover;
 }
 a{
@@ -108,12 +107,9 @@ text-decoration: none;
    @include transition(all 0.6s ease);
 } */
 
-#categories{
-  font-size: larger;
 
-}
 .app{
-height: 750px;
+height: 100vh;
 }
 /* -------------Sidebar----------------*/
 .sidebar {
@@ -132,8 +128,8 @@ visibility: visible;
 -webkit-backface-visibility: hidden;
 }
 header{
-background-color: rgb(14, 76, 78);
-width: 104%;
+background-color: rgb(18, 198, 204);
+width: 100%;
 display:block;
 padding: 0.75em	1em;
 text-align: center;
@@ -171,8 +167,8 @@ width: 90%;
     
 .sidebar-nav ul li a{
 color:blue;
-font-size: 0.80em;
-padding: 0px;
+font-size: 0.75em;
+padding: 1.05em	1em;
 position: relative;
 display:block;
 text-align: center;
@@ -181,7 +177,109 @@ text-align: center;
 .sidebar-nav ul li a:hover{
 background: whitesmoke;
 }
+/* books slider start*/
+.home{
+background-color: bisque;
+background-position: center;
+}
+.home .row{
+display: flex;
+align-items: center;
+flex-wrap: wrap;
+gap: 1.5px;
+}
+.home .row .books-slider{
+flex: 1 1 42 rem;
+text-align: center;
+margin-top: 50px;
+}
+.home .row .books-slider a img{
+height: 200px;
+}
+.home .row .books-slider a:hover img{
+transform:scale(.9);
+}
+.home .row .books-slider .stand{
+margin-top: -2rem;
+}
 
+.featured .heading{
+text-align: center;
+font-size: 35px;
+}
+.featured .featured-slider .box{
+margin:2rem 0;
+position: relative;
+overflow: hidden;
+border:var(--border);
+text-align: center;
+}
+
+.featured .featured-slider .box:hover{
+border:var(--border-hover);
+}
+
+.featured .featured-slider .box .image{
+padding:1rem;
+background: linear-gradient(15deg, #eee 30%, #fff 30.1%);
+}
+
+.featured .featured-slider .box:hover .image{
+transform: translateY(6rem);
+}
+
+.featured .featured-slider .box .image img{
+height: 25rem;
+}
+
+.featured .featured-slider .box .icons{
+border-bottom: var(--border-hover);
+position: absolute;
+top:0; left:0; right: 0;
+background:blueviolet;
+z-index: 1;
+transform: translateY(-105%);
+}
+
+.featured .featured-slider .box:hover .icons{
+transform: translateY(0%);
+}
+
+.featured .featured-slider .box .icons a{
+color:var(--black);
+font-size: 2.2rem;
+padding:1.3rem 1.5rem;
+}
+
+.featured .featured-slider .box .icons a:hover{
+background:var(--green);
+color:#fff;
+}
+
+.featured .featured-slider .box .content{
+background:#eee;
+padding:1.5rem;
+}
+
+.featured .featured-slider .box .content h3{
+font-size: 2rem;
+color:var(--black);
+}
+
+.featured .featured-slider .box .content .price{
+font-size: 2.2rem;
+color:var(--black);
+padding-top: 1rem;
+}
+
+.featured .featured-slider .box .content .price span{
+font-size: 1.5rem;
+color:var(--light-color);
+text-decoration: line-through;
+}
+/* .featured .featured-slider .{} */
+
+/* books slider end */
 /* -------------
 Chev elements
 ----------------*/ 
