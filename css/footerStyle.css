@@ -32,7 +32,6 @@
     padding-right: 2rem;
 }
 
-<<<<<<< HEAD
 .footer .box-container .share{
     padding:1rem 0;
     text-align: center;
@@ -53,13 +52,6 @@
 
 .footer .share i:hover{
     background:var(--black);
-=======
-.footer .box-container .box .map{
-    width:100%;
-}
-.share{
-    place-items:initial;
->>>>>>> c8fdd4df5e71e0c366234784b3b492340357e603
 }
 .share{
     
