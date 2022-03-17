@@ -35,24 +35,7 @@
 .footer .box-container .box .map{
     width:100%;
 }
-
-.footer .share{
-    padding:1rem 0;
-    text-align: center;
-}
-
-.footer .share a{
-    height: 5rem;
-    width: 5rem;
-    line-height: 5rem;
-    font-size: 2rem;
-    color:rgb(245, 245, 245);
-    background:var(--green);
-    margin:0 .3rem;
-    border-radius: 50%; 
-}
-
-.footer .share a:hover{
-    background:var(--black);
+.share{
+    place-items:initial;
 }
 
