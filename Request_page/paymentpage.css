@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+nav{
+    background:rgb(67, 175, 218);
+    height: 70px;
+    width: 100%;
+    /* border-top: 1px solid; */
+    position:sticky;
+    margin-left: -20px; 
+    margin-right: -20px; 
+    width:auto;
+  }
+  nav{
+    text-align: right;
+}
+nav ul{
+    float: left;
+    margin-left: 25px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin:0px;
+  }
+  nav ul li a{
+    color: black;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  nav .search-form{
+    margin: 15px;
+    width: 460px;
+    height:2.5rem;
+    /* border:var(--border); */
+    overflow: hidden;
+    background:rgb(18, 198, 204);
+    /* display:flex; */
+    align-content: center;
+    border-radius: 10px;
+    justify-content: right;
+    float:right;
+    margin-right: 30%;
+    border: 2px solid rgb(4, 7, 7);
+  }
+  nav .search-form input{
+    font-size: 1.6rem;
+    padding:0 1.2rem;
+    height:100%;
+    width:100%;
+    text-transform: none;
+    color:var(--black);
+  }
+body{
+    /* background:#07FEC1; */
+    background-color: #000;
+    background-image:url(".vscode/a48b39096e02d4bc661a48c3326c80e4.jpg");
+    background-size: cover;
+    padding:0 10px;/*to generate space around an element's content, inside of any defined borders. */
+    
+}
+
+.container{
+    display:flex;
+    justify-content: left;
+    align-items: center;
+    padding: 25px;
+    min-height: 100vh;
+    /* background: linear-gradient(90deg,#2ecc71 60%, #27ae60 40.1%); */
+    padding-bottom: 70px;
+}
+.container form{
+    padding: 20px;
+    width: 700px;
+    background: white;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    
+}
+.container form .row{
+    display: flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+.container form .row .col{
+    flex: 1 1 250px;
+}
+.container form .row .col .title{
+    font-size: 20px;
+    color:#333;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+
+}
+.container form .row .col .inputbox{
+    margin: 15px 0;
+}
+.container form .row .col .inputbox span{
+    margin-bottom: 5px;
+    display: block;
+}
+.container form .row .col .inputbox input{
+    width:100%;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    font-size: 15px;
+    text-transform: none;
+}
+.container form .row .col .inputbox input:focus{
+    border: 1px solid #000;
+}
+.container form .row .col  .flex{
+    display: flex;
+    gap:15px;
+}
+.container form .row .col .flex .inputbox{
+    margin-top: 5px;
+
+}
+.container form .row .col .inputbox img{
+    height: 34px;
+    margin-top: 5px;
+    filter: drop-shadow(0 0 1px #000);
+}
+.container form .submit-btn{
+    width:100%;
+    padding: 12px;
+    font-size: 17px;
+    /* background: #27ae60; */
+    background:blue;
+    color: #fff;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.container form .submit-btn:hover{
+    background: #2ecc71;
+}
+
