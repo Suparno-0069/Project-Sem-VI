@@ -3,7 +3,7 @@ body
     margin: 0;  
     padding: 0;  
     background-color:#000000ba;
-    background-image: url("Untitled.png");
+    background-image: url("../image/logos2/Untitled.png");
     background-size: cover;
     font-family: 'Arial';
 }
@@ -14,7 +14,7 @@ body
     margin: 20 0 0 450px;  
     padding: 70px;  
     background: #23463f;
-    background-image: url("tumblr_pu0ndkstCx1uzwgsuo1_400.gif");
+    background-image: url("../image/logos2/tumblr_pu0ndkstCx1uzwgsuo1_400.gif");
     background-size: cover;
     border-radius: 100px ;
 }

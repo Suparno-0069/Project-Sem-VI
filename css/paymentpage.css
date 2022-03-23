@@ -63,7 +63,7 @@ nav ul{
 body{
     /* background:#07FEC1; */
     background-color: #000;
-    background-image:url(".vscode/a48b39096e02d4bc661a48c3326c80e4.jpg");
+    background-image:url("../image/payment-bg-img.jpg");
     background-size: cover;
     padding:0 10px;/*to generate space around an element's content, inside of any defined borders. */
     

@@ -8,7 +8,7 @@
 }
 body{
     /* background:#07FEC1; */
-    background-image:url("galaxy2.jpg");
+    background-image:url("../image/logos2/galaxy2.jpg");
     background-size: cover;
     padding:0 10px;/*to generate space around an element's content, inside of any defined borders. */
 }
