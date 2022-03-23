@@ -96,7 +96,7 @@ body{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
   text-rendering: optimizeLegibility;
-  background-image: url(wp3004476-light-teal-background.jpg);
+  /* background-image: url(wp3004476-light-teal-background.jpg); */
   background-size: cover;
 }
 a{
@@ -116,13 +116,13 @@ a{
   margin: 0;
   padding: 0;
   position: bottom;
-  width: 33.3333%;
+  width: 20%;
   width: 15em;
-  height: 105%;
+  height: 65.8%;
   top: 0;
   
   /* overflow:hidden; */
-  background-color: #19222a;
+  /* background-color: #19222a; */
   -webkit-transform: translateZ(0);
   visibility: visible;
   -webkit-backface-visibility: hidden;
@@ -167,8 +167,8 @@ header{
       
 .sidebar-nav ul li a{
   color:blue;
-  font-size: 0.75em;
-  padding: 1.05em	1em;
+  font-size: 14px;
+  padding: 1px	1px;
   position: relative;
   display:block;
   text-align: center;
@@ -179,7 +179,7 @@ header{
 }
 /* books slider start*/
 .home{
-  background-color: bisque;
+  
   background-position: center;
 }
 .home .row{
@@ -203,79 +203,41 @@ header{
   margin-top: -2rem;
 }
 
-.featured .heading{
+section .cards .card {
+  box-shadow: 0 4px 8px 0 rgba(76, 140, 223, 0.2);
+  max-width: 300px;
+  margin: 0;
   text-align: center;
-  font-size: 35px;
+  font-family: arial;
+  float: left;
+  float: right;
+  
 }
-.featured .featured-slider .box{
-  margin:2rem 0;
-  position: relative;
-  overflow: hidden;
-  border:var(--border);
+
+section .cards .card  p{
+    margin: 8px;
+}
+section .cards .card  h3{
+    margin-bottom: 8px;
+}
+section .cards .card  .price {
+  color: rgb(80, 78, 78);
+  font-size: 22px;
+}
+section  .cards .card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
   text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
 }
 
-.featured .featured-slider .box:hover{
-  border:var(--border-hover);
-}
-
-.featured .featured-slider .box .image{
-  padding:1rem;
-  background: linear-gradient(15deg, #eee 30%, #fff 30.1%);
-}
-
-.featured .featured-slider .box:hover .image{
-  transform: translateY(6rem);
-}
-
-.featured .featured-slider .box .image img{
-  height: 25rem;
-}
-
-.featured .featured-slider .box .icons{
-  border-bottom: var(--border-hover);
-  position: absolute;
-  top:0; left:0; right: 0;
-  background:blueviolet;
-  z-index: 1;
-  transform: translateY(-105%);
-}
-
-.featured .featured-slider .box:hover .icons{
-  transform: translateY(0%);
-}
-
-.featured .featured-slider .box .icons a{
-  color:var(--black);
-  font-size: 2.2rem;
-  padding:1.3rem 1.5rem;
-}
-
-.featured .featured-slider .box .icons a:hover{
-  background:var(--green);
-  color:#fff;
-}
-
-.featured .featured-slider .box .content{
-  background:#eee;
-  padding:1.5rem;
-}
-
-.featured .featured-slider .box .content h3{
-  font-size: 2rem;
-  color:var(--black);
-}
-
-.featured .featured-slider .box .content .price{
-  font-size: 2.2rem;
-  color:var(--black);
-  padding-top: 1rem;
-}
-
-.featured .featured-slider .box .content .price span{
-  font-size: 1.5rem;
-  color:var(--light-color);
-  text-decoration: line-through;
+section  .cards .card button:hover {
+  opacity: 0.7;
 }
 
 
