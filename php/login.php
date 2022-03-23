@@ -2,25 +2,13 @@
 include_once "dbconn.php";
 
 if ($_POST) {
-    echo "<html>
-    <head>
-    </head>
-    <body>
-    <table>
-    <thead>
-        <th scope='col'>User ID</th>
-        <th scope='col'>Name</th>
-        <th scope='col'>Email</th>
-        <th scope='col'>Mobile</th>
-    </thead>
-    <tbody>";
+
     $un = $_POST['uname'];
     $pass = $_POST['pass'];
 
-    echo $un;
-    echo $pass;
+    
 
-    $sql = "SELECT * FROM users WHERE username='$un' AND passwords='$pass'";
+    $sql = "SELECT * FROM users WHERE uname='$un' AND passwords='$pass'";
 
     // if ($conn->query($sql)) {
     //     echo "Login success!";
@@ -30,29 +18,90 @@ if ($_POST) {
     //     echo "there is an error" . $conn->error;
     // }
 
-        $res = $conn->query($sql);
-        if ($res->num_rows > 0) {
-            while ($row = $res->fetch_assoc()) {
-                $uid = $row["userid"];
-                $fname = $row["fname"];
-                $lname = $row["lname"];
-                $email = $row["email"];
-                $mob = $row["mob"];
+    $res = $conn->query($sql);
+    $row = $res->fetch_assoc();
+    if ($row) {
+        echo $un;
+        echo $pass;
+?>
 
-                echo "<tr>
-                <td>$uid</td>
-                <td>$fname$lname</td>
-                <td>$email</td>
-                <td>$mob</td>
-            </tr>
-        </tbody>
-    </table>
-    </body>
-    </html>";
-            }
-        }
+        <!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>abcd</title>
+        </head>
+
+        <body>
+            <h1> <?php echo $row["fname"]; echo $row["lname"]; ?></h1>
+        </body>
+
+        </html>
+
+
+<?php
+    }
 }
 
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php
+// echo "<html>
+// <head>
+// </head>
+// <body>
+// <table>
+// <thead>
+//     <th scope='col'>User ID</th>
+//     <th scope='col'>Name</th>
+//     <th scope='col'>Email</th>
+//     <th scope='col'>Mobile</th>
+// </thead>
+// <tbody>";
+//     $uid = $row["userid"];
+//     $fname = $row["fname"];
+//     $lname = $row["lname"];
+//     $email = $row["email"];
+//     $mob = $row["mob"];
+
+//     echo "<tr>
+//             <td>$uid</td>
+//             <td>$fname$lname</td>
+//             <td>$email</td>
+//             <td>$mob</td>
+//         </tr>
+//     </tbody>
+// </table>
+// </body>
+// </html>";
 
 /*$result = $conn->query($sql);
 
@@ -68,3 +117,4 @@ if ($_POST) {
                         ";
             }
         } */
+?>
