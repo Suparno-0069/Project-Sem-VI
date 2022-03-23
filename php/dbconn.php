@@ -1,11 +1,13 @@
 <?php
 $srvname = "localhost";
-$usrname = "ucAdmin";
-$password = "asd123";
-$dbname = "uclogin";
+$usrname = "root";
+$password = "";
+$dbname = "urbanchaptars";
 
 $conn = new mysqli($srvname, $usrname, $password, $dbname);
 
 if($conn->connect_error){
     die("Connection failed : " . $conn->connect_error);
+}else {
+    echo "connected successfully!";
 }
