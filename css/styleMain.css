@@ -135,7 +135,7 @@ header{
 /* -------------Sidebar Nav----------------*/
 .sidebar-nav {
   position: fixed;
-  width: 13em;
+  width: 10;
   background-color: #19222a;
   height: 117%;
   /* font-weight: 200;  */
