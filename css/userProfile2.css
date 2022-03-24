@@ -1,0 +1,114 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+body{
+    background-image: url("Untitled.png");
+    background-size: cover;
+}
+
+/* nav bar style:-> */
+nav{
+    background:rgb(67, 175, 218);
+    height: 70px;
+    width: 100%;
+    border-top: 1px solid;
+  }
+  label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+  }
+  nav ul{
+    float: left;
+    margin-left: 25px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin:0px;
+  }
+  nav ul li a{
+    color: black;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  a.active,a:hover{
+    background:white;
+    transition: .5s;
+  }
+  nav .search-form{
+    margin: 15px;
+    width: 460px;
+    height:2.5rem;
+    /* border:var(--border); */
+    overflow: hidden;
+    background:rgb(18, 198, 204);
+    /* display:flex; */
+    align-content: center;
+    border-radius: 10px;
+    justify-content: right;
+    float:right;
+    margin-right: 30%;
+    border: 2px solid rgb(4, 7, 7);
+  }
+  nav .search-form input{
+    font-size: 1.6rem;
+    padding:0 1.2rem;
+    height:100%;
+    width:100%;
+    text-transform: none;
+    color:var(--black);
+  }
+  .checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+  /* Nav bar style end */
+
+body{
+    margin-top: 20px;
+    background-color: lightgray;
+}
+.main{
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sidebar{
+    background-color:#333;
+    color: white;
+    height: 100%;
+}
+.sidebar a{
+    margin-left: 10px;
+    display: block;
+    color: white;
+    padding-bottom: 10px;
+    font-size: 30px;
+    text-decoration: none;
+}
+.card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+}
+.content{
+    background-color:whitesmoke;
+}
