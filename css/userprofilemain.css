@@ -5,12 +5,15 @@
   padding: 0;
   box-sizing: border-box;
   list-style: none;
+  text-decoration: none;
   font-family: 'Josefin Sans', sans-serif;
 }
 
 body{
    background-color: #f3f3f3;
-   background-image: url("../image/logos3/main-bg-img.gif");
+   /* background-image: url("../image/logos3/main-bg-img.gif");
+   background-size: cover;
+   background-repeat: no-repeat; */
 }
 
 /* nav bar style:-> */
