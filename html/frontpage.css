@@ -15,6 +15,9 @@
     background-image: url("../image/logos2/tumblr_pu0ndkstCx1uzwgsuo1_400.gif");
     background-size:cover;
     overflow: visible;
+    top:0;
+    left: 0;
+   
 }
 #uctxt{
     height: 350px;
@@ -32,13 +35,26 @@
     object-fit: cover;
 
 }
+
+
 /* FIRST NAVABR STARTS HERE */
 .wrapper .multi_color_border{
     width:100%;
     height: 5px;
     background: grey;
 }
+.wrapper .multi_color_border .top_nav{
+    
+    position: fixed;
+    top:0;
+    cursor: pointer;
+   
+
+    
+}  
+
 .wrapper .top_nav{
+    
     width: 100%;
     height: 65px;
     background:#525252;
@@ -46,13 +62,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+}
 
-}
-.wrapper .top_nav .sticky{
-    position: fixed;
-    top: 0;
-    left: 0;
-}
+
 .wrapper .top_nav .left{
     display: flex;
     align-items:left;
@@ -203,7 +216,7 @@
     background-color: #000000;
 }
 .active, .wrapper .bottom_nav  ul li:hover{
-    background: black;
+    background: rgb(0, 0, 0);
     border-radius: .1px;
     transition: 0.3s;
 }
@@ -214,25 +227,25 @@
 {
     display: block;
     position: absolute;
-    background: gainsboro;
+    background: lightgray;
     margin-top: 0px;
     margin-left: -15px;
-    transition: 5s;
+    
 }
 .wrapper .bottom_nav  ul li:hover .sub-menu-1 ul{
     display: block;
-    margin :10px;
+    margin :0.1px;
     
 }
 .wrapper  .bottom_nav  ul li:hover .sub-menu-1 ul li{
-    width: 1.5 px;
-    padding: 17px;
+    width: 0.2 px;
+    padding: 1px;
     border-radius: 0;
     text-decoration: left;
     background: transparent;
     border-bottom: 1px dotted #fff;
     display: block;
-    transition: 2s;
+   
 
 }
 .wrapper .bottom_nav  ul li:hover .sub-menu-1 ul li  :last-child{
@@ -260,11 +273,11 @@ body{
 .small-container{
     max-width:  1080px;
     margin:auto;
-   
     padding-right: 25 px;
     margin-top: 200px;
     
 }
+
 .col-4{
     flex-basis: 25%;
     padding: 10px;
@@ -285,14 +298,19 @@ body{
 }
 .title{
     text-align: center;
-    margin: 0 auto 80px;
-    position: relative;
-    left: 60px;
-    color:#563434;
+    margin: 0 auto 35px;
+    
+    left: 150px;
+    color:black;
+    text-transform: uppercase;
+    border:solid;
+    border-color: #000000;
+    background-color: lightseagreen;
+    
 }
 .title::after{
     content: '';
-    background: #ff523b;
+    /* background: #ff523b; */
     width: 80px;
     height: 5px;
     border-radius: 5px;
@@ -319,16 +337,17 @@ h4{
 .footer{
     background:grey;
     color:skyblue;
-    font-size: 14 px;
-    padding:20px 0 20px;
+    font-size: 18 px;
+    padding:10px 0 10px;
+    
 }
 .footer h3{
     color:#fff;
     margin-bottom: 20px;
 }
 .footer-col-1, .footer-col-2, .footer-col-3{
-    min-width: 250px;
-    margin-bottom: 20px;
+    min-width: 150px;
+    margin-bottom: 10px;
 }
 .footer-col-1{
     flex-basis: 30%;
