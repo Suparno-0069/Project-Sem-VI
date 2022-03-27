@@ -56,7 +56,8 @@ nav ul li a {
 }
 
 a.active, a:hover {
-    background: white;
+    /* background: white; */
+    background: black;
     transition: .5s;
 }
 
