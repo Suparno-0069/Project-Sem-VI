@@ -6,10 +6,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" type="text/css" href="../css/stylereg.css" >
+    <link rel="stylesheet" type="text/css" href="../css/stylereg.css">
 </head>
 
 <body>
+    <!-- nav-bar -->
+    <style>
+        * {
+            text-decoration: none;
+        }
+
+        nav {
+            background: rgb(67, 175, 218);
+            height: 70px;
+            width: 100%;
+            border-top: 1px solid;
+        }
+
+        nav ul {
+            float: left;
+            margin-left: 25px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            line-height: 20px;
+            margin: 0px;
+        }
+
+        nav ul li a {
+            color: black;
+            font-size: 17px;
+            padding: 7px 13px;
+            border-radius: 3px;
+            text-transform: uppercase;
+        }
+
+        a:hover {
+            background: white;
+            transition: .5s;
+        }
+    </style>
+    <nav>
+        <ul>
+            <li><a href="../html/index.html">Home</a></li>
+            <li><a href="#">Featured</a></li>
+            <li><a href="#">Arrivals</a></li>
+            <li><a href="#">Reviews</a></li>
+        </ul>
+
+    </nav>
+    <!-- end nav-bar -->
+
     <h1> Register </h1>
     <div class="register">
         <form id="reg" method="post" action="../php/register.php">
@@ -38,8 +86,8 @@
             <label>Enter Email :</label>
             <input type="email" name="email" id="email" placeholder="example@email.com">
             <br><br>
-            <label>Enter Address :</label>
-            <textarea name="addr" id="addr" cols="30" rows="10"></textarea>
+            <label>Enter Address :</label><br>
+            <textarea name="addr" id="addr" cols="50" rows="3"></textarea>
             <br><br>
             <label>Select Country :</label>
             <select id="country" name="country">
@@ -304,7 +352,8 @@
             <label for="img">Select image:</label>
             <input type="file" id="img" name="img" accept="image/*">
             <br><br> -->
-            <input type="submit" name="submitReg">
+            <!-- <input type="submit" class="submit" name=""> -->
+            <button type="submit" class="submit" name="submitReg">Submit</button>
         </form>
     </div>
 </body>

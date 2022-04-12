@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - User</title>
-    <link rel="stylesheet" type="text/css" href="../css/stylelogin.css">
-    <!-- <link rel="stylesheet" type="text/css" href="../css/stylelogin1.css" > -->
+    <title>Request A book</title>
+    <link rel="stylesheet" href="../css/stylelogin.css">
 </head>
 
 <body>
@@ -54,32 +53,28 @@
             <li><a href="#">Featured</a></li>
             <li><a href="#">Arrivals</a></li>
             <li><a href="#">Reviews</a></li>
+            <li><a href="../php/dashboard.php">back to dash</a></li>
         </ul>
 
     </nav>
     <!-- end nav-bar -->
-    <h1>Login</h1><br>
+
+    <h1>Request A Book</h1>
+    <br>
     <div class="login">
-        <form id="login" method="post" action="../php/login.php">
-            <label><b>User Name </b>
-            </label>
-            <input type="text" name="uname" id="uname" placeholder="Username">
-            <br><br>
-            <label><b>Password</b>
-            </label>
-            <input type="Password" name="pass" id="pass" placeholder="Password">
-            <br><br>
-            <input type="checkbox" id="check"><span> Remember me</span>
-            <br><br>
-            <a href="">Forgot Password</a>
-            <br><br>
-            <a href="register.html">Don't have an account? Register</a>
-            <br><br>
-            <input type="reset" class="submit" value="Clear"> <br><br>
-            <button class="submit" type="submit"><b>Log In</b></button>
 
-
+        <form id="login" action="../php/requestBook.php" method="post">
+            <label><b>Book Name : </b></label> <input type="text" name="bname">
+            <br><br>
+            <label><b>Author Name : </b></label> <input type="text" name="aname">
+            <br><br>
+            <label><b>Publisher Name : </b></label> <input type="text" name="pname">
+            <br><br>
+            <label><b>Description : </b></label> <textarea name="msg" cols="50" rows="3"></textarea>
+            <br><br>
+            <button class="submit" type="submit"><b>Request</b></button>
         </form>
+
     </div>
 </body>
 

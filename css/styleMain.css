@@ -17,6 +17,10 @@
     width: 100%;
     border-top: 1px solid;
   }
+  .actual{
+    position:fixed;
+    top:0; left:0; right:0;
+  }
   label.logo{
     color: white;
     font-size: 35px;
@@ -54,9 +58,9 @@
     /* display:flex; */
     align-content: center;
     border-radius: 10px;
-    justify-content: right;
-    float:right;
-    margin-right: 30%;
+    /* justify-content: right; */
+    float:left;
+    /* margin-right: 30%; */
     border: 2px solid rgb(4, 7, 7);
   }
   nav .search-form input{
