@@ -38,7 +38,7 @@ if ($_SESSION["logged"]) {
             }
 
             section .cards .card .price {
-                color: rgb(80, 78, 78);
+                color: #f123f1;
                 font-size: 22px;
             }
 
