@@ -30,7 +30,7 @@ if ($_SESSION["logged"]) {
                     <li><a href="../html/index.html">Home</a></li>
                     <li><a href="#">Featured</a></li>
                     <li><a href="#">Arrivals</a></li>
-                    <li><a href="#">Reviews</a></li>
+                    <li><a href="shop.php">Shop</a></li>
                     <li><a href="../html/requestPage.html">Request a Book</a></li>
                     <li><a href="logout.php">Logout</a></li>
                 </ul>

@@ -28,8 +28,8 @@ if ($_SESSION["adlogged"]) {
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Featured</a></li>
-                    <li><a href="#">Arrivals</a></li>
+                    <li><a href="publishers.php">Publishers</a></li>
+                    <li><a href="books.php">Books</a></li>
                     <li><a href="requests.php">Requests</a></li>
                     <li><a href="logout.php">Logout</a></li>
                 </ul>
