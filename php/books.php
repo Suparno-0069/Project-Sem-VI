@@ -17,39 +17,76 @@ if ($_SESSION["adlogged"]) {
     </head>
 
     <body>
-        <nav>
+        <style>
+            .frm {
+                align-items: center;
+                background-image: url("../image/logos2/tumblr_pu0ndkstCx1uzwgsuo1_400.gif");
+                background-size: cover;
+                margin-top: 100px;
+                margin-left: 200px;
+                margin-right: 600px;
+            }
+
+            .frm label {
+                font-size: large;
+                color: aqua;
+                padding: 7px;
+            }
+
+            .frm input[type=submit],
+            .btn {
+                background-color: rgb(255, 255, 255);
+                display: inline-block;
+                padding: 16px 30px;
+                border-radius: 30px;
+                border: 20px;
+                color: rgb(8, 20, 129);
+                width: 150px;
+                text-align: center;
+                margin-left: 110px;
+                margin-bottom: 0px;
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: 400;
+            }
+
+            .frm input[type=submit]:hover,
+            .btn:hover {
+                cursor: pointer;
+                background-color: #73b1eb5b;
+                color: aqua;
+            }
+        </style>
+        <nav class="navbar">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Featured</a></li>
-                <li><a href="#">Arrivals</a></li>
                 <li><a href="adminDashboard.php">Dashboard</a></li>
                 <li><a href="logout.php">Logout</a></li>
             </ul>
 
         </nav>
 
-        <form action="" method="post">
-            ISBN : <input type="text" name="isbn"><br>
+        <form class="frm" action="" method="post">
+            <label>ISBN : </label><input type="text" name="isbn"><br>
             <br>
-            Publisher Name : <input type="text" name="pname"><br>
+            <label>Publisher Name : </label><input type="text" name="pname"><br>
             <br>
-            Book Name : <input type="text" name="bname"><br>
+            <label>Book Name : </label><input type="text" name="bname"><br>
             <br>
-            Author Name : <input type="text" name="aname"><br>
+            <label>Author Name : </label><input type="text" name="aname"><br>
             <br>
-            Quantity : <input type="number" name="qty"><br>
+            <label>Quantity : </label><input type="number" name="qty"><br>
             <br>
-            Price : <input type="text" name="price" placeholder="0000.00"><br>
+            <label>Price : </label></label><input type="text" name="price" placeholder="0000.00"><br>
             <br>
-            Rating : <input type="text" name="rating" placeholder="00.00"><br>
+            <label>Rating : </label><input type="text" name="rating" placeholder="00.00"><br>
             <br>
-            Pages : <input type="number" name="pages"><br>
+            <label>Pages : </label><input type="number" name="pages"><br>
             <br>
-            Published Date : <input type="date" name="pdate"><br>
+            <label>Published Date : </label><input type="date" name="pdate"><br>
             <br>
-            Genre : <input type="checkbox" name="genre[]" value="genre1">Genre 1
-            <input type="checkbox" name="genre[]" value="genre2"> Genre 2
-            <input type="checkbox" name="genre[]" value="genre3"> Genre 3
+            <label>Genre : </label><input type="checkbox" name="genre[]" value="genre1"><span style="color: aqua;">Genre 1</span>
+            <input type="checkbox" name="genre[]" value="genre2"><span style="color: aqua;">Genre 2</span>
+            <input type="checkbox" name="genre[]" value="genre3"><span style="color: aqua;">Genre 3</span>
             <br><br>
             <br><br>
             <input type="submit" value="Submit">
@@ -62,6 +99,7 @@ if ($_SESSION["adlogged"]) {
                 <tr>
                     <th>Book Name</th>
                     <th>Quantity</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -73,13 +111,21 @@ if ($_SESSION["adlogged"]) {
                     <tr>
                         <td><?php echo $row["book_name"]; ?></td>
                         <td><?php echo $row["quantity"]; ?></td>
-
+                        <td>
+                            <form action="adBook.php" method="post">
+                                <input type="text" name="bid" value="<?php echo $row["bid"]; ?>" readonly style="display: none;">
+                                <input type="text" name="qty" value="<?php echo $row["quantity"]; ?>" readonly style="display: none;">
+                                <input class="btn" type="submit" name="adB" value="Add">
+                            </form>
+                        </td>
                     </tr>
                 <?php
                 }
                 ?>
             </tbody>
         </table>
+
+        <script src="../js/script2.js"></script>
     </body>
 
     </html>

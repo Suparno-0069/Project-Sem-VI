@@ -17,24 +17,59 @@ if ($_SESSION["adlogged"]) {
     </head>
 
     <body>
+        <style>
+            form {
+                align-items: center;
+                background-image: url("../image/logos2/tumblr_pu0ndkstCx1uzwgsuo1_400.gif");
+                background-size: cover;
+                margin-top: 100px;
+                margin-left: 200px;
+                margin-right: 600px;
+            }
+
+            form label {
+                font-size: large;
+                color: aqua;
+                padding: 7px;
+            }
+
+            form input[type=submit] {
+                background-color: rgb(255, 255, 255);
+                display: inline-block;
+                padding: 16px 30px;
+                border-radius: 30px;
+                border: 20px;
+                color: rgb(8, 20, 129);
+                width: 150px;
+                text-align: center;
+                margin-left: 110px;
+                margin-bottom: 0px;
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: 400;
+            }
+
+            form input[type=submit]:hover {
+                cursor: pointer;
+                background-color: #73b1eb5b;
+                color: aqua;
+            }
+        </style>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Featured</a></li>
-                <li><a href="#">Arrivals</a></li>
                 <li><a href="adminDashboard.php">Dashboard</a></li>
                 <li><a href="logout.php">Logout</a></li>
             </ul>
 
         </nav>
         <form action="" method="post">
-            Publisher Name : <input type="text" name="pname"><br>
+            <label> Name : </label><input type="text" name="pname"><br>
             <br>
-            Website : <input type="url" name="website"><br>
+            <label>Website : </label><input type="url" name="website"><br>
             <br>
-            Address : <textarea name="addr" cols="50" rows="3"></textarea><br>
+            <label>Address : </label><textarea name="addr" cols="50" rows="3"></textarea><br>
             <br>
-            Email : <input type="email" name="email">
+            <label>Email : </label><input type="email" name="email">
             <br><br>
             <br><br>
             <input type="submit" value="Submit">

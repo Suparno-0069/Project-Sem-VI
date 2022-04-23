@@ -24,10 +24,7 @@ if ($_SESSION["adlogged"]) {
     <body>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Featured</a></li>
                 <li><a href="adminDashboard.php">DashBoard</a></li>
-                <li><a href="requests.php">Requests</a></li>
                 <li><a href="logout.php">Logout</a></li>
             </ul>
 
@@ -40,6 +37,7 @@ if ($_SESSION["adlogged"]) {
                     <th>Publisher Name</th>
                     <th>User Name</th>
                     <th>Description</th>
+                    <th>Timestamp</th>
                 </tr>
             </thead>
             <tbody>
@@ -61,6 +59,7 @@ if ($_SESSION["adlogged"]) {
                         ?>
                         <td><?php echo $uname; ?></td>
                         <td><?php echo $row["descriptions"]; ?></td>
+                        <td><?php echo $row["rq_date_time"]; ?></td>
                     </tr>
                 <?php
                 } ?>

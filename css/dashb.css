@@ -4,7 +4,7 @@
     text-decoration: none;
 }
 
-body{
+body {
     background-image: url("../image/logos2/Untitled.png");
     background-size: cover;
 }
@@ -16,13 +16,20 @@ nav {
     border-top: 1px solid;
 }
 
+.actual {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
 nav ul {
     float: left;
     margin-left: 25px;
 }
 
 nav ul li {
-    
+
     display: inline-block;
     line-height: 20px;
     margin: 0px;
@@ -41,19 +48,21 @@ a:hover {
     transition: .5s;
 }
 
-table{
+table {
     align-items: center;
     background-image: url("../image/logos2/tumblr_pu0ndkstCx1uzwgsuo1_400.gif");
     background-size: cover;
     margin-top: 100px;
     /* margin-left: 550px; */
 }
-th{
+
+th {
     font-size: large;
     color: aqua;
-    padding: 7px; 
+    padding: 7px;
 }
-td{
+
+td {
     font-size: large;
     color: aqua;
     padding: 7px;

@@ -9,6 +9,7 @@ if ($_SESSION["logged"]) {
     $res = $conn->query($sql);
     $row = $res->fetch_assoc();
     if ($row) {
+        $_SESSION["uid"] = $row["usrid"];
 
 ?>
 
