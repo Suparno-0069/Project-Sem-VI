@@ -1,40 +1,44 @@
-body
-{  
-    margin: 0;  
-    padding: 0;  
-    background-color:#000000ba;
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000ba;
     background-image: url("../image/logos2/Untitled.png");
     background-size: cover;
     font-family: 'Arial';
 }
-#reg{
-    width: 382px;  
-    overflow: hidden;  
+
+#reg {
+    width: 382px;
+    overflow: hidden;
     margin: auto;
-    margin: 20 0 0 450px;  
-    padding: 70px;  
+    margin: 20 0 0 450px;
+    padding: 70px;
     background: #23463f;
     background-image: url("../image/logos2/tumblr_pu0ndkstCx1uzwgsuo1_400.gif");
     background-size: cover;
-    border-radius: 100px ;
+    border-radius: 100px;
 }
-h1{  
-    text-align: center;  
-    color: #b3e2e9;  
+
+h1 {
+    text-align: center;
+    color: #b3e2e9;
     margin: auto;
     padding: 20px;
     text-decoration: underline rgb(0, 0, 0);
     font-size: xxx-large;
     font-family: 'sans-serif';
 }
-label{  
-    color: #6a52f1;  
-    font-size: 17px;  
+
+label {
+    color: #6a52f1;
+    font-size: 17px;
 }
-.span{
+
+.span {
     text-decoration: darkblue;
     text-decoration: underline;
 }
+
 .checkmark {
     position: absolute;
     top: 0;
@@ -42,7 +46,27 @@ label{
     height: 25px;
     width: 25px;
     background-color: #eee;
-  }
-/* .submit{
+}
 
-} */
+
+.submit {
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    padding: 16px 30px;
+    border-radius: 30px;
+    border: 20px;
+    color: rgb(8, 20, 129);
+    width: 150px;
+    text-align: center;
+    margin-left: 110px;
+    margin-bottom: 0px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.submit:hover {
+    cursor: pointer;
+    background-color: #73b1eb5b;
+    color: aqua;
+}

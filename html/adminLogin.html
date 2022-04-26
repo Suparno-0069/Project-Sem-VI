@@ -5,14 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - User</title>
+    <title>Login - Admin</title>
     <link rel="stylesheet" type="text/css" href="../css/stylelogin.css">
     <!-- <link rel="stylesheet" type="text/css" href="../css/stylelogin1.css" > -->
 </head>
 
 <body>
-<<<<<<< HEAD
-=======
     <!-- nav-bar -->
     <style>
         * {
@@ -60,10 +58,9 @@
 
     </nav>
     <!-- end nav-bar -->
->>>>>>> ca2b62d0497763991bf2c6e74f3a681c6f0d25fe
     <h1>Login</h1><br>
     <div class="login">
-        <form id="login" method="post" action="../php/login.php">
+        <form id="login" method="post" action="../php/adminLogin.php">
             <label><b>User Name </b>
             </label>
             <input type="text" name="uname" id="uname" placeholder="Username">
@@ -72,14 +69,8 @@
             </label>
             <input type="Password" name="pass" id="pass" placeholder="Password">
             <br><br>
-            <input type="checkbox" id="check"><span> Remember me</span>
-            <br><br>
-            <a href="">Forgot Password</a>
-            <br><br>
-            <a href="register.html">Don't have an account? Register</a>
-            <br><br>
             <input type="reset" class="submit" value="Clear"> <br><br>
-            <button class="submit" type="submit"><b>Log In</b></button>
+            <button class="submit" type="submit" name="submitLog"><b>Log In</b></button>
 
 
         </form>
