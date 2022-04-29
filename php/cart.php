@@ -102,7 +102,7 @@ if ($_SESSION["logged"]) {
                                 <td><?php echo $rw["rating"]; ?></td>
                                 <td>
                                     <form action="delFrmCart.php" method="post">
-                                        <input type="text" name="cid" value="<?php echo $row["c_id"] ?>" readonly style="display: none;">
+                                        <input type="text" name="cid" value="<?php echo $row["c_id"]; ?>" readonly style="display: none;"> 
                                         <input type="text" name="qtyy" value="<?php echo $rw["quantity"] ?>" readonly style="display: none;">
                                         <input type="text" name="bid" value="<?php echo $rw["bid"] ?>" readonly style="display: none;">
                                         <input class="btn" type="submit" value="Remove" name="cartRem">
@@ -125,9 +125,10 @@ if ($_SESSION["logged"]) {
             $sqlC = "SELECT * FROM cart";
             $resC = $conn->query($sqlC);
             if ($resC->num_rows > 0) {
+                $rowC = $resC->fetch_assoc();
             ?>
 
-                <button class="btn" onclick="window.location = 'buyNow.php'">Buy Now</button>
+                <button class="btn" onclick="window.location = 't_buyNow.php'">Buy Now</button>
 
             <?php
             }
@@ -142,5 +143,5 @@ if ($_SESSION["logged"]) {
 <?php
 
 } else {
-    header("Location: ../html/login.php");
+    header("Location: ../html/login.html");
 }
