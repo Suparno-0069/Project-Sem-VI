@@ -59,6 +59,7 @@ if ($_SESSION["logged"]) {
         $mno = $_POST["mno"];
         $email = $_POST["email"];
         $addr = $_POST["addr"];
+        $uid = $_POST["uid"];
 
         $upSql = "UPDATE users
     SET fname='$fname', lname='$lname', dob='$dob', mob='$mno', email='$email', addresses='$addr'
