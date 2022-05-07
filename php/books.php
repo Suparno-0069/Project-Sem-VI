@@ -90,6 +90,7 @@ if ($_SESSION["adlogged"]) {
             <br><br>
             <br><br>
             <input type="submit" value="Submit">
+            <input type="reset" value="Clear" class="btn">
         </form>
 
         <hr>
@@ -99,6 +100,8 @@ if ($_SESSION["adlogged"]) {
                 <tr>
                     <th>Book Name</th>
                     <th>Quantity</th>
+                    <th></th>
+                    <th>Image</th>
                     <th></th>
                 </tr>
             </thead>
@@ -117,6 +120,37 @@ if ($_SESSION["adlogged"]) {
                                 <input type="text" name="qty" value="<?php echo $row["quantity"]; ?>" readonly style="display: none;">
                                 <input class="btn" type="submit" name="adB" value="Add">
                             </form>
+                        </td>
+                        <td>
+                            <?php
+                            if ($row["thumbnail"] == null) {
+                            ?>
+                                <form action="uploadImg.php" method="post" enctype="multipart/form-data">
+                                    <input type="text" name="bid" value="<?php echo $row["bid"]; ?>" readonly style="display: none;">
+                                    <input type="file" name="thumbnail">
+                                    <input type="submit" name="uploadImg" value="Upload" class="btn">
+                                </form>
+                            <?php
+                            } else {
+
+                            ?>
+                                <img src="../uploads/<?php echo $row["thumbnail"]; ?>" alt="??" height="70px">
+                            <?php
+                            }
+                            ?>
+
+                        </td>
+                        <td>
+                            <?php
+                            if ($row["thumbnail"] != null) {
+                            ?>
+                                <form action="removeImg.php" method="post">
+                                    <input type="text" name="bid" value="<?php echo $row["bid"]; ?>" readonly style="display: none;">
+                                    <input class="btn" type="submit" name="rmBT" value="Remove">
+                                </form>
+                            <?php
+                            }
+                            ?>
                         </td>
                     </tr>
                 <?php
