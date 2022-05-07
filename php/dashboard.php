@@ -29,7 +29,6 @@ if ($_SESSION["logged"]) {
             <nav>
                 <ul>
                     <li><a href="../html/index.html">Home</a></li>
-                    <li><a href="#">Featured</a></li>
                     <li><a href="updateProfile.php">Update Profile</a></li>
                     <li><a href="shop.php">Shop</a></li>
                     <li><a href="../html/requestPage.html">Request a Book</a></li>
