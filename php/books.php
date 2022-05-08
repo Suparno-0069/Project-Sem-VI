@@ -33,8 +33,7 @@ if ($_SESSION["adlogged"]) {
                 padding: 7px;
             }
 
-            .frm input[type=submit],
-            .btn {
+            .frm input[type=submit] {
                 background-color: rgb(255, 255, 255);
                 display: inline-block;
                 padding: 16px 30px;
@@ -50,7 +49,26 @@ if ($_SESSION["adlogged"]) {
                 font-weight: 400;
             }
 
-            .frm input[type=submit]:hover,
+            .frm input[type=submit]:hover {
+                cursor: pointer;
+                background-color: #73b1eb5b;
+                color: aqua;
+            }
+
+            .btn {
+                background-color: rgb(255, 255, 255);
+                display: inline-block;
+                padding: 16px 30px;
+                border-radius: 30px;
+                border: 20px;
+                color: rgb(8, 20, 129);
+                width: 150px;
+                text-align: center;
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: 400;
+            }
+
             .btn:hover {
                 cursor: pointer;
                 background-color: #73b1eb5b;
@@ -93,7 +111,7 @@ if ($_SESSION["adlogged"]) {
                 <br><br>
                 <br><br>
                 <input type="submit" value="Submit">
-                <input type="reset" value="Clear" class="btn">
+                <input type="reset" value="Clear" class="btn" style="margin-left: 110px;margin-bottom: 0px;">
             </form>
         </div>
 
