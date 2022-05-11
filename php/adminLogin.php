@@ -10,8 +10,9 @@ if ($_POST) {
 
 
     $sql = "SELECT * FROM admins WHERE usrname='$un' AND passwords='$pass'";
+    $res =$conn->query($sql);
 
-    if ($conn->query($sql)) {
+    if ($res->num_rows > 0) {
         // echo "Login success!";
         $_SESSION["adlogged"] = true;
         header("Location: adminDashboard.php");

@@ -35,8 +35,18 @@ if ($_SESSION["logged"]) {
         ?>
 
                 <div id="cod" class="cod">
-                    <p>Pay when the Book Arrives....</p>
-
+                    <form action="checkout.php" method="post">
+                        <h3 class="title">billing address</h3>
+                        <span>Full Name:</span>
+                        <input type="text" name="flname" placeholder="Myra deo">
+                        <span>Mob :</span>
+                        <input type="tel" name="mob" placeholder="0123456789">
+                        <span>Email :</span>
+                        <input type="email" name="email" placeholder="example@example.com">
+                        <span>Address:</span>
+                        <input type="text" name="addr" placeholder="room - street - locality">
+                        <input type="submit" name="chkOutCash" value="proceed to checkout" class="submit-btn">
+                    </form>
                 </div>
 
             <?php
@@ -44,66 +54,30 @@ if ($_SESSION["logged"]) {
             ?>
                 <div class="online" id="online">
                     <div class="container">
-                        <form action="">
-                            <div class="row">
-                                <div class="col">
-                                    <h3 class="title">billing address</h3>
-                                    <div class="inputbox">
-                                        <span>Full Name:</span>
-                                        <input type="text" placeholder="Myra deo">
-                                    </div>
-                                    <div class="inputbox">
-                                        <span>Email :</span>
-                                        <input type="email" placeholder="example@example.com">
-                                    </div>
-                                    <div class="inputbox">
-                                        <span>Address:</span>
-                                        <input type="text" placeholder="room - street - locality">
-                                    </div>
-                                    <div class="inputbox">
-                                        <span>City:</span>
-                                        <input type="text" placeholder="Mumbai">
-                                    </div>
-                                    <div class="flex">
-                                        <div class="inputbox">
-                                            <span>State:</span>
-                                            <input type="text" placeholder="India">
-                                        </div>
-                                        <div class="inputbox">
-                                            <span>Zip code:</span>
-                                            <input type="text" placeholder="123 456">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <h3 class="title">Payment</h3>
+                        <form action="checkout.php" method="post">
+                            <h3 class="title">billing address</h3>
+                            <span>Full Name:</span>
+                            <input type="text" name="flname" placeholder="Myra deo">
+                            <span>Mob :</span>
+                            <input type="tel" name="mob" placeholder="0123456789">
+                            <span>Email :</span>
+                            <input type="email" name="email" placeholder="example@example.com">
+                            <span>Address:</span>
+                            <input type="text" name="addr" placeholder="room - street - locality">
 
-                                    <div class="inputbox">
-                                        <span>Name on Card:</span>
-                                        <input type="text" placeholder="mr.Myra deo">
-                                    </div>
 
-                                    <div class="inputbox">
-                                        <span>Crdit Card No:</span>
-                                        <input type="number" placeholder="1111-2222-3333-4444">
-                                    </div>
-                                    <div class="inputbox">
-                                        <span>exp month:</span>
-                                        <input type="text" placeholder="january">
-                                    </div>
-                                    <div class="flex">
-                                        <div class="inputbox">
-                                            <span>exp year:</span>
-                                            <input type="number" placeholder="2022">
-                                        </div>
-                                        <div class="inputbox">
-                                            <span>CVV:</span>
-                                            <input type="text" placeholder="1234">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <input type="submit" value="proceed to checkout" class="submit-btn">
+                            <h3 class="title">Payment</h3>
+                            <span>Name on Card:</span>
+                            <input type="text" name="cname" placeholder="mr.Myra deo">
+                            <span>Card No:</span>
+                            <input type="number" name="cnum" placeholder="1111-2222-3333-4444">
+                            <span>exp month:</span>
+                            <input type="text" name="expm" placeholder="january">
+                            <span>exp year:</span>
+                            <input type="number" name="expy" placeholder="2022">
+                            <span>CVV:</span>
+                            <input type="text" name="cvv" placeholder="1234">
+                            <input type="submit" name="chkOutOnline" value="proceed to checkout" class="submit-btn">
                         </form>
                     </div>
                 </div>

@@ -31,6 +31,7 @@ if ($_SESSION["adlogged"]) {
                     <li><a href="publishers.php">Publishers</a></li>
                     <li><a href="books.php">Books</a></li>
                     <li><a href="requests.php">Requests</a></li>
+                    <li><a href="orders.php">Orders</a></li>
                     <li><a href="logout.php">Logout</a></li>
                 </ul>
 

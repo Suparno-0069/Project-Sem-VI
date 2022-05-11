@@ -122,13 +122,13 @@ if ($_SESSION["logged"]) {
 
         <section class="buyNow">
             <?php
-            $sqlC = "SELECT * FROM cart";
+            $sqlC = "SELECT * FROM cart WHERE usrid='$uid'";
             $resC = $conn->query($sqlC);
             if ($resC->num_rows > 0) {
-                $rowC = $resC->fetch_assoc();
+
             ?>
 
-                <button class="btn" onclick="window.location = 't_buyNow.php'">Buy Now</button>
+                <button onclick="window.location = 't_buyNow.php'" class="btn">Buy Now</button>
 
             <?php
             }

@@ -167,7 +167,7 @@ if ($_SESSION["adlogged"]) {
                                 ?>
                                     <form action="removeImg.php" method="post">
                                         <input type="text" name="bid" value="<?php echo $row["bid"]; ?>" readonly style="display: none;">
-                                        <input class="btn" type="submit" name="rmBT" value="Remove">
+                                        <input class="btn" type="submit" name="rmBT" value="Remove Image">
                                     </form>
                                 <?php
                                 }
