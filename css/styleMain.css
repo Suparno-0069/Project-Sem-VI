@@ -5,12 +5,12 @@
     list-style: none;
     box-sizing: border-box;
   }
-  /* body{
+  body{
     font-family: montserrat;
     background-image: url("/image/umberto-FewHpO4VC9Y-unsplash.jpg");
     background-color: black;
     background-size: cover;
-  } */
+  }
   nav{
     background:rgb(67, 175, 218);
     height: 70px;

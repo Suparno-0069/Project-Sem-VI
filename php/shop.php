@@ -87,15 +87,16 @@ if ($_SESSION["logged"]) {
             $sql = "SELECT * FROM books";
             $res = $conn->query($sql);
             while ($row = $res->fetch_assoc()) {
-                $b_id = $row["bid"];
-                $qtty = $row["quantity"];
+                // $b_id = $row["bid"];
+                // $qtty = $row["quantity"];
             ?>
 
                 <div class="cards">
                     <div class="card" style="width: 12%;">
-                        <img src="../image/book-1.png" alt="book 1" style="width:100%">
+                        <!-- <img src="../image/book-1.png" alt="book 1" style="width:100%"> -->
+                        <img src="../uploads/<?php echo $row["thumbnail"]; ?>" alt="book <?php echo $row["bid"]; ?>" style="width:100%">
                         <h3><?php echo $row["book_name"]; ?></h3>
-                        <p class="price"><?php echo $row["price"]; ?></p>
+                        <p class="price">₹<?php echo $row["price"]; ?></p>
                         <p>Author Name : <?php echo $row["author_name"]; ?></p>
                         <form action="view.php" method="post">
                             <input type="text" name="bid" value="<?php echo $row["bid"] ?>" readonly style="display: none;">
@@ -104,6 +105,7 @@ if ($_SESSION["logged"]) {
                         <form action="" method="post">
                             <input type="text" name="bid" value="<?php echo $row["bid"] ?>" readonly style="display: none;">
                             <input type="text" name="qtty" value="<?php echo $row["quantity"]; ?>" readonly style="display: none;">
+                            <input type="text" name="price" value="<?php echo $row["price"] ?>" readonly style="display: none;">
                             <input type="text" name="uid" value="<?php echo $uid ?>" readonly style="display: none;">
                             <p><button type="submit" name="cart">Add to Cart</button></p>
                         </form>
@@ -125,9 +127,11 @@ if ($_SESSION["logged"]) {
         $bid = $_POST["bid"];
         $uid = $_POST["uid"];
         $qtty = $_POST["qtty"];
+        $price = $_POST["price"];
 
-        $sqq = "INSERT INTO cart(usrid, bid)
-        VALUES('$uid', '$bid')";
+
+        $sqq = "INSERT INTO cart(usrid, bid, price)
+        VALUES('$uid', '$bid', '$price')";
 
         if ($conn->query($sqq)) {
             $qtty -= 1;

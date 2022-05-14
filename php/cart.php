@@ -77,7 +77,7 @@ if ($_SESSION["logged"]) {
                     $pname = $rr["p_name"];
             ?>
 
-                    <div><img src="../image/book-1.png" alt="book 1" style="width:10%"></div>
+                    <div><img src="../uploads/<?php echo $rw["thumbnail"]; ?>" alt="book <?php echo $rw["bid"]; ?>" style="width:10%"></div>
                     <table>
                         <thead>
                             <tr>
@@ -102,7 +102,7 @@ if ($_SESSION["logged"]) {
                                 <td><?php echo $rw["rating"]; ?></td>
                                 <td>
                                     <form action="delFrmCart.php" method="post">
-                                        <input type="text" name="cid" value="<?php echo $row["c_id"] ?>" readonly style="display: none;">
+                                        <input type="text" name="cid" value="<?php echo $row["c_id"]; ?>" readonly style="display: none;">
                                         <input type="text" name="qtyy" value="<?php echo $rw["quantity"] ?>" readonly style="display: none;">
                                         <input type="text" name="bid" value="<?php echo $rw["bid"] ?>" readonly style="display: none;">
                                         <input class="btn" type="submit" value="Remove" name="cartRem">
@@ -122,12 +122,13 @@ if ($_SESSION["logged"]) {
 
         <section class="buyNow">
             <?php
-            $sqlC = "SELECT * FROM cart";
+            $sqlC = "SELECT * FROM cart WHERE usrid='$uid'";
             $resC = $conn->query($sqlC);
             if ($resC->num_rows > 0) {
+
             ?>
 
-                <button class="btn" onclick="window.location = 'buyNow.php'">Buy Now</button>
+                <button onclick="window.location = 't_buyNow.php'" class="btn">Buy Now</button>
 
             <?php
             }
@@ -142,5 +143,5 @@ if ($_SESSION["logged"]) {
 <?php
 
 } else {
-    header("Location: ../html/login.php");
+    header("Location: ../html/login.html");
 }

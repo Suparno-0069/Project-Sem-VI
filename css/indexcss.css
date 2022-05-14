@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+/* HEADER CSS */
+
+@media screen {
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    height:450px;
+    background: #000000;
+    background-image: url("../image/logos3/main-bg-img.gif");
+    background-size:cover;
+    overflow: visible;
+}
+#uctxt{
+    height: 350px;
+    width: 800px;
+    margin-left: 100px;
+    text-align: right;
+}
+#logo{
+    width: 360px;
+    height: 300px;
+    text-align: left;
+    margin: 0px;
+    margin-left: 40px;
+    width: 650;
+}
+/* Navbar 1 */
+.nav1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(44, 191, 218);
+    height: 20px;
+    padding: 30px 2%;
+}
+.nav_links li{
+    margin-left: 40px;
+    display: inline-flex;
+    padding: 10px 20px;
+    background-color: aliceblue;
+    border-radius: 15px;
+}
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: rgb(10, 55, 85);
+}
+.nav_links li a:hover {
+    color: rgb(10, 37, 126);
+    padding: 5px;
+    cursor: pointer;
+}
+button{
+    padding: 10px 25px;
+    background-color: rgb(5, 7, 102);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.2s ease 0s;
+    color: aliceblue;
+}
+button:hover{
+    background-color: blue;
+    color:aliceblue;
+    padding: 25px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+
+
+/* Navbar 2 */
+.nav2{
+    position:fixed;
+    margin-bottom: 0;
+}
+/* Dropup Button */
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 0;
+  }
+  .dropbtn img{
+      height: 50px;
+      width: 50px;
+  }
+  
+  /* The container <div> - needed to position the dropup content */
+  .dropup {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropup content (Hidden by Default) */
+  .dropup-content {
+    display: none;
+    position: absolute;
+    bottom: 50px;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropup */
+  .dropup-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropup links on hover */
+  .dropup-content a:hover {background-color: #ddd}
+  
+  /* Show the dropup menu on hover */
+  .dropup:hover .dropup-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropup button when the dropup content is shown */
+  .dropup:hover .dropbtn {
+    background-color: #2980B9;
+  }

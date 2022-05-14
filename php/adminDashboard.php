@@ -19,7 +19,7 @@ if ($_SESSION["adlogged"]) {
             <meta charset="UTF-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>User profile</title>
+            <title>Admin profile</title>
             <link rel="stylesheet" href="../css/dashb.css">
         </head>
 
@@ -27,10 +27,11 @@ if ($_SESSION["adlogged"]) {
             <!-- nav-bar -->
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="users.php">Users</a></li>
                     <li><a href="publishers.php">Publishers</a></li>
                     <li><a href="books.php">Books</a></li>
                     <li><a href="requests.php">Requests</a></li>
+                    <li><a href="orders.php">Orders</a></li>
                     <li><a href="logout.php">Logout</a></li>
                 </ul>
 
@@ -49,7 +50,7 @@ if ($_SESSION["adlogged"]) {
                         <td><?php echo $row["admin_name"]; ?></td>
                         <td><?php echo $row["mob"] ?></td>
                         <td><?php echo $row["email"] ?></td>
-                        
+
                     </tr>
                 </tbody>
             </table>
