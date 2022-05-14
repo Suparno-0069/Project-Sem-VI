@@ -5,7 +5,7 @@ if ($_SESSION["adlogged"]) {
 
     // $un = $_SESSION["aun"];
 
-    $sql = "SELECT * FROM requests";
+    $sql = "SELECT * FROM requests ORDER BY rq_date_time DESC";
     $res = $conn->query($sql);
 
 ?>
@@ -22,6 +22,27 @@ if ($_SESSION["adlogged"]) {
     </head>
 
     <body>
+        <style>
+            .btn {
+                background-color: rgb(255, 255, 255);
+                display: inline-block;
+                padding: 16px 30px;
+                border-radius: 30px;
+                border: 20px;
+                color: rgb(8, 20, 129);
+                width: 150px;
+                text-align: center;
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: 400;
+            }
+
+            .btn:hover {
+                cursor: pointer;
+                background-color: #73b1eb5b;
+                color: aqua;
+            }
+        </style>
         <nav>
             <ul>
                 <li><a href="adminDashboard.php">DashBoard</a></li>
@@ -38,6 +59,7 @@ if ($_SESSION["adlogged"]) {
                     <th>User Name</th>
                     <th>Description</th>
                     <th>Timestamp</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -60,6 +82,12 @@ if ($_SESSION["adlogged"]) {
                         <td><?php echo $uname; ?></td>
                         <td><?php echo $row["descriptions"]; ?></td>
                         <td><?php echo $row["rq_date_time"]; ?></td>
+                        <td>
+                            <form action="" method="post">
+                                <input type="text" name="rid" value="<?php echo $row["rqid"]; ?>" readonly style="display: none;">
+                                <input type="submit" name="rqDel" value="Delete" class="btn">
+                            </form>
+                        </td>
                     </tr>
                 <?php
                 } ?>
@@ -71,6 +99,16 @@ if ($_SESSION["adlogged"]) {
 
 <?php
 
+    if (isset($_POST['rqDel'])) {
+        $rid = $_POST["rid"];
+
+        $D_sql = "DELETE FROM requests WHERE rqid='$rid'";
+        if ($conn->query($D_sql)) {
+            echo "<script>window.location = 'requests.php';</script>";
+        } else {
+            echo "Something went wrong" . $conn->error;
+        }
+    }
 } else {
     header("Location: ../html/adminLogin.html");
 }
