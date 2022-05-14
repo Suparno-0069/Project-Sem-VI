@@ -10,6 +10,7 @@ html,body{
   height: 100%;
   place-items: center;
   background-color: aqua;
+  background-image: url('istockphoto-1225495890-612x612.jpg');
 }
 .wrapper{
   width: 350px;
