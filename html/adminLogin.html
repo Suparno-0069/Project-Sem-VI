@@ -11,54 +11,29 @@
 </head>
 
 <body>
-    <!-- nav-bar -->
     <style>
-        * {
-            text-decoration: none;
+        #gotologin{
+            margin-top: 40px;
         }
-
-        nav {
-            background: rgb(67, 175, 218);
-            height: 70px;
-            width: 100%;
-            border-top: 1px solid;
-        }
-
-        nav ul {
-            float: left;
-            margin-left: 25px;
-        }
-
-        nav ul li {
-            display: inline-block;
-            line-height: 20px;
-            margin: 0px;
-        }
-
-        nav ul li a {
+        #clear{
+            padding: 5px;
+            margin: 0;
             color: black;
-            font-size: 17px;
-            padding: 7px 13px;
-            border-radius: 3px;
-            text-transform: uppercase;
         }
-
-        a:hover {
-            background: white;
-            transition: .5s;
+        #clear:hover{
+            background-color: aliceblue;
         }
     </style>
     <nav>
         <ul>
             <li><a href="../html/index.html">Home</a></li>
-            <li><a href="#">Featured</a></li>
             <li><a href="#">Arrivals</a></li>
             <li><a href="#">Reviews</a></li>
         </ul>
 
     </nav>
     <!-- end nav-bar -->
-    <h1>Login</h1><br>
+    <h1>Admin Login</h1><br>
     <div class="login">
         <form id="login" method="post" action="../php/adminLogin.php">
             <label><b>User Name </b>
@@ -69,10 +44,9 @@
             </label>
             <input type="Password" name="pass" id="pass" placeholder="Password">
             <br><br>
-            <input type="reset" class="submit" value="Clear"> <br><br>
+            <input id="clear" type="reset" class="submit" value="Clear"> <br><br>
             <button class="submit" type="submit" name="submitLog"><b>Log In</b></button>
-
-
+            <a id="gotologin" href="loginSelector.html">Go back to login selector page</a>
         </form>
     </div>
 </body>

@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000ba;
+    background-image: url("../image/logos3/cropped_block.png");
+    background-size:cover;
+    font-family: 'Arial';
+}
+
+/* Navbar */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(44, 191, 218);
+    height: 20px;
+    padding: 30px 2%;
+    overflow: hidden;
+}
+
+nav li {
+    margin-left: 40px;
+    display: inline-flex;
+    padding: 10px 20px;
+    background-color: aliceblue;
+    border-radius: 15px;
+}
+
+nav li a{
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: rgb(10, 55, 85);
+}
+
+a:hover {
+    color: rgb(10, 37, 126);
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+    color: #173575;
+    margin: auto;
+    padding: 20px;
+    text-decoration: underline rgb(0, 0, 0);
+    font-size: xxx-large;
+    font-family: 'sans-serif';
+}
+
+#select{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 382px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 100px;
+    padding: 70px;
+    background-color: rgba(60, 222, 243, 0.5);
+    color: #fff;
+    background-size: cover;
+    border-radius: 100px;
+    margin-bottom: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-shadow: 5px 10px #070708;
+}
+#select button{
+    padding: 30px;
+    background-color: rgb(170, 241, 214);
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+#select button:hover{
+    color: #070708;
+    padding: 20;
+    background-color: aquamarine;
+}
+
+p{
+    text-align: center;
+    color: red;
+}
