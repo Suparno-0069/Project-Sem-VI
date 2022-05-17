@@ -305,3 +305,9 @@ body{
     align-items: center;
     justify-content: center;
 }
+.box1{
+    /* margin-left: 10px; */
+    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
