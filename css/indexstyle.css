@@ -5,8 +5,8 @@
 
 body{
     background-color: #79d6e2;
-    background-image: url("../image/wp3004476-light-teal-background.jpg");
-    background-size: cover;
+    background-image: url("../image/logos3/banner-bg.jpg");
+    background-size: contain;
 }
 
 
@@ -33,13 +33,19 @@ body{
     width: 650;
 }
 /* Navbar */
-.nav{
+.navbar{
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: rgb(44, 191, 218);
     height: 20px;
     padding: 30px 2%;
+}
+.actual {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 .nav_links li{
     margin-left: 40px;
@@ -145,7 +151,7 @@ body{
  
   /*featured*/
 #featured{
-    background-color: rgb(189, 236, 226);
+    background-color: rgb(189, 236, 226, 0.5);
     border-radius: 10px;
     padding: 30px;
     margin: 10px 100px 20px;
@@ -169,7 +175,7 @@ body{
     font-family: 'Times New Roman', Times, serif;
 }
 .card{
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
     border: 2px;
     border-color: #000000;
     text-align: center;
@@ -188,7 +194,7 @@ body{
 
 #arrivals{
     display: grid;
-    background-color: rgb(189, 236, 226);
+    background-color: rgb(189, 236, 226, 0.3);
     border-radius: 10px;
     padding: 30px;
     margin: 10px 100px 20px;
@@ -223,7 +229,7 @@ body{
 .footer .box-container{
     color: #01d5f1;
     margin-bottom: 0px;
-    background-color: #030d3a;
+    background-color: #171c30;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap:2.5rem;

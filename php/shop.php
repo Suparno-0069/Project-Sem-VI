@@ -16,58 +16,10 @@ if ($_SESSION["logged"]) {
         <title>Shop - Urban Chapters</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <link rel="stylesheet" href="../css/dashb.css">
+        <link rel="stylesheet" href="../css/shopstyle.css">
     </head>
 
     <body>
-        <style>
-            section .cards .card {
-                box-shadow: 0 4px 8px 0 rgba(76, 140, 223, 0.2);
-                max-width: 300px;
-                margin: 0;
-                text-align: center;
-                font-family: arial;
-                float: left;
-                /* float: right; */
-
-            }
-
-            section .cards .card p {
-                margin: 8px;
-            }
-
-            section .cards .card h3 {
-                margin-bottom: 8px;
-            }
-
-            section .cards .card .price {
-                color: #f123f1;
-                font-size: 22px;
-            }
-
-            section .cards .card button {
-                border: none;
-                outline: 0;
-                padding: 12px;
-                color: white;
-                background-color: #000;
-                text-align: center;
-                cursor: pointer;
-                width: 100%;
-                font-size: 18px;
-            }
-
-            section .cards .card button:hover {
-                opacity: 0.7;
-            }
-
-            section .card {
-                align-items: right;
-            }
-
-            .view {
-                display: none;
-            }
-        </style>
         <nav>
             <ul>
                 <li><a href="dashboard.php">Home</a></li>
