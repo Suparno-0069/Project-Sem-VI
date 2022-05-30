@@ -42,6 +42,17 @@ if ($_SESSION["adlogged"]) {
                 background-color: #73b1eb5b;
                 color: aqua;
             }
+
+            .instraction,
+            h6,
+            .instraction a {
+                color: #ff0069;
+            }
+
+            .instraction a:hover {
+                cursor: pointer;
+                background: fixed;
+            }
         </style>
         <nav>
             <ul>
@@ -50,6 +61,14 @@ if ($_SESSION["adlogged"]) {
             </ul>
 
         </nav>
+
+        <div class="instraction">
+            <h6>How to resolve a request:</h6>
+
+            First Add the publisher in the <a href="publishers.php">Publishers Page</a>,<br>
+            Then Add The book in the <a href="books.php">Books Page</a>.
+        </div>
+
         <table>
             <thead>
                 <tr>

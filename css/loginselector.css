@@ -3,7 +3,7 @@ body {
     padding: 0;
     background-color: #000000ba;
     background-image: url("../image/logos3/cropped_block.png");
-    background-size:cover;
+    background-size: cover;
     font-family: 'Arial';
 }
 
@@ -27,7 +27,7 @@ nav li {
     border-radius: 15px;
 }
 
-nav li a{
+nav li a {
     transition: all 0.3s ease 0s;
     text-decoration: none;
     text-transform: uppercase;
@@ -51,7 +51,7 @@ h1 {
     font-family: 'sans-serif';
 }
 
-#select{
+#select {
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -69,20 +69,26 @@ h1 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     box-shadow: 5px 10px #070708;
 }
-#select button{
+
+#select button {
     padding: 30px;
     background-color: rgb(170, 241, 214);
     border-radius: 10px;
     font-size: 15px;
     font-weight: bold;
 }
-#select button:hover{
+
+#select button:hover {
     color: #070708;
     padding: 20;
     background-color: aquamarine;
 }
 
-p{
+p {
     text-align: center;
     color: red;
+}
+
+.btn:hover {
+    cursor: pointer;
 }

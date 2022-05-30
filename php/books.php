@@ -124,6 +124,7 @@ if ($_SESSION["adlogged"]) {
                         <th></th>
                         <th>Image</th>
                         <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -139,7 +140,8 @@ if ($_SESSION["adlogged"]) {
                                 <form action="adBook.php" method="post">
                                     <input type="text" name="bid" value="<?php echo $row["bid"]; ?>" readonly style="display: none;">
                                     <input type="text" name="qty" value="<?php echo $row["quantity"]; ?>" readonly style="display: none;">
-                                    <input class="btn" type="submit" name="adB" value="Add">
+                                    <input class="btn" type="submit" name="rmBB" value="-">
+                                    <input class="btn" type="submit" name="adB" value="+">
                                 </form>
                             </td>
                             <td>
@@ -172,6 +174,12 @@ if ($_SESSION["adlogged"]) {
                                 <?php
                                 }
                                 ?>
+                            </td>
+                            <td>
+                                <form action="rmvBook.php" method="post">
+                                    <input type="text" name="bid" value="<?php echo $row["bid"]; ?>" readonly style="display:none;">
+                                    <input type="submit" value="Delete" name="rmbBokk" class="btn">
+                                </form>
                             </td>
                         </tr>
                     <?php

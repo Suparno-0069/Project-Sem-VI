@@ -42,64 +42,146 @@ if ($_SESSION["adlogged"]) {
             <ul>
                 <li><a href="adminDashboard.php">Dashboard</a></li>
                 <li><a href="logout.php">Logout</a></li>
+                <li><button class="btn" id="order-btn">Offline Orders</button></li>
             </ul>
 
         </nav>
-        <table>
-            <thead>
-                <tr>
-                    <th>Order Id</th>
-                    <th>User Name</th>
-                    <th>Odered Book</th>
-                    <th>Book Price</th>
-                    <th>Reciver's Name</th>
-                    <th>Reciver's Address</th>
-                    <th>Reciver's Mob</th>
-                    <th>Reciver's Email</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                $sql = "SELECT * FROM orders";
-                $res = $conn->query($sql);
-                while ($row = $res->fetch_assoc()) {
-                    $Obid = $row["bid"];
-                    $Ouid = $row["usrid"];
 
-                    $B_sql = "SELECT book_name FROM books WHERE bid='$Obid'";
-                    $B_res = $conn->query($B_sql);
-                    $B_row = $B_res->fetch_assoc();
-                    $bname = $B_row["book_name"];
-
-                    $U_sql = "SELECT fname, lname FROM users WHERE usrid='$Ouid'";
-                    $U_res = $conn->query($U_sql);
-                    $U_row = $U_res->fetch_assoc();
-                    $uname = $U_row["fname"] . $U_row["lname"];
-                ?>
+        <div id="online-orders">
+            <table>
+                <thead>
                     <tr>
-                        <td><?php echo $row["odrid"]; ?></td>
-                        <td><?php echo $uname; ?></td>
-                        <td><?php echo $bname ?></td>
-                        <td><?php echo $row["price"]; ?></td>
-                        <td><?php echo $row["full_name"]; ?></td>
-                        <td><?php echo $row["order_address"]; ?></td>
-                        <td><?php echo $row["mob"]; ?></td>
-                        <td><?php echo $row["email"]; ?></td>
-                        <td>
-                            <form action="" method="post">
-                                <input type="text" name="oid" value="<?php echo $row["odrid"]; ?>" readonly style="display: none;">
-                                <input type="submit" name="rmOrd" value="Delete" class="btn">
-                            </form>
-                        </td>
+                        <th>Order Id</th>
+                        <th>User Name</th>
+                        <th>Odered Book</th>
+                        <th>Book Price</th>
+                        <th>Reciver's Name</th>
+                        <th>Reciver's Address</th>
+                        <th>Reciver's Mob</th>
+                        <th>Reciver's Email</th>
+                        <th>Paymet Screenshot</th>
+                        <th></th>
                     </tr>
-                <?php
-                }
-                ?>
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    <?php
+                    $sql = "SELECT * FROM orders WHERE p_type='online'";
+                    $res = $conn->query($sql);
+                    while ($row = $res->fetch_assoc()) {
+                        $Obid = $row["bid"];
+                        $Ouid = $row["usrid"];
+
+                        $B_sql = "SELECT book_name FROM books WHERE bid='$Obid'";
+                        $B_res = $conn->query($B_sql);
+                        $B_row = $B_res->fetch_assoc();
+                        $bname = $B_row["book_name"];
+
+                        $U_sql = "SELECT fname, lname FROM users WHERE usrid='$Ouid'";
+                        $U_res = $conn->query($U_sql);
+                        $U_row = $U_res->fetch_assoc();
+                        $uname = $U_row["fname"] . $U_row["lname"];
+                    ?>
+                        <tr>
+                            <td><?php echo $row["odrid"]; ?></td>
+                            <td><?php echo $uname; ?></td>
+                            <td><?php echo $bname ?></td>
+                            <td><?php echo $row["price"]; ?></td>
+                            <td><?php echo $row["full_name"]; ?></td>
+                            <td><?php echo $row["order_address"]; ?></td>
+                            <td><?php echo $row["mob"]; ?></td>
+                            <td><?php echo $row["email"]; ?></td>
+                            <td><img src="../uploads/payments/<?php echo $row["screenshots"]; ?>" alt="??" height="100px"></td>
+                            <td>
+                                <form action="" method="post">
+                                    <input type="text" name="oid" value="<?php echo $row["odrid"]; ?>" readonly style="display: none;">
+                                    <input type="submit" name="rmOrd" value="Delete" class="btn">
+                                </form>
+                            </td>
+                        </tr>
+                    <?php
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="offline-orders" style="display:none;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order Id</th>
+                        <th>User Name</th>
+                        <th>Odered Book</th>
+                        <th>Book Price</th>
+                        <th>Reciver's Name</th>
+                        <th>Reciver's Address</th>
+                        <th>Reciver's Mob</th>
+                        <th>Reciver's Email</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    $sql = "SELECT * FROM orders WHERE p_type='offline'";
+                    $res = $conn->query($sql);
+                    while ($row = $res->fetch_assoc()) {
+                        $Obid = $row["bid"];
+                        $Ouid = $row["usrid"];
+
+                        $B_sql = "SELECT book_name FROM books WHERE bid='$Obid'";
+                        $B_res = $conn->query($B_sql);
+                        $B_row = $B_res->fetch_assoc();
+                        $bname = $B_row["book_name"];
+
+                        $U_sql = "SELECT fname, lname FROM users WHERE usrid='$Ouid'";
+                        $U_res = $conn->query($U_sql);
+                        $U_row = $U_res->fetch_assoc();
+                        $uname = $U_row["fname"] . $U_row["lname"];
+                    ?>
+                        <tr>
+                            <td><?php echo $row["odrid"]; ?></td>
+                            <td><?php echo $uname; ?></td>
+                            <td><?php echo $bname ?></td>
+                            <td><?php echo $row["price"]; ?></td>
+                            <td><?php echo $row["full_name"]; ?></td>
+                            <td><?php echo $row["order_address"]; ?></td>
+                            <td><?php echo $row["mob"]; ?></td>
+                            <td><?php echo $row["email"]; ?></td>
+                            <td>
+                                <form action="" method="post">
+                                    <input type="text" name="oid" value="<?php echo $row["odrid"]; ?>" readonly style="display: none;">
+                                    <input type="submit" name="rmOrd" value="Delete" class="btn">
+                                </form>
+                            </td>
+                        </tr>
+                    <?php
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </div>
 
         <script src="../js/script2.js"></script>
+        <script>
+            const onOrd = document.getElementById('online-orders');
+            const offOrd = document.getElementById('offline-orders');
+
+            const btn = document.getElementById('order-btn');
+
+            btn.addEventListener('click', function handleClick() {
+                if (offOrd.style.display === 'none') {
+                    offOrd.style.display = 'block';
+                    onOrd.style.display = 'none';
+
+                    btn.textContent = 'Online Orders';
+                } else {
+                    offOrd.style.display = 'none';
+                    onOrd.style.display = 'block';
+
+                    btn.textContent = 'Offline Orders';
+                }
+            })
+        </script>
     </body>
 
     </html>
