@@ -26,8 +26,9 @@ if ($_SESSION["logged"]) {
                 <li><a href="#">Featured</a></li>
                 <li><a href="#">Arrivals</a></li>
                 <li><a href="../html/requestPage.html">Request a Book</a></li>
-                <li><a href="logout.php">Logout</a></li>
                 <li><a href="cart.php"><i class="fas fa-shopping-cart"></i></a></li>
+                <li><a href="myOrders.php">My Orders</a></li>
+                <li><a href="logout.php">Logout</a></li>
             </ul>
 
         </nav>
