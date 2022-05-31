@@ -26,7 +26,7 @@ if ($_SESSION["adlogged"]) {
 
                 if (in_array($img_ex_lc, $allowed_exs)) {
                     $new_img_name = uniqid("IMG-", true) . '.' . $img_ex_lc;
-                    $img_upload_path = '../uploads/' . $new_img_name;
+                    $img_upload_path = '../uploads/thumbnails/' . $new_img_name;
                     move_uploaded_file($tmp_name, $img_upload_path);
 
                     $sql = "UPDATE books

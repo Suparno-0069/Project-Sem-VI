@@ -16,6 +16,18 @@ if ($_POST) {
     $cn = $_POST['country'];
     $un = $_POST['uname'];
     $pass = $_POST['pass'];
+    $defO = "default.jpg";
+    $defM = "default_male.jpg";
+    $defF = "default_female.jpg";
+
+    $pImg = "";
+    if ($gen == "M") {
+        $pImg = $defM;
+    } elseif ($gen == "F") {
+        $pImg = $defF;
+    } elseif ($gen == "O") {
+        $pImg = $defO;
+    }
 
     $sql = "SELECT * FROM users WHERE uname='$un'";
     $res = $conn->query($sql);
@@ -25,8 +37,8 @@ if ($_POST) {
         window.location = '../html/register.html'</script>";
         // header("Location: ../html/register.html");
     } else {
-        $sql = "INSERT INTO users(fname, lname, gender, dob, mob, email, addresses, country, uname, passwords)
-VALUE('$fn', '$ln', '$gen', '$dob', '$mob', '$em', '$addr', '$cn', '$un', '$pass')";
+        $sql = "INSERT INTO users(fname, lname, gender, dob, mob, email, addresses, country, uname, passwords, profile_pic)
+VALUE('$fn', '$ln', '$gen', '$dob', '$mob', '$em', '$addr', '$cn', '$un', '$pass', '$pImg')";
 
         if ($conn->query($sql)) {
             header("Location: ../html/login.html");

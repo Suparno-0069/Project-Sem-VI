@@ -157,7 +157,7 @@ if ($_SESSION["adlogged"]) {
                                 } else {
 
                                 ?>
-                                    <img src="../uploads/<?php echo $row["thumbnail"]; ?>" alt="??" height="70px">
+                                    <img src="../uploads/thumbnails/<?php echo $row["thumbnail"]; ?>" alt="??" height="70px">
                                 <?php
                                 }
                                 ?>

@@ -87,13 +87,20 @@ if ($_SESSION["logged"]) {
     </html>
 <?php
 
-if($_POST){
-    $uname = $_POST["uname"];
-    $desc = $_POST["desc"];
+    if ($_POST) {
+        $uname = $_POST["uname"];
+        $desc = $_POST["desc"];
 
-    $sql_R = "INSERT INTO reviews(uname)";
-}
+        $sql_R = "INSERT INTO reviews(uname, descriptions)
+        VALUES('$uname', '$desc')";
 
+        if ($conn->query($sql_R)) {
+            echo "<script> alert('Thanks for your valuable review');
+        window.location = 'dashboard.php'; </script>";
+        } else {
+            echo "Something went wrong!! " . $conn->error;
+        }
+    }
 } else {
     header("Location: ../html/login.html");
 }

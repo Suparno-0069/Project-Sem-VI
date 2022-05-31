@@ -64,12 +64,12 @@ if ($_SESSION["logged"]) {
             </ul>
 
         </nav>
+        <?php
+        $sql = "SELECT * FROM users WHERE uname='$un'";
+        $res = $conn->query($sql);
+        $row = $res->fetch_assoc();
+        ?>
         <form class="frm" method="post" action="">
-            <?php
-            $sql = "SELECT * FROM users WHERE uname='$un'";
-            $res = $conn->query($sql);
-            $row = $res->fetch_assoc();
-            ?>
             <label><b>First Name</b></label>
             <br>
             <input type="text" name="fname" id="fname" value="<?php echo $row["fname"]; ?>" style="width: 300px;">
@@ -95,6 +95,12 @@ if ($_SESSION["logged"]) {
             <input type="submit" name="submitUpdate" value="Upadate">
             <input type="reset" class="btn" value="Reset">
         </form>
+
+        <form class="frm" action="" method="post" enctype="multipart/form-data">
+            <input type="file" name="profilePic">
+            <input type="text" name="uid" value="<?php echo $row["usrid"] ?>" readonly style="display: none;">
+            <input type="submit" value="Upload" name="updateImg">
+        </form>
     </body>
 
     </html>
@@ -117,6 +123,47 @@ if ($_SESSION["logged"]) {
             header("Location: updateProfile.php");
         } else {
             echo "Something went wrong!" . $conn->error;
+        }
+    } elseif (isset($_POST['updateImg'])) {
+        if (isset($_FILES['profilePic'])) {
+            $uid = $_POST["uid"];
+
+            $img_name = $_FILES['profilePic']['name'];
+            $img_size = $_FILES['profilePic']['size'];
+            $tmp_name = $_FILES['profilePic']['tmp_name'];
+            $error = $_FILES['profilePic']['error'];
+
+            if ($error === 0) {
+                if ($img_size > 1000000) {
+                    echo "<script>alert('Sorry, your file is too large');
+                    window.location = 'updateProfile.php';</script>";
+                } else {
+                    $img_ex = pathinfo($img_name, PATHINFO_EXTENSION);
+                    $img_ex_lc = strtolower($img_ex);
+
+                    $allowed_exs = array("jpg", "jpeg", "png");
+
+                    if (in_array($img_ex_lc, $allowed_exs)) {
+                        $new_img_name = uniqid("PIC-", true) . '.' . $img_ex_lc;
+                        $img_upload_path = '../uploads/profilePics/' . $new_img_name;
+                        move_uploaded_file($tmp_name, $img_upload_path);
+
+                        $upISql = "UPDATE users
+                        SET profile_pic='$new_img_name'
+                        WHERE usrid='$uid'";
+
+                        if ($conn->query($upISql)) {
+                            echo "<script>alert('Success!! File updated');
+                    window.location = 'updateProfile.php';</script>";
+                        } else {
+                            echo "Something went wrong!" . $conn->error;
+                        }
+                    } else {
+                        echo "<script>alert('Sorry, You can't upload files of this type');
+                    window.location = 'updateProfile.php';</script>";
+                    }
+                }
+            }
         }
     }
 } else {
