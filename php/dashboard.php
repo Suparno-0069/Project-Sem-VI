@@ -35,7 +35,19 @@ if ($_SESSION["logged"]) {
                     <li><a href="../html/requestPage.html">Request a Book</a></li>
                     <li><a href="cart.php"><i class="fas fa-shopping-cart"></i></a></li>
                     <li><a href="myOrders.php">My Orders</a></li>
-                    <li><a href="reviews.php">Review</a></li>
+                    <?php
+                    $RCsql = "SELECT * FROM reviews WHERE uname='$un'";
+                    $RCres = $conn->query($RCsql);
+                    if ($RCres->num_rows > 0) {
+                    ?>
+                        <li></li>
+                    <?php
+                    } else {
+                    ?>
+                        <li><a href="reviews.php">Review</a></li>
+                    <?php
+                    }
+                    ?>
                     <li><a href="logout.php">Logout</a></li>
                 </ul>
 

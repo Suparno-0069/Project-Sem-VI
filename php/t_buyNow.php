@@ -71,7 +71,7 @@ if ($_SESSION["logged"]) {
                             <h3 class="title">Payment</h3>
                             <span>ss of payment:</span>
                             <input type="file" name="myFile" onchange="myFnc()">
-                            <input type="submit" name="chkOutOnline" value="proceed to checkout" class="submit-btn" id="chkOutOnline" style="display:none;">
+                            <input type="submit" name="chkOutOnline" value="proceed to checkout" class="submit-btn" id="chkOutOnline" disabled>
                         </form>
                     </div>
                 </div>
@@ -85,7 +85,7 @@ if ($_SESSION["logged"]) {
                 const btn = document.getElementById('chkOutOnline');
 
                 if (val != null) {
-                    btn.style.display = "block";
+                    btn.disabled = false;
                 }
             }
         </script>
