@@ -17,6 +17,7 @@ if ($_SESSION["logged"]) {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <link rel="stylesheet" href="../css/dashb.css">
         <link rel="stylesheet" href="../css/shopstyle.css">
+        <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
     </head>
 
     <body>
@@ -43,7 +44,7 @@ if ($_SESSION["logged"]) {
             ?>
 
                 <div class="cards">
-                    <div class="card" style="width: 12%;">
+                    <div class="card">
                         <!-- <img src="../image/book-1.png" alt="book 1" style="width:100%"> -->
                         <img src="../uploads/thumbnails/<?php echo $row["thumbnail"]; ?>" alt="book <?php echo $row["bid"]; ?>" style="width:100%">
                         <h3><?php echo $row["book_name"]; ?></h3>

@@ -137,7 +137,7 @@ if ($_SESSION["logged"]) {
             if ($resC->num_rows > 0) {
 
             ?>
-                <button onclick="window.location = 't_buyNow.php'" class="btn">Buy Now</button>
+                <button onclick="window.location = 'buyNow.php'" class="btn">Buy Now</button>
             <?php
             } else {
             ?>

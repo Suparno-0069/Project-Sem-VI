@@ -3,6 +3,7 @@ session_start();
 include "dbconn.php";
 
 if ($_SESSION["logged"]) {
+    $uid = $_SESSION["uid"];
 
 ?>
 
@@ -25,6 +26,8 @@ if ($_SESSION["logged"]) {
             <input type="radio" name="payMethod" id="online" value="online"><br><br>
             <input type="submit" name="paySub" value="Submit">
         </form>
+        <a href="cart.php"><button>Back to cart</button></a>
+
         <?php
         if (isset($_POST['paySub'])) {
             $payMethod = $_POST["payMethod"];
@@ -32,7 +35,19 @@ if ($_SESSION["logged"]) {
         ?>
 
                 <div id="cod" class="cod">
-                    <p>Pay when the Book Arrives....</p>
+                    <form action="checkout.php" method="post">
+                        <h3 class="title">billing address</h3>
+                        <span>Full Name:</span>
+                        <input type="text" name="flname" placeholder="Myra deo">
+                        <span>Mob :</span>
+                        <input type="tel" name="mob" placeholder="0123456789">
+                        <span>Email :</span>
+                        <input type="email" name="email" placeholder="example@example.com">
+                        <span>Address:</span>
+                        <input type="text" name="addr" placeholder="room - street - locality">
+                        <input type="text" name="ptype" value="offline" readonly>
+                        <input type="submit" name="chkOutCash" value="proceed to checkout" class="submit-btn">
+                    </form>
                 </div>
 
             <?php
@@ -40,66 +55,23 @@ if ($_SESSION["logged"]) {
             ?>
                 <div class="online" id="online">
                     <div class="container">
-                        <form action="">
-                            <div class="row">
-                                <div class="col">
-                                    <h3 class="title">billing address</h3>
-                                    <div class="inputbox">
-                                        <span>Full Name:</span>
-                                        <input type="text" placeholder="Myra deo">
-                                    </div>
-                                    <div class="inputbox">
-                                        <span>Email :</span>
-                                        <input type="email" placeholder="example@example.com">
-                                    </div>
-                                    <div class="inputbox">
-                                        <span>Address:</span>
-                                        <input type="text" placeholder="room - street - locality">
-                                    </div>
-                                    <div class="inputbox">
-                                        <span>City:</span>
-                                        <input type="text" placeholder="Mumbai">
-                                    </div>
-                                    <div class="flex">
-                                        <div class="inputbox">
-                                            <span>State:</span>
-                                            <input type="text" placeholder="India">
-                                        </div>
-                                        <div class="inputbox">
-                                            <span>Zip code:</span>
-                                            <input type="text" placeholder="123 456">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <h3 class="title">Payment</h3>
+                        <form action="checkout.php" method="post" enctype="multipart/form-data">
+                            <h3 class="title">billing address</h3>
+                            <span>Full Name:</span>
+                            <input type="text" name="flname" placeholder="Myra deo">
+                            <span>Mob :</span>
+                            <input type="tel" name="mob" placeholder="0123456789">
+                            <span>Email :</span>
+                            <input type="email" name="email" placeholder="example@example.com">
+                            <span>Address:</span>
+                            <input type="text" name="addr" placeholder="room - street - locality">
+                            <input type="text" name="ptype" value="online" readonly>
 
-                                    <div class="inputbox">
-                                        <span>Name on Card:</span>
-                                        <input type="text" placeholder="mr.Myra deo">
-                                    </div>
 
-                                    <div class="inputbox">
-                                        <span>Crdit Card No:</span>
-                                        <input type="number" placeholder="1111-2222-3333-4444">
-                                    </div>
-                                    <div class="inputbox">
-                                        <span>exp month:</span>
-                                        <input type="text" placeholder="january">
-                                    </div>
-                                    <div class="flex">
-                                        <div class="inputbox">
-                                            <span>exp year:</span>
-                                            <input type="number" placeholder="2022">
-                                        </div>
-                                        <div class="inputbox">
-                                            <span>CVV:</span>
-                                            <input type="text" placeholder="1234">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <input type="submit" value="proceed to checkout" class="submit-btn">
+                            <h3 class="title">Payment</h3>
+                            <span>ss of payment:</span>
+                            <input type="file" name="myFile" onchange="myFnc()">
+                            <input type="submit" name="chkOutOnline" value="proceed to checkout" class="submit-btn" id="chkOutOnline" disabled>
                         </form>
                     </div>
                 </div>
@@ -107,6 +79,16 @@ if ($_SESSION["logged"]) {
             }
         }
         ?>
+        <script>
+            function myFnc() {
+                const val = document.querySelector('input').value;
+                const btn = document.getElementById('chkOutOnline');
+
+                if (val != null) {
+                    btn.disabled = false;
+                }
+            }
+        </script>
     </body>
 
     </html>
