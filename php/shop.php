@@ -26,8 +26,9 @@ if ($_SESSION["logged"]) {
                 <li><a href="#">Featured</a></li>
                 <li><a href="#">Arrivals</a></li>
                 <li><a href="../html/requestPage.html">Request a Book</a></li>
-                <li><a href="logout.php">Logout</a></li>
                 <li><a href="cart.php"><i class="fas fa-shopping-cart"></i></a></li>
+                <li><a href="myOrders.php">My Orders</a></li>
+                <li><a href="logout.php">Logout</a></li>
             </ul>
 
         </nav>
@@ -44,7 +45,7 @@ if ($_SESSION["logged"]) {
                 <div class="cards">
                     <div class="card" style="width: 12%;">
                         <!-- <img src="../image/book-1.png" alt="book 1" style="width:100%"> -->
-                        <img src="../uploads/<?php echo $row["thumbnail"]; ?>" alt="book <?php echo $row["bid"]; ?>" style="width:100%">
+                        <img src="../uploads/thumbnails/<?php echo $row["thumbnail"]; ?>" alt="book <?php echo $row["bid"]; ?>" style="width:100%">
                         <h3><?php echo $row["book_name"]; ?></h3>
                         <p class="price">₹<?php echo $row["price"]; ?></p>
                         <p>Author Name : <?php echo $row["author_name"]; ?></p>

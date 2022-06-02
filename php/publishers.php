@@ -18,7 +18,7 @@ if ($_SESSION["adlogged"]) {
 
     <body>
         <style>
-            form {
+            .frmm {
                 align-items: center;
                 background-image: url("../image/logos2/tumblr_pu0ndkstCx1uzwgsuo1_400.gif");
                 background-size: cover;
@@ -27,13 +27,14 @@ if ($_SESSION["adlogged"]) {
                 margin-right: 600px;
             }
 
-            form label {
+            .frmm label {
                 font-size: large;
                 color: aqua;
                 padding: 7px;
             }
 
-            form input[type=submit] {
+            .frmm input[type=submit],
+            .btn {
                 background-color: rgb(255, 255, 255);
                 display: inline-block;
                 padding: 16px 30px;
@@ -49,7 +50,8 @@ if ($_SESSION["adlogged"]) {
                 font-weight: 400;
             }
 
-            form input[type=submit]:hover {
+            .frmm input[type=submit]:hover,
+            .btn:hover {
                 cursor: pointer;
                 background-color: #73b1eb5b;
                 color: aqua;
@@ -62,7 +64,7 @@ if ($_SESSION["adlogged"]) {
             </ul>
 
         </nav>
-        <form action="" method="post">
+        <form class="frmm" action="" method="post">
             <label> Name : </label><input type="text" name="pname"><br>
             <br>
             <label>Website : </label><input type="url" name="website"><br>
@@ -84,6 +86,7 @@ if ($_SESSION["adlogged"]) {
                     <th>Website </th>
                     <th>Address</th>
                     <th>Email</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -97,6 +100,12 @@ if ($_SESSION["adlogged"]) {
                         <td><?php echo $row["website"]; ?></td>
                         <td><?php echo $row["addresses"]; ?></td>
                         <td><?php echo $row["email"]; ?></td>
+                        <td>
+                            <form action="publisherDel.php" method="post">
+                                <input type="text" name="pid" value="<?php echo $row["pid"] ?>" readonly style="display:none;">
+                                <input type="submit" value="Delete" class="btn" name="pubDell">
+                            </form>
+                        </td>
                     </tr>
                 <?php
                 }

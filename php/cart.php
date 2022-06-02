@@ -48,6 +48,16 @@ if ($_SESSION["logged"]) {
                 background-color: #73b1eb5b;
                 color: aqua;
             }
+
+            .instraction,
+            .instraction a {
+                color: #ff0069;
+            }
+
+            .instraction a:hover {
+                cursor: pointer;
+                background: fixed;
+            }
         </style>
         <nav class="navbar">
             <ul>
@@ -127,9 +137,11 @@ if ($_SESSION["logged"]) {
             if ($resC->num_rows > 0) {
 
             ?>
-
                 <button onclick="window.location = 't_buyNow.php'" class="btn">Buy Now</button>
-
+            <?php
+            } else {
+            ?>
+                <div class="instraction">There is nothing in the cart, <a href="shop.php">Add something to cart.</a></div>
             <?php
             }
             ?>
