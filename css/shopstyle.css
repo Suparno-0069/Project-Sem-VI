@@ -1,8 +1,9 @@
 body{
-    background-image: url("../image/logos3/images.jpg");
+    background-image: url("../image/logos3/banner-bg.jpg");
+    background-size: cover;
 }
 section{
-    background-color: rgb(189, 236, 226);
+    background-color: rgb(0, 0, 0);
     border-radius: 10px;
     padding: 30px;
     margin: 10px 100px 20px;
@@ -11,7 +12,7 @@ section .cards{
     margin: 0 auto;
     max-width: 1000px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     font-family: 'Times New Roman', Times, serif;
 }
@@ -23,7 +24,6 @@ section .cards .card {
     font-family: arial;
     float: left;
     /* float: right; */
-
 }
 
 section .cards .card p {
@@ -42,7 +42,6 @@ section .cards .card .price {
 section .cards .card button {
     border: none;
     outline: 0;
-    padding: 12px;
     color: white;
     background-color: #000;
     text-align: center;
@@ -61,4 +60,43 @@ section .card {
 
 .view {
     display: none;
+}
+
+#featured{
+    background-color: rgb(189, 236, 226, 0.5);
+    border-radius: 10px;
+    padding: 30px;
+    margin: 10px 100px 20px;
+}
+#featured h2{
+    text-transform:uppercase;
+    text-decoration: underline;
+    text-decoration: dotted;
+    color: rgb(6, 66, 119);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: auto;
+}
+
+.cards{
+    
+    margin: 0 auto;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.card{
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    border: 2px;
+    border-color: #000000;
+    text-align: center;
+}
+.cards .card img{
+    width: 100%;
+    display: block;
+}
+
+#featured{
+    display: grid;
 }

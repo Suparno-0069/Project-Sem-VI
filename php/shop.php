@@ -32,9 +32,7 @@ if ($_SESSION["logged"]) {
 
         </nav>
 
-        <p style="color: #f123f1;">the books to be shopped.!!!</p>
-
-        <section>
+        <section id="featured">
             <?php
             $sql = "SELECT * FROM books";
             $res = $conn->query($sql);
