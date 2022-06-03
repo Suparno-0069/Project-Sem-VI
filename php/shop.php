@@ -35,15 +35,15 @@ if ($_SESSION["logged"]) {
         </nav>
 
         <section id="featured">
-            <?php
-            $sql = "SELECT * FROM books";
-            $res = $conn->query($sql);
-            while ($row = $res->fetch_assoc()) {
-                // $b_id = $row["bid"];
-                // $qtty = $row["quantity"];
-            ?>
+            <div class="cards">
+                <?php
+                $sql = "SELECT * FROM books";
+                $res = $conn->query($sql);
+                while ($row = $res->fetch_assoc()) {
+                    // $b_id = $row["bid"];
+                    // $qtty = $row["quantity"];
+                ?>
 
-                <div class="cards">
                     <div class="card">
                         <!-- <img src="../image/book-1.png" alt="book 1" style="width:100%"> -->
                         <img src="../uploads/thumbnails/<?php echo $row["thumbnail"]; ?>" alt="book <?php echo $row["bid"]; ?>" style="width:100%">
@@ -63,10 +63,10 @@ if ($_SESSION["logged"]) {
                         </form>
                         <!-- <iframe src="view.php" class="view" frameborder="0"></iframe> -->
                     </div>
-                </div>
-            <?php
-            }
-            ?>
+                <?php
+                }
+                ?>
+            </div>
         </section>
 
     </body>
