@@ -21,11 +21,12 @@ if ($_SESSION["logged"]) {
 
         <nav>
             <ul>
-                <li><a href="dashboard.php">Back to Dash</a></li>
+                <li><a href="dashboard.php">My Profile</a></li>
                 <li><a href="shop.php">Shop</a></li>
                 <li><a href="../html/requestPage.html">Request a Book</a></li>
                 <li><a href="cart.php"><i class="fas fa-shopping-cart"></i></a></li>
-                <li><a href="logout.php">Logout</a></li>
+                <a id="logout" class="loginbtn" href="logout.php"><button><img src="../image/logos2/icons8-logout-66.png"
+                        alt="LOGOUT"></button></a>
             </ul>
 
         </nav>

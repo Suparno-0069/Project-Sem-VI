@@ -14,53 +14,15 @@ if ($_SESSION["logged"]) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>UPDATE</title>
         <link rel="stylesheet" href="../css/dashb.css">
+        <link rel="stylesheet" href="../css/updateProfile.css">
     </head>
 
     <body>
-        <style>
-            .frm {
-                align-items: center;
-                background-image: url("../image/logos2/tumblr_pu0ndkstCx1uzwgsuo1_400.gif");
-                background-size: cover;
-                margin-top: 100px;
-                margin-left: 200px;
-                margin-right: 600px;
-            }
-
-            .frm label {
-                font-size: large;
-                color: aqua;
-                padding: 7px;
-            }
-
-            .frm input[type=submit],
-            .btn {
-                background-color: rgb(255, 255, 255);
-                display: inline-block;
-                padding: 16px 30px;
-                border-radius: 30px;
-                border: 20px;
-                color: rgb(8, 20, 129);
-                width: 150px;
-                text-align: center;
-                margin-left: 110px;
-                margin-bottom: 0px;
-                text-decoration: none;
-                font-size: 16px;
-                font-weight: 400;
-            }
-
-            .frm input[type=submit]:hover,
-            .btn:hover {
-                cursor: pointer;
-                background-color: #73b1eb5b;
-                color: aqua;
-            }
-        </style>
         <nav>
             <ul>
-                <li><a href="dashboard.php">Home</a></li>
-                <li><a href="logout.php">Logout</a></li>
+                <li><a href="dashboard.php">My Profile</a></li>
+                <a id="logout" class="loginbtn" href="logout.php"><button><img src="../image/logos2/icons8-logout-66.png"
+                        alt="LOGOUT"></button></a>
             </ul>
 
         </nav>
@@ -92,7 +54,7 @@ if ($_SESSION["logged"]) {
             <input type="text" name="uid" value="<?php echo $row["usrid"] ?>" readonly style="display: none;">
             <br><br>
             <br><br>
-            <input type="submit" name="submitUpdate" value="Upadate">
+            <input type="submit" class="btn" name="submitUpdate" value="Update">
             <input type="reset" class="btn" value="Reset">
         </form>
 

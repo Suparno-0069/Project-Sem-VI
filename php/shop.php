@@ -21,20 +21,17 @@ if ($_SESSION["logged"]) {
     </head>
 
     <body>
-        <nav>
+        <nav id="navbar">
             <ul>
-                <li><a href="dashboard.php">Home</a></li>
-                <li><a href="#">Featured</a></li>
-                <li><a href="#">Arrivals</a></li>
+                <li><a href="dashboard.php">My Profile</a></li>
                 <li><a href="../html/requestPage.html">Request a Book</a></li>
-                <li><a href="cart.php"><i class="fas fa-shopping-cart"></i></a></li>
                 <li><a href="myOrders.php">My Orders</a></li>
                 <li><a href="logout.php">Logout</a></li>
+                <li><a id="kart" href="cart.php"><i class="fas fa-shopping-cart"></i></a></li>
             </ul>
-
         </nav>
 
-        <section id="featured">
+        <section id="shopbooks">
             <div class="cards">
                 <?php
                 $sql = "SELECT * FROM books";
@@ -68,7 +65,36 @@ if ($_SESSION["logged"]) {
                 ?>
             </div>
         </section>
+        
+        <section class="footer">
 
+            <div class="box-container">
+
+                <div class="box">
+                    <div class="social">
+                    <h3>Follow Us</h3>
+                    <br>
+                    <a href="https://www.facebook.com"> <i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.twitter.com"> <i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com"> <i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com"> <i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="box">
+                <h3>Quick Links</h3>
+                <a href="#"> <i class="fas fa-arrow-right"></i> Home </a>
+                <a href="#"> <i class="fas fa-arrow-right"></i> Featured </a>
+                <a href="#"> <i class="fas fa-arrow-right"></i> Arrivals </a>
+                <a href="#"> <i class="fas fa-arrow-right"></i> Reviews </a>
+            </div>
+            <div class="box">
+                <a href="#"> <i class="fas fa-arrow-right"></i> About Us </a>
+                <a href="reviewpage.html"> <i class="fas fa-arrow-right"></i> Review </a>
+                <a href="#"> <i class="fas fa-arrow-right"></i> About Page </a>
+            </div>
+
+            </div>
+        </section>
     </body>
 
     </html>

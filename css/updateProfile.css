@@ -1,0 +1,45 @@
+body{
+    background-image: url("../image/istockphoto-1225495890-612x612.jpg");
+    background-size: cover;
+}
+.frm {
+    font-family:'Times New Roman', Times, serif;
+    margin-top: 10px;
+    margin-left: 400px;
+    margin-right: 400px;
+    background-size: cover;
+    background-color: rgba(70, 157, 163, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 15px 5px 10px rgba(23, 115, 158, 1);
+}
+
+.frm label {
+    margin: auto;
+    font-size: large;
+    color: rgb(17, 31, 31);
+    padding: 10px;
+}
+
+.btn {
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    padding: 16px 30px;
+    border-radius: 30px;
+    border: 20px;
+    color: rgb(8, 20, 129);
+    width: 150px;
+    text-align: center;
+    margin-left: 110px;
+    margin-bottom: 0px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.btn:hover {
+    transition: 0.8s;
+    cursor: pointer;
+    background-color: #31a3b35b;
+    color: rgb(0, 0, 0);
+}
