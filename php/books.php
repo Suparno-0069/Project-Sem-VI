@@ -13,80 +13,36 @@ if ($_SESSION["adlogged"]) {
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Add or Remove Books - Urban Chapters</title>
+        <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="../css/dashb.css">
+        <link rel="stylesheet" href="../css/booksstyle.css">
     </head>
 
     <body>
-        <style>
-            .frm {
-                align-items: center;
-                background-image: url("../image/logos2/tumblr_pu0ndkstCx1uzwgsuo1_400.gif");
-                background-size: cover;
-                margin-top: 100px;
-                margin-left: 200px;
-                margin-right: 600px;
-            }
-
-            .frm label {
-                font-size: large;
-                color: aqua;
-                padding: 7px;
-            }
-
-            .frm input[type=submit] {
-                background-color: rgb(255, 255, 255);
-                display: inline-block;
-                padding: 16px 30px;
-                border-radius: 30px;
-                border: 20px;
-                color: rgb(8, 20, 129);
-                width: 150px;
-                text-align: center;
-                margin-left: 110px;
-                margin-bottom: 0px;
-                text-decoration: none;
-                font-size: 16px;
-                font-weight: 400;
-            }
-
-            .frm input[type=submit]:hover {
-                cursor: pointer;
-                background-color: #73b1eb5b;
-                color: aqua;
-            }
-
-            .btn {
-                background-color: rgb(255, 255, 255);
-                display: inline-block;
-                padding: 16px 30px;
-                border-radius: 30px;
-                border: 20px;
-                color: rgb(8, 20, 129);
-                width: 150px;
-                text-align: center;
-                text-decoration: none;
-                font-size: 16px;
-                font-weight: 400;
-            }
-
-            .btn:hover {
-                cursor: pointer;
-                background-color: #73b1eb5b;
-                color: aqua;
-            }
-        </style>
         <nav class="navbar">
             <ul>
-                <li><a href="adminDashboard.php">Dashboard</a></li>
-                <li><a href="logout.php">Logout</a></li>
-                <li><button class="btn" id="show-form">Hide Form</button></li>
-                <li><button class="btn" id="detailed-view">Detailed View</button></li>
+                <li><a href="adminDashboard.php">DashBoard</a></li>
+                <li><a href="users.php">Users</a></li>
+                <li><a href="publishers.php">Publishers</a></li>
+                <li><a href="books.php">Books</a></li>
+                <li><a href="requests.php">Requests</a></li>
+                <li><a href="orders.php">Orders</a></li>
+                <a id="logout" class="loginbtn" href="logout.php"><button><img src="../image/logos2/icons8-logout-66.png"
+                        alt="LOGOUT"></button></a>
             </ul>
 
         </nav>
+        <br>
+        <h1>Add Books</h1>
+        <div class="showbutton">
+            <button class="showbtn" id="show-form">Hide Form</button>
+            <br><br><br>
+            <button class="showbtn" id="detailed-view">Detailed View</button>
+        </div>
+        
         <div id="book-form" style="display: block;">
 
-            <form class="frm" action="" method="post">
+            <form class="frmm" action="" method="post">
                 <label>ISBN : </label><input type="text" name="isbn"><br>
                 <br>
                 <label>Publisher Name : </label><input type="text" name="pname"><br>
@@ -105,9 +61,16 @@ if ($_SESSION["adlogged"]) {
                 <br>
                 <label>Published Date : </label><input type="date" name="pdate"><br>
                 <br>
-                <label>Genre : </label><input type="checkbox" name="genre[]" value="genre1"><span style="color: aqua;">Genre 1</span>
-                <input type="checkbox" name="genre[]" value="genre2"><span style="color: aqua;">Genre 2</span>
-                <input type="checkbox" name="genre[]" value="genre3"><span style="color: aqua;">Genre 3</span>
+                <label>Genre : </label><input type="checkbox" name="genre[]" value="genre1"><span style="color: aqua;">Fantasy</span>
+                <input type="checkbox" name="genre[]" value="genre2"><span style="color: aqua;">Science Fiction</span>
+                <input type="checkbox" name="genre[]" value="genre3"><span style="color: aqua;">Adventure</span>
+                <input type="checkbox" name="genre[]" value="genre4"><span style="color: aqua;">Romance</span>
+                <input type="checkbox" name="genre[]" value="genre5"><span style="color: aqua;">Mystery</span>
+                <input type="checkbox" name="genre[]" value="genre6"><span style="color: aqua;">Horror</span>
+                <input type="checkbox" name="genre[]" value="genre7"><span style="color: aqua;">Thriller</span>
+                <input type="checkbox" name="genre[]" value="genre8"><span style="color: aqua;">Memoir & Autobiography</span>
+                <input type="checkbox" name="genre[]" value="genre9"><span style="color: aqua;">Business & Money</span>
+                <input type="checkbox" name="genre[]" value="genre10"><span style="color: aqua;">Educational</span>
                 <br><br>
                 <br><br>
                 <input type="submit" value="Submit">
@@ -233,7 +196,6 @@ if ($_SESSION["adlogged"]) {
         </div>
 
 
-        <script src="../js/script2.js"></script>
         <script>
             const form_box = document.getElementById('book-form');
             const compact_table = document.getElementById('book-table-compact');

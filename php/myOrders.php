@@ -14,22 +14,27 @@ if ($_SESSION["logged"]) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>My Orders - Urban Chapters</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="../css/dashb.css">
+        <link rel="stylesheet" href="../css/myOrdersstyle.css">
     </head>
 
     <body>
 
         <nav>
             <ul>
-                <li><a href="dashboard.php">My Profile</a></li>
+                
                 <li><a href="shop.php">Shop</a></li>
                 <li><a href="../html/requestPage.html">Request a Book</a></li>
-                <li><a href="cart.php"><i class="fas fa-shopping-cart"></i></a></li>
+                <li><a href="dashboard.php">My Profile</a></li>
                 <a id="logout" class="loginbtn" href="logout.php"><button><img src="../image/logos2/icons8-logout-66.png"
                         alt="LOGOUT"></button></a>
             </ul>
 
         </nav>
+        <a id="kart" href="cart.php"><i class="fas fa-shopping-cart fa-3x"></i></a>
+        <h1 id="myorder">My Orders</h1>
+        
 
         <div id="online-orders">
             <table>

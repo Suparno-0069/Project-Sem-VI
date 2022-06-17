@@ -15,18 +15,21 @@ if ($_SESSION["logged"]) {
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Payment - Urban Chapters</title>
+        <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="../css/paymentpage.css">
     </head>
 
     <body>
+        <h1>Payment</h1>
 
-        <form action="" method="post">
+        <form id="choosemethod" action="" method="post">
             <label for="cod">COD</label>
             <input type="radio" name="payMethod" id="cod" value="cod"><br><br>
             <label for="online">Online</label>
             <input type="radio" name="payMethod" id="online" value="online"><br><br>
-            <input type="submit" name="paySub" value="Submit">
+            <input class="submit-btn" type="submit" name="paySub" value="Submit">
         </form>
-        <a href="cart.php"><button>Back to cart</button></a>
+        <a id="backtocart" href="cart.php">Cancel payment and return to Cart</a>
 
         <?php
         if (isset($_POST['paySub'])) {
@@ -35,8 +38,8 @@ if ($_SESSION["logged"]) {
         ?>
 
                 <div id="cod" class="cod">
-                    <form action="checkout.php" method="post">
-                        <h3 class="title">billing address</h3>
+                    <form class="finaldetails" action="checkout.php" method="post">
+                        <h3 class="title">Offline Billing Address</h3>
                         <span>Full Name:</span>
                         <input type="text" name="flname" placeholder="Myra deo">
                         <span>Mob :</span>
@@ -45,8 +48,8 @@ if ($_SESSION["logged"]) {
                         <input type="email" name="email" placeholder="example@example.com">
                         <span>Address:</span>
                         <input type="text" name="addr" placeholder="room - street - locality">
-                        <input type="text" name="ptype" value="offline" readonly>
-                        <input type="submit" name="chkOutCash" value="proceed to checkout" class="submit-btn">
+                        <br><br>
+                        <input type="submit" name="chkOutCash" value="Proceed to Checkout" class="submit-btn">
                     </form>
                 </div>
 
@@ -55,8 +58,8 @@ if ($_SESSION["logged"]) {
             ?>
                 <div class="online" id="online">
                     <div class="container">
-                        <form action="checkout.php" method="post" enctype="multipart/form-data">
-                            <h3 class="title">billing address</h3>
+                        <form class="finaldetails" action="checkout.php" method="post" enctype="multipart/form-data">
+                            <h3 class="title">Online Billing Address</h3>
                             <span>Full Name:</span>
                             <input type="text" name="flname" placeholder="Myra deo">
                             <span>Mob :</span>
@@ -65,13 +68,10 @@ if ($_SESSION["logged"]) {
                             <input type="email" name="email" placeholder="example@example.com">
                             <span>Address:</span>
                             <input type="text" name="addr" placeholder="room - street - locality">
-                            <input type="text" name="ptype" value="online" readonly>
-
-
                             <h3 class="title">Payment</h3>
-                            <span>ss of payment:</span>
+                            <span>ScreenShot of Payment:</span>
                             <input type="file" name="myFile" onchange="myFnc()">
-                            <input type="submit" name="chkOutOnline" value="proceed to checkout" class="submit-btn" id="chkOutOnline" disabled>
+                            <input type="submit" name="chkOutOnline" value="Proceed to Checkout" class="submit-btn" id="chkOutOnline" disabled>
                         </form>
                     </div>
                 </div>

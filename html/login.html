@@ -6,16 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - User</title>
+    <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="../css/stylelogin.css" >
 </head>
 
 <body>
-    
+    <style>
+        #clear{
+            padding: 5px;
+            margin: 0;
+            color: black;
+        }
+        #clear:hover{
+            background-color: aliceblue;
+        }
+    </style>
+
     <nav>
         <ul>
             <li><a href="../html/index.html">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Reviews</a></li>
+            <li><a href="../html/about_us.html" target="_blank">About Us</a></li>
+            <li><a href="../php/reviewPage.php" target="_blank">Reviews</a></li>
         </ul>
     </nav>
 
@@ -30,11 +41,10 @@
             </label>
             <input type="Password" name="pass" id="pass" placeholder="Password">
             <br><br>
+            <input id="clear" type="reset" class="submit" value="Clear"> <br><br>
+            <button class="submit" type="submit"><b>Log In</b></button>
             <br><br>
             <a href="register.html">Don't have an account? Register</a>
-            <br><br>
-            <input type="reset" class="submit" value="Clear"> <br><br>
-            <button class="submit" type="submit"><b>Log In</b></button>
         </form>
     </div>
 </body>

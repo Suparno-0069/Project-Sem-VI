@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url("../image/19366.jpg");
+    background-size: 1400px;
+    background-position: center;
+    background-position-y: 10px;
+}
+.btn {
+    background-color: rgb(200, 228, 233);
+    display: inline-block;
+    padding: 16px 30px;
+    border-radius: 30px;
+    border: 20px;
+    color: rgb(8, 20, 129);
+    width: 150px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#order-btn{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(98, 39, 138);
+    margin-top: 15px;
+    width: auto;
+    padding: 40px;
+    text-align: center;
+    font-size: 40px;
+    color: black;
+    background-color: rgb(26, 172, 164);
+}
+#order-btn:hover{
+    cursor: pointer;
+    background-color: rgba(202, 181, 181, 0.5);
+    color: rgb(0, 0, 0);
+    transition: 0.2s;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+    transition: 0.2s;
+    font-weight:bold;
+}
+
+
+table, th, td {
+    text-align: center;
+    padding: 4px;
+    border: 2.5px solid black;
+  }
+
+.ordertable{
+    display: grid;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    overflow: auto;
+    font-size: 20px;
+    font-weight: bold;
+}

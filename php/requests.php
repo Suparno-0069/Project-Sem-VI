@@ -17,50 +17,28 @@ if ($_SESSION["adlogged"]) {
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Requests</title>
+        <title>Requests - Urbn Chapters</title>
+        <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="../css/dashb.css">
+        <link rel="stylesheet" href="../css/requestsstyle.css">
     </head>
 
     <body>
-        <style>
-            .btn {
-                background-color: rgb(255, 255, 255);
-                display: inline-block;
-                padding: 16px 30px;
-                border-radius: 30px;
-                border: 20px;
-                color: rgb(8, 20, 129);
-                width: 150px;
-                text-align: center;
-                text-decoration: none;
-                font-size: 16px;
-                font-weight: 400;
-            }
-
-            .btn:hover {
-                cursor: pointer;
-                background-color: #73b1eb5b;
-                color: aqua;
-            }
-
-            .instraction,
-            h6,
-            .instraction a {
-                color: #ff0069;
-            }
-
-            .instraction a:hover {
-                cursor: pointer;
-                background: fixed;
-            }
-        </style>
         <nav>
             <ul>
                 <li><a href="adminDashboard.php">DashBoard</a></li>
-                <li><a href="logout.php">Logout</a></li>
+                <li><a href="users.php">Users</a></li>
+                <li><a href="publishers.php">Publishers</a></li>
+                <li><a href="books.php">Books</a></li>
+                <li><a href="requests.php">Requests</a></li>
+                <li><a href="orders.php">Orders</a></li>
+                <a id="logout" class="loginbtn" href="logout.php"><button><img src="../image/logos2/icons8-logout-66.png"
+                        alt="LOGOUT"></button></a>
             </ul>
 
         </nav>
+        <br>
+        <h1>Requests Received</h1>
 
         <div class="instraction">
             <h6>How to resolve a request:</h6>

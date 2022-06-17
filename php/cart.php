@@ -15,60 +15,26 @@ if ($_SESSION["logged"]) {
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cart - Urban Chapters</title>
+        <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="../css/dashb.css">
+        <link rel="stylesheet" href="../css/cartstyle.css">
     </head>
 
     <body>
-        <style>
-            .buyNow {
-                padding-top: 20px;
-                padding-bottom: 20px;
-                align-items: center;
-                text-align: center;
-            }
-
-            .btn {
-                background-color: rgb(255, 255, 255);
-                display: inline-block;
-                padding: 16px 30px;
-                border-radius: 30px;
-                border: 20px;
-                color: rgb(8, 20, 129);
-                width: 150px;
-                text-align: center;
-                /* margin-left: 110px;
-                margin-bottom: 0px; */
-                text-decoration: none;
-                font-size: 16px;
-                font-weight: 400;
-            }
-
-            .btn:hover {
-                cursor: pointer;
-                background-color: #73b1eb5b;
-                color: aqua;
-            }
-
-            .instraction,
-            .instraction a {
-                color: #ff0069;
-            }
-
-            .instraction a:hover {
-                cursor: pointer;
-                background: fixed;
-            }
-        </style>
         <nav class="navbar">
             <ul>
-                <li><a href="dashboard.php">Dashboard</a></li>
                 <li><a href="shop.php">Shop</a></li>
-                <li><a href="logout.php">Logout</a></li>
+                
+                <li><a href="../html/requestPage.html">Request a Book</a></li>
+                <li><a href="dashboard.php">My profile</a></li>
+                <li><a href="myOrders.php">My Orders</a></li>
+                <a id="logout" class="loginbtn" href="logout.php"><button><img src="../image/logos2/icons8-logout-66.png"
+                        alt="LOGOUT"></button></a>
             </ul>
 
         </nav>
-
-        <section>
+        <h1 id="myorder">Cart <img src="../image/logos2/cart.jpg" alt=""></h1>
+        <section class="karttable">
             <?php
             $sql = "SELECT * FROM cart WHERE usrid='$uid'";
             $res = $conn->query($sql);
@@ -147,7 +113,6 @@ if ($_SESSION["logged"]) {
             ?>
         </section>
 
-        <script src="../js/script2.js"></script>
     </body>
 
     </html>

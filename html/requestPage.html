@@ -6,51 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Request A book</title>
-    <link rel="stylesheet" href="../css/stylelogin.css">
+    <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/requestPagestyle.css">
+    <link rel="stylesheet" href="../css/dashb.css">
 </head>
 
 <body>
     <!-- nav-bar -->
-    <style>
-        * {
-            text-decoration: none;
-        }
-
-        nav {
-            background: rgb(67, 175, 218);
-            height: 70px;
-            width: 100%;
-            border-top: 1px solid;
-        }
-
-        nav ul {
-            float: left;
-            margin-left: 25px;
-        }
-
-        nav ul li {
-            display: inline-block;
-            line-height: 20px;
-            margin: 0px;
-        }
-
-        nav ul li a {
-            color: black;
-            font-size: 17px;
-            padding: 7px 13px;
-            border-radius: 3px;
-            text-transform: uppercase;
-        }
-
-        a:hover {
-            background: white;
-            transition: .5s;
-        }
-    </style>
+    
     <nav>
         <ul>
-            <li><a href="../html/index.html">Home</a></li>
-            <li><a href="../php/dashboard.php">back to dash</a></li>
+            <li><a href="../php/shop.php">Shop</a></li>
+            <li><a href="../php/dashboard.php">My profile</a></li>
+            <li><a href="../php/myOrders.php">My Orders</a></li>
+            <a id="logout" class="loginbtn" href="logout.php"><button><img src="../image/logos2/icons8-logout-66.png"
+                alt="LOGOUT"></button></a>
         </ul>
 
     </nav>
@@ -69,7 +39,9 @@
             <br><br>
             <label><b>Description : </b></label> <textarea name="msg" cols="50" rows="3"></textarea>
             <br><br>
-            <button class="submit" type="submit"><b>Request</b></button>
+            <input id="clear" type="reset" class="submit" value="Clear"> 
+            <br><br>
+            <button class="submit" type="submit"><b>Submit</b></button>
         </form>
 
     </div>

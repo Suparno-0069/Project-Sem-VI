@@ -2,6 +2,25 @@ body{
     background-image: url("../image/logos3/banner-bg.jpg");
     background-size: cover;
 }
+h1{
+    margin: 15px;
+    text-align: center;
+    font-size: 50px;
+    text-decoration: underline overline rgba(0, 0, 0, 0.3);
+}
+#kart{
+    position: fixed;
+    right:0mm;
+    margin: 5px;
+    color: rgb(4, 67, 240);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+}
+#kart:hover{
+    transform: scale(110%);
+}
+
 section #shopbooks{
     background-color: rgb(74, 219, 238);
     border-radius: 10px;
@@ -9,6 +28,7 @@ section #shopbooks{
     margin: 10px 100px 20px;
 }
 section .cards{
+    height: 450px;
     margin: 0 auto;
     max-width: 1000px;
     display: grid;
@@ -67,6 +87,8 @@ section .card {
     border-radius: 10px;
     padding: 30px;
     margin: 10px 100px 20px;
+    overflow: auto;
+    height: 1000px;
 }
 #shopbooks h2{
     text-transform:uppercase;
@@ -105,7 +127,7 @@ section .card {
 .footer .box-container{
     color: #01d5f1;
     margin-bottom: 0px;
-    background-color: #171c30;
+    background-color: #000000;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap:3rem;

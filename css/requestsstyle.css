@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url("../image/19366.jpg");
+    background-size: 1400px;
+    background-position: center;
+    background-position-y: 10px;
+}
+
+h1{
+    font-size: 40px;
+    text-align: center;
+    text-decoration: underline overline;
+    color: rgb(55, 32, 65);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.btn {
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    padding: 16px 30px;
+    border-radius: 30px;
+    border: 2px solid;
+    color: rgb(8, 20, 129);
+    width: 150px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: #73b1eb5b;
+    color: rgb(0, 0, 0);
+}
+
+.instraction,h6,.instraction a {
+    margin: 8px;
+    color: #ff0069;
+    font-size: 110%;
+}
+.instraction h6{
+    text-decoration: underline;
+}
+
+.instraction a:hover {
+    cursor: pointer;
+    background: fixed;
+}
+
+
+table, th, td {
+    margin: auto;
+    padding: 15px;
+    border: 2.5px solid black;
+}
+tr:hover {
+    background-color: rgba(233, 71, 71, 0.5);
+    text-decoration: solid;
+}
+th,td:hover{
+    background-color: rgba(110, 88, 88, 0.5);
+}

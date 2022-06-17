@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url("../image/19366.jpg");
+    background-size: 1400px;
+    background-position: center;
+    background-position-y: 10px;
+}
+h1{
+    font-size: 40px;
+    text-align: center;
+    text-decoration: underline overline;
+    color: rgb(55, 32, 65);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.frmm {
+    align-items: center;
+    background-image: url("../image/blue-background-023.jpg");
+    background-color: black;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+    padding: 30px;
+    border-radius: 20px;
+    background-size: cover;
+    margin-top: 50px;
+    margin-left: 400px;
+    margin-right: 400px;
+}
+
+.frmm label {
+    font-size: large;
+    color: rgb(109, 226, 226);
+    padding: 7px;
+    text-decoration: darkgrey;
+}
+
+.frmm input[type=submit],
+.btn {
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    padding: 10px 1px;
+    border-radius: 30px;
+    border: 2px solid;
+    color: rgb(8, 20, 129);
+    width: 150px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.frmm input[type=submit]:hover,
+.btn:hover {
+    cursor: pointer;
+    background-color: #73b1eb5b;
+    color: rgb(0, 0, 0);
+}
+
+table, th, td{
+    font-weight: bold;
+    margin: auto;
+    padding: 5px;
+    border: 2.5px solid black;
+    width: 100%;
+  }
+
+tr:hover {
+    background-color: rgba(233, 71, 71, 0.5);
+    text-decoration: solid;
+}
+th,td:hover{
+    background-color: rgba(110, 88, 88, 0.5);
+}

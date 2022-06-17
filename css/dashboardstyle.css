@@ -48,6 +48,5 @@ body {
     grid-template-columns: repeat(2, 1fr);
 }
 #profilecard #kart{
-    
     color: rgb(15, 49, 82);
 }

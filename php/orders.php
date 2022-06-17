@@ -13,41 +13,30 @@ if ($_SESSION["adlogged"]) {
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Orders - Urban Chapters</title>
+        <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="../css/dashb.css">
+        <link rel="stylesheet" href="../css/ordersstyle.css">
     </head>
 
     <body>
-        <style>
-            .btn {
-                background-color: rgb(255, 255, 255);
-                display: inline-block;
-                padding: 16px 30px;
-                border-radius: 30px;
-                border: 20px;
-                color: rgb(8, 20, 129);
-                width: 150px;
-                text-align: center;
-                text-decoration: none;
-                font-size: 16px;
-                font-weight: 400;
-            }
-
-            .btn:hover {
-                cursor: pointer;
-                background-color: #73b1eb5b;
-                color: aqua;
-            }
-        </style>
         <nav class="navbar">
             <ul>
-                <li><a href="adminDashboard.php">Dashboard</a></li>
-                <li><a href="logout.php">Logout</a></li>
-                <li><button class="btn" id="order-btn">Offline Orders</button></li>
+                <li><a href="adminDashboard.php">DashBoard</a></li>
+                <li><a href="users.php">Users</a></li>
+                <li><a href="publishers.php">Publishers</a></li>
+                <li><a href="books.php">Books</a></li>
+                <li><a href="requests.php">Requests</a></li>
+                <li><a href="orders.php">Orders</a></li>
+                <a id="logout" class="loginbtn" href="logout.php"><button><img src="../image/logos2/icons8-logout-66.png"
+                        alt="LOGOUT"></button></a>
             </ul>
 
         </nav>
-
-        <div id="online-orders">
+        <div class="headbutton">
+            <button class="btn" id="order-btn">Offline Orders</button>
+        </div>
+        
+        <div id="online-orders" class="ordertable">
             <table>
                 <thead>
                     <tr>
@@ -105,7 +94,7 @@ if ($_SESSION["adlogged"]) {
             </table>
         </div>
 
-        <div id="offline-orders" style="display:none;">
+        <div id="offline-orders" class="ordertable">
             <table>
                 <thead>
                     <tr>
@@ -161,7 +150,6 @@ if ($_SESSION["adlogged"]) {
             </table>
         </div>
 
-        <script src="../js/script2.js"></script>
         <script>
             const onOrd = document.getElementById('online-orders');
             const offOrd = document.getElementById('offline-orders');

@@ -196,10 +196,11 @@ body{
 
 #arrivals{
     display: grid;
-    background-color: rgb(189, 236, 226, 0.3);
+    background-color: rgb(189, 236, 226, 0.4);
     border-radius: 10px;
     padding: 30px;
     margin: 10px 100px 20px;
+    overflow: scroll;
 }
 #arrivals h2{
     text-transform:uppercase;

@@ -10,23 +10,25 @@ a{
 }
 html,body{
    background-color: aqua;
-   background-image: url("../image/wp3004476-light-teal-background.jpg");
-   background-size: cover;
+   background-image: url("../image/tp244-bg1-08.jpg");
+   background-size:cover;
     
 }
 
 #review{
+    margin: 50px;
+    background-color: rgba(47, 141, 170, 0.3);
+    border-radius: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 100%;
 
 }
 .review-heading{
     letter-spacing: 1px;
     margin: 30px 1px;
-    padding: 10px 20 px;
+    padding: 10px 30 px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,11 +36,14 @@ html,body{
 
 }
 .review-heading h1{
-    font-size: 2.2 rem;
-    font-weight: 500;
-    background-color: black;
+    letter-spacing: 10px;
+    padding: 30px 200px;
+    border-radius: 10px;
+    font-size:45px;
+    font-weight: 50;
+    background-color: rgb(11, 79, 83);
     color: whitesmoke;
-    padding: 10 px 20 px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .review-heading span{
     font-size: 1.5 rem;
@@ -59,7 +64,8 @@ html,body{
 .review-box{
     width: 500px;
     box-shadow: 6px 6px 40px rgba(0,0,0,0.1);
-    background-color:wheat;
+    background-color:rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
     padding: 40px;
     margin: 15px;
     cursor: pointer;
@@ -87,12 +93,15 @@ html,body{
     flex-direction: column;
 }
 .name-user strong{
-    color: #3d3d3d;
+    text-decoration: underline;
+    margin-left: 15px;
+    color: #000000;
     font-size: 1.1 rem;
     letter-spacing: 0.5px;
 }
 .name-user span{
-    color: #979797;
+    margin-left: 40px;
+    color: #777171;
     font-size: 0.8 rem;
 
 }
@@ -107,12 +116,17 @@ html,body{
     margin-bottom: 20px;
 }
 .client-comment p{
+    font-family: cursive;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 5px;
+    border-radius: 10px;
     font-size: 0.9 rem;
-    color: #4b4b4b;
+    color: #fff9f9;
 }
 .review-box:hover{
-    transform: translateY(-10px);
-    transition: all ease 0.3s;
+    transform: scale(1.2);
+    transition: all ease 0.6s;
 }
 @media (max-width:1060px){
     .review-box{

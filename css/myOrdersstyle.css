@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: url("../image/kmV7Md.jpg");
+    background-size: cover;
+}
+
+h1{
+    margin: 10px;
+    text-align: center;
+    text-decoration: underline overline;
+    text-decoration-color: #601e8d;
+    font-size: 50px;
+}
+h1 img{
+    height: 40px;
+}
+
+
+#kart{
+    position: fixed;
+    right:0mm;
+    margin: 5px;
+    color: rgb(4, 67, 240);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+}
+#kart:hover{
+    transform: scale(110%);
+}
+
+/*table*/
+
+.karttable {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 30px;
+    margin: 10px 100px 20px;
+    overflow: auto;
+    height: 500px;
+}
+table{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 30px;
+    margin: 10px 100px 20px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid rgb(0, 0, 0);
+  }
+
+.buyNow {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+.btn {
+    background-color: rgb(255, 255, 255);
+    display: inline-block;
+    padding: 16px 30px;
+    border-radius: 30px;
+    border: 20px;
+    color: rgb(8, 20, 129);
+    width: 150px;
+    text-align: center;
+    /* margin-left: 110px;
+    margin-bottom: 0px; */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: #73b1eb5b;
+    color: rgb(0, 0, 0);
+    transform: scale(110%);
+}
+.buyNow button:hover{
+    cursor: pointer;
+    background-color: #fcfcfc5b;
+    color: rgb(0, 0, 0);
+    transform: scale(110%);
+}
+
+.instraction,
+.instraction a {
+    color: #ff0069;
+}
+
+.instraction a:hover {
+    cursor: pointer;
+    background: fixed;
+}
