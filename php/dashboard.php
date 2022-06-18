@@ -21,7 +21,8 @@ if ($_SESSION["logged"]) {
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>User profile</title>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+            <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
+            <link rel="stylesheet" href="../font-awesome/css/all.min.css">
             <link rel="stylesheet" href="../css/dashb.css">
             <link rel="stylesheet" href="../css/dashboardstyle.css">
             <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
@@ -47,6 +48,7 @@ if ($_SESSION["logged"]) {
                     <?php
                     }
                     ?>
+                    <li><a href="../pdf-reader/myEbooks.php">My E-Books</a></li>
                     <a id="logout" class="loginbtn" href="logout.php"><button><img src="../image/logos2/icons8-logout-66.png"
                         alt="LOGOUT"></button></a>
                 </ul>
@@ -56,7 +58,7 @@ if ($_SESSION["logged"]) {
 
             <div id="profilecard" class="cards">
                 <div >
-                    <img src="../image/logo/IMG20200506053106.jpg" alt="profile_image">
+                    <img src="../uploads/profilePics/<?php echo $row["profile_pic"]; ?>" alt="profile_image">
                 </div>
                 <div id="name_head">
                     <h1>

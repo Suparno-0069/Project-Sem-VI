@@ -62,8 +62,10 @@ if ($_SESSION["logged"]) {
 
                         $B_sql = "SELECT book_name FROM books WHERE bid='$Obid'";
                         $B_res = $conn->query($B_sql);
-                        $B_row = $B_res->fetch_assoc();
-                        $bname = $B_row["book_name"];
+                        if ($B_res->num_rows > 0) {
+                            $B_row = $B_res->fetch_assoc();
+                            $bname = $B_row["book_name"];
+                        }
 
                         $U_sql = "SELECT fname, lname FROM users WHERE usrid='$Ouid'";
                         $U_res = $conn->query($U_sql);

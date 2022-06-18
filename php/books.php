@@ -38,6 +38,8 @@ if ($_SESSION["adlogged"]) {
             <button class="showbtn" id="show-form">Hide Form</button>
             <br><br><br>
             <button class="showbtn" id="detailed-view">Detailed View</button>
+            <br><br><br>
+            <button class="showbtn" id="book-type">Add E-books</button>
         </div>
         
         <div id="book-form" style="display: block;">
@@ -195,14 +197,34 @@ if ($_SESSION["adlogged"]) {
             </table>
         </div>
 
+        <div id="e-books" style="display: none;">
+            <div id="ebooks-form">
+                <form action="../pdf-reader/ebooks-add.php" method="post" class="frm" enctype="multipart/form-data">
+                    <label>E-book Name: </label> <input type="text" name="ebname"><br>
+                    <br>
+                    <label>E-book Author Name: </label> <input type="text" name="ebaname"><br>
+                    <br>
+                    <label>E-book URL:</label> <input type="text" name="eburl"><br>
+                    <br>
+                    <label>Thumbnail : </label> <input type="file" name="ebImg"><br>
+                    <br><br>
+                    <br><br>
+
+                    <input type="submit" name="ebSubmit" value="Submit">
+                </form>
+            </div>
+            <div id="ebooks-table"></div>
+        </div>
 
         <script>
             const form_box = document.getElementById('book-form');
             const compact_table = document.getElementById('book-table-compact');
             const detailed_table = document.getElementById('book-table-detailed');
+            const ebook_div = document.getElementById('e-books');
 
             const btn_frm = document.getElementById('show-form');
             const btn_tbl = document.getElementById('detailed-view');
+            const btn_ebook = document.getElementById('book-type');
 
             btn_frm.addEventListener('click', function handleClick() {
                 if (form_box.style.display === 'block') {
@@ -227,6 +249,27 @@ if ($_SESSION["adlogged"]) {
                     compact_table.style.display = 'block';
 
                     btn_tbl.textContent = 'Detailed View';
+                }
+            });
+
+            btn_ebook.addEventListener('click', function handleClick() {
+                if (ebook_div.style.display === 'none') {
+                    form_box.style.display = 'none';
+                    compact_table.style.display = 'none';
+                    detailed_table.style.display = 'none';
+
+                    ebook_div.style.display = 'block'
+
+
+                    btn_ebook.textContent = 'Add Books';
+                } else {
+                    form_box.style.display = 'block';
+                    compact_table.style.display = 'block';
+                    detailed_table.style.display = 'block';
+
+                    ebook_div.style.display = 'none'
+
+                    btn_ebook.textContent = 'Add E-books';
                 }
             });
         </script>

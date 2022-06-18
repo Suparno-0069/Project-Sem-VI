@@ -53,7 +53,7 @@ if ($_SESSION["logged"]) {
                     $pname = $rr["p_name"];
             ?>
 
-                    <div><img src="../uploads/<?php echo $rw["thumbnail"]; ?>" alt="book <?php echo $rw["bid"]; ?>" style="width:10%"></div>
+                    <div><img src="../uploads/thumbnails/<?php echo $rw["thumbnail"]; ?>" alt="book <?php echo $rw["bid"]; ?>" style="width:10%"></div>
                     <table>
                         <thead>
                             <tr>

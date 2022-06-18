@@ -18,7 +18,7 @@ include "dbconn.php";
     
     <nav class="navbar">
         <ul class="nav_links">
-            <li><a class="active" href="../html/index.html">Home</a></li>
+            <li><a class="active" href="../">Home</a></li>
             <li><a href="../html/about_us.html" target="_blank">About us</a></li>
         </ul>
     </nav>

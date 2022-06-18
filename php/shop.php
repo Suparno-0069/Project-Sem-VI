@@ -14,7 +14,8 @@ if ($_SESSION["logged"]) {
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Shop - Urban Chapters</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
+        <link rel="stylesheet" href="../font-awesome/css/all.min.css">
         <link rel="stylesheet" href="../css/dashb.css">
         <link rel="stylesheet" href="../css/shopstyle.css">
         <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
@@ -33,6 +34,49 @@ if ($_SESSION["logged"]) {
         </nav>
         <a id="kart" href="cart.php"><i class="fas fa-shopping-cart fa-3x"></i></a>
         <h1>SHOP</h1>
+        <section>
+            <form class="searchBox" action="" method="get">
+                <input type="text" name="searchQue" placeholder="Search by book name...">
+                <button type="submit" name="subSearch"><i class="fas fa-search"></i></button>
+            </form>
+        </section>
+        <?php
+        if (isset($_GET['subSearch'])) {
+            $que = $_GET["searchQue"];
+        ?>
+            <section id="searched">
+                <div class="cards">
+                    <?php
+                    $S_sql = "SELECT * FROM books WHERE book_name LIKE '%$que%'";
+                    $S_res = $conn->query($S_sql);
+                    while ($S_row = $S_res->fetch_assoc()) {
+                    ?>
+
+                        <div class="card">
+                            <img src="../uploads/thumbnails/<?php echo $S_row["thumbnail"]; ?>" alt="book <?php echo $S_row["bid"]; ?>" style="width:100%">
+                            <h3><?php echo $S_row["book_name"]; ?></h3>
+                            <p class="price">₹<?php echo $S_row["price"]; ?></p>
+                            <p>Author Name : <?php echo $S_row["author_name"]; ?></p>
+                            <form action="view.php" method="post">
+                                <input type="text" name="bid" value="<?php echo $S_row["bid"] ?>" readonly style="display: none;">
+                                <p><button type="submit" name="view">View</button></p>
+                            </form>
+                            <form action="" method="post">
+                                <input type="text" name="bid" value="<?php echo $S_row["bid"] ?>" readonly style="display: none;">
+                                <input type="text" name="qtty" value="<?php echo $S_row["quantity"]; ?>" readonly style="display: none;">
+                                <input type="text" name="price" value="<?php echo $S_row["price"] ?>" readonly style="display: none;">
+                                <input type="text" name="uid" value="<?php echo $uid ?>" readonly style="display: none;">
+                                <p><button type="submit" name="cart">Add to Cart</button></p>
+                            </form>
+                        </div>
+                    <?php
+                    }
+                    ?>
+                </div>
+            </section>
+        <?php
+        }
+        ?>
         <section id="shopbooks">
             <div class="cards">
                 <?php
