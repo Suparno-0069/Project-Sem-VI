@@ -47,9 +47,9 @@ if ($_SESSION["logged"]) {
                 ?>
 
                         <div class="card">
-                            <!-- <img src="../uploads/thumbnails/ echo $row["thumbnail"]; ?>" alt="book  echo $row["bid"]; ?>" style="width:100%"> -->
+                            <img src="../uploads/ebThumbnail/<?php echo $row["eb_thumbnail"]; ?>" alt="book <?php echo $row["ebid"]; ?>" style="width:100%">
+                            <a href="../pdf-reader/<?php echo $row["eb_url"]; ?> " target="_blank"> <i class="fas fa-download"></i> </a>
                             <h3><?php echo $row["eb_name"]; ?></h3>
-                            <p class="price">₹500.00</p>
                             <p>Author Name : <?php echo $row["eb_aname"]; ?></p>
                             <form action="../pdf-reader/reader.php" method="post">
                                 <input type="text" name="url" value="<?php echo $row["eb_url"] ?>" readonly style="display: none;">

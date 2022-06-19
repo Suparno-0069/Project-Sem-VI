@@ -94,7 +94,7 @@ if ($_SESSION["adlogged"]) {
             </table>
         </div>
 
-        <div id="offline-orders" class="ordertable">
+        <div id="offline-orders" class="ordertable" style="display: none;">
             <table>
                 <thead>
                     <tr>

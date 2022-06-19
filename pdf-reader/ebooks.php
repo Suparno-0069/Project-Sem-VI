@@ -44,12 +44,12 @@ if ($_SESSION["logged"]) {
                     <div class="card">
                         <img src="../uploads/ebThumbnail/<?php echo $row["eb_thumbnail"]; ?>" alt="book <?php echo $row["ebid"]; ?>" style="width:100%">
                         <h3><?php echo $row["eb_name"]; ?></h3>
-                        <p class="price">₹500.00</p>
+                        <p class="price"><?php echo $row["price"]; ?></p>
                         <p>Author Name : <?php echo $row["eb_aname"]; ?></p>
                         <form action="eb_buyNow.php" method="post">
                             <input type="text" name="usid" value="<?php echo $uid; ?>" readonly style="display: none;">
                             <input type="text" name="ebid" value="<?php echo $row["ebid"]; ?>" readonly style="display: none;">
-                            <input type="text" name="price" value="500.00" readonly style="display: none;">
+                            <input type="text" name="price" value="<?php echo $row["price"]; ?>" readonly style="display: none;">
                             <p><button type="submit" name="ebbuy">Buy</button></p>
                         </form>
                         <!-- <iframe src="view.php" class="view" frameborder="0"></iframe> -->

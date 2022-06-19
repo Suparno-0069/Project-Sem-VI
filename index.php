@@ -27,8 +27,8 @@ include "./php/dbconn.php";
             <li><a class="active" href="#">Home</a></li>
             <li><a href="#featured">Featured</a></li>
             <li><a href="#arrivals">Arrivals</a></li>
-            <li><a href="./html/our-team/">About us</a></li>
-            <li><a href="./php/reviewPage.php">Review</a></li>
+            <li><a href="./html/about_us.html" target="_blank">About Us</a></li>
+            <li><a href="./php/reviewPage.php" target="_blank">Reviews</a></li>
         </ul>
         <?php
         if (isset($_SESSION["logged"])) {

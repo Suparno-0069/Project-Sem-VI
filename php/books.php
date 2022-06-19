@@ -27,8 +27,7 @@ if ($_SESSION["adlogged"]) {
                 <li><a href="books.php">Books</a></li>
                 <li><a href="requests.php">Requests</a></li>
                 <li><a href="orders.php">Orders</a></li>
-                <a id="logout" class="loginbtn" href="logout.php"><button><img src="../image/logos2/icons8-logout-66.png"
-                        alt="LOGOUT"></button></a>
+                <a id="logout" class="loginbtn" href="logout.php"><button><img src="../image/logos2/icons8-logout-66.png" alt="LOGOUT"></button></a>
             </ul>
 
         </nav>
@@ -41,7 +40,7 @@ if ($_SESSION["adlogged"]) {
             <br><br><br>
             <button class="showbtn" id="book-type">Add E-books</button>
         </div>
-        
+
         <div id="book-form" style="display: block;">
 
             <form class="frmm" action="" method="post">
@@ -188,7 +187,7 @@ if ($_SESSION["adlogged"]) {
                             <td><?php echo $BtD_row["pages"]; ?></td>
                             <td><?php echo $BtD_row["published_date"]; ?></td>
                             <td><?php echo $BtD_row["genre"]; ?></td>
-                            <td><img src="../uploads/<?php echo $BtD_row["thumbnail"]; ?>" alt="??" height="100px"></td>
+                            <td><img src="../uploads/thumbnails/<?php echo $BtD_row["thumbnail"]; ?>" alt="??" height="100px"></td>
                         </tr>
                     <?php
                     }
@@ -199,18 +198,44 @@ if ($_SESSION["adlogged"]) {
 
         <div id="e-books" style="display: none;">
             <div id="ebooks-form">
-                <form action="../pdf-reader/ebooks-add.php" method="post" class="frm" enctype="multipart/form-data">
-                    <label>E-book Name: </label> <input type="text" name="ebname"><br>
+                <form action="../pdf-reader/ebooks-add.php" method="post" class="frmm" enctype="multipart/form-data">
+                    <label>ISBN : </label><input type="text" name="isbn"><br>
                     <br>
-                    <label>E-book Author Name: </label> <input type="text" name="ebaname"><br>
+                    <label>Publisher Name : </label><input type="text" name="pname"><br>
                     <br>
-                    <label>E-book URL:</label> <input type="text" name="eburl"><br>
+                    <label>Book Name : </label><input type="text" name="ebname"><br>
                     <br>
-                    <label>Thumbnail : </label> <input type="file" name="ebImg"><br>
+                    <label>Author Name : </label><input type="text" name="ebaname"><br>
+                    <br>
+                    <label>Quantity : </label><input type="number" name="qty"><br>
+                    <br>
+                    <label>Price : </label></label><input type="text" name="price" placeholder="0000.00"><br>
+                    <br>
+                    <label>Rating : </label><input type="text" name="rating" placeholder="00.00"><br>
+                    <br>
+                    <label>Pages : </label><input type="number" name="pages"><br>
+                    <br>
+                    <label>Published Date : </label><input type="date" name="pdate"><br>
+                    <br>
+                    <label>Genre : </label><input type="checkbox" name="genre[]" value="genre1"><span style="color: aqua;">Fantasy</span>
+                    <input type="checkbox" name="genre[]" value="genre2"><span style="color: aqua;">Science Fiction</span>
+                    <input type="checkbox" name="genre[]" value="genre3"><span style="color: aqua;">Adventure</span>
+                    <input type="checkbox" name="genre[]" value="genre4"><span style="color: aqua;">Romance</span>
+                    <input type="checkbox" name="genre[]" value="genre5"><span style="color: aqua;">Mystery</span>
+                    <input type="checkbox" name="genre[]" value="genre6"><span style="color: aqua;">Horror</span>
+                    <input type="checkbox" name="genre[]" value="genre7"><span style="color: aqua;">Thriller</span>
+                    <input type="checkbox" name="genre[]" value="genre8"><span style="color: aqua;">Memoir & Autobiography</span>
+                    <input type="checkbox" name="genre[]" value="genre9"><span style="color: aqua;">Business & Money</span>
+                    <input type="checkbox" name="genre[]" value="genre10"><span style="color: aqua;">Educational</span> <br>
+                    <br>
+                    <label>URL : </label><input type="text" name="eburl"><br>
+                    <br>
+                    <label>Thumbnail: </label><input type="file" name="ebImg"><br>
+                    <br>
                     <br><br>
                     <br><br>
-
-                    <input type="submit" name="ebSubmit" value="Submit">
+                    <input type="submit" value="Submit" name="ebSubmit">
+                    <input type="reset" value="Clear" class="btn" style="margin-left: 110px;margin-bottom: 0px;">
                 </form>
             </div>
             <div id="ebooks-table"></div>

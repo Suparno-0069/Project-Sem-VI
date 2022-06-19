@@ -36,6 +36,7 @@ if ($_SESSION["logged"]) {
                     <li><a href="shop.php">Shop</a></li>
                     <li><a href="../html/requestPage.html">Request a Book</a></li>
                     <li><a href="myOrders.php">My Orders</a></li>
+                    <li><a href="../pdf-reader/myEbooks.php">My E-Books</a></li>
                     <?php
                     $RCsql = "SELECT * FROM reviews WHERE uname='$un'";
                     $RCres = $conn->query($RCsql);

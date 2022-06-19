@@ -26,6 +26,7 @@ if ($_SESSION["logged"]) {
             <ul>
                 <li><a href="../html/requestPage.html">Request a Book</a></li>
                 <li><a href="dashboard.php">My Profile</a></li>
+                <li><a href="../pdf-reader/ebooks.php">E-Books</a></li>
                 <li><a href="myOrders.php">My Orders</a></li>
                 
                 <a id="logout" class="loginbtn" href="logout.php"><button><img src="../image/logos2/icons8-logout-66.png"
