@@ -23,18 +23,17 @@ if ($_SESSION["logged"]) {
 
         <nav>
             <ul>
-                
+
                 <li><a href="shop.php">Shop</a></li>
                 <li><a href="../html/requestPage.html">Request a Book</a></li>
                 <li><a href="dashboard.php">My Profile</a></li>
-                <a id="logout" class="loginbtn" href="logout.php"><button><img src="../image/logos2/icons8-logout-66.png"
-                        alt="LOGOUT"></button></a>
+                <a id="logout" class="loginbtn" href="logout.php"><button><img src="../image/logos2/icons8-logout-66.png" alt="LOGOUT"></button></a>
             </ul>
 
         </nav>
         <a id="kart" href="cart.php"><i class="fas fa-shopping-cart fa-3x"></i></a>
         <h1 id="myorder">My Orders</h1>
-        
+
 
         <div id="online-orders">
             <table>
@@ -60,12 +59,27 @@ if ($_SESSION["logged"]) {
                         $Obid = $row["bid"];
                         $Ouid = $row["usrid"];
 
-                        $B_sql = "SELECT book_name FROM books WHERE bid='$Obid'";
-                        $B_res = $conn->query($B_sql);
-                        if ($B_res->num_rows > 0) {
-                            $B_row = $B_res->fetch_assoc();
-                            $bname = $B_row["book_name"];
+                        $btype = $row["book_type"];
+                        $bname = "";
+
+                        if ($btype == "book") {
+
+                            $B_sql = "SELECT book_name FROM books WHERE bid='$Obid'";
+                            $B_res = $conn->query($B_sql);
+                            if ($B_res->num_rows > 0) {
+                                $B_row = $B_res->fetch_assoc();
+                                $bname = $B_row["book_name"];
+                            }
+                        } elseif ($btype == "ebook") {
+
+                            $B_sqll = "SELECT eb_name FROM ebooks WHERE ebid='$Obid'";
+                            $B_resl = $conn->query($B_sqll);
+                            if ($B_resl->num_rows > 0) {
+                                $B_rowl = $B_resl->fetch_assoc();
+                                $bname = $B_rowl["eb_name"];
+                            }
                         }
+
 
                         $U_sql = "SELECT fname, lname FROM users WHERE usrid='$Ouid'";
                         $U_res = $conn->query($U_sql);
