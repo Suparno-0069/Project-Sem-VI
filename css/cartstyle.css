@@ -1,20 +1,22 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
-body{
+
+body {
     background-image: url("../image/kmV7Md.jpg");
     background-size: cover;
 }
 
-h1{
+h1 {
     margin: 10px;
     text-align: center;
     text-decoration: underline overline;
     text-decoration-color: #601e8d;
     font-size: 50px;
 }
-h1 img{
+
+h1 img {
     height: 40px;
 }
 
@@ -29,7 +31,8 @@ h1 img{
     overflow: auto;
     height: 500px;
 }
-table{
+
+table {
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     padding: 30px;
@@ -40,7 +43,7 @@ th, td {
     padding: 15px;
     text-align: left;
     border-bottom: 1px solid rgb(0, 0, 0);
-  }
+}
 
 .buyNow {
     padding-top: 20px;
@@ -71,7 +74,8 @@ th, td {
     color: rgb(0, 0, 0);
     transform: scale(110%);
 }
-.buyNow button:hover{
+
+.buyNow button:hover {
     cursor: pointer;
     background-color: #fcfcfc5b;
     color: rgb(0, 0, 0);

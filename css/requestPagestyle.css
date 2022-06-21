@@ -3,9 +3,10 @@ body {
     padding: 0;
     background-color: #000000ba;
     background-image: url("../image/istockphoto-1225495890-612x612.jpg");
-    background-size:cover;
+    background-size: cover;
     font-family: 'Arial';
 }
+
 #login {
     width: 382px;
     overflow: hidden;
@@ -20,6 +21,7 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     box-shadow: 5px 10px #070708;
 }
+
 h1 {
     text-align: center;
     color: #173575;
@@ -35,23 +37,26 @@ label {
     font-size: 17px;
 }
 
-span{
+span {
     padding: 5px;
     border-radius: 5px;
     background-color: #35ebf8;
 }
 
-form a{
+form a {
     color: #070708;
 }
-#clear{
+
+#clear {
     padding: 5px;
     margin: 0;
     color: black;
 }
-#clear:hover{
+
+#clear:hover {
     background-color: aliceblue;
 }
+
 .submit {
     background-color: rgb(255, 255, 255);
     display: inline-block;

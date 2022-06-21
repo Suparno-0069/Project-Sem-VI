@@ -1,8 +1,9 @@
-body{
+body {
     background-image: url("../image/v915-wit-002.jpg");
     background-size: cover;
 }
-.admindetails{
+
+.admindetails {
     border-left: 6px solid rgb(0, 0, 0);
     border-style: groove;
     border-right: 6px solid rgb(0, 0, 0);
@@ -17,18 +18,21 @@ body{
     box-shadow: 5px 5px 10px rgba(23, 115, 158, 1);
     display: grid;
 }
-.admindetails img{
+
+.admindetails img {
     height: 150px;
     margin: auto;
     padding: 10px;
     border-radius: 15px;
     background-color: rgba(7, 31, 43, 0.5);
 }
+
 .admindetails h4 {
     font-size: 50px;
     text-transform: uppercase;
     text-decoration: underline;
 }
-.admindetails span{
+
+.admindetails span {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }

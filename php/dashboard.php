@@ -32,7 +32,7 @@ if ($_SESSION["logged"]) {
             <!-- nav-bar -->
             <nav id="navbar">
                 <ul>
-                    
+
                     <li><a href="shop.php">Shop</a></li>
                     <li><a href="../html/requestPage.html">Request a Book</a></li>
                     <li><a href="myOrders.php">My Orders</a></li>
@@ -49,16 +49,14 @@ if ($_SESSION["logged"]) {
                     <?php
                     }
                     ?>
-                    <li><a href="../pdf-reader/myEbooks.php">My E-Books</a></li>
-                    <a id="logout" class="loginbtn" href="logout.php"><button><img src="../image/logos2/icons8-logout-66.png"
-                        alt="LOGOUT"></button></a>
+                    <a id="logout" class="loginbtn" href="logout.php"><button><img src="../image/logos2/icons8-logout-66.png" alt="LOGOUT"></button></a>
                 </ul>
 
             </nav>
 
 
             <div id="profilecard" class="cards">
-                <div >
+                <div>
                     <img src="../uploads/profilePics/<?php echo $row["profile_pic"]; ?>" alt="profile_image">
                 </div>
                 <div id="name_head">
@@ -67,17 +65,17 @@ if ($_SESSION["logged"]) {
                         <br><br>
                     </h1>
                     <div id="details">
-                        <h4>Gender  </h4><?php echo $row["gender"] ?>
+                        <h4>Gender </h4><?php echo $row["gender"] ?>
                         <hr style="height:2px;border-width:0;color:gray;background-color:gray">
-                        <h4>DOB  </h4><?php echo $row["dob"] ?>
+                        <h4>DOB </h4><?php echo $row["dob"] ?>
                         <hr style="height:2px;border-width:0;color:gray;background-color:gray">
-                        <h4>Contact  </h4><?php echo $row["mob"] ?>
+                        <h4>Contact </h4><?php echo $row["mob"] ?>
                         <hr style="height:2px;border-width:0;color:gray;background-color:gray">
-                        <h4>Email  </h4><?php echo $row["email"] ?>
+                        <h4>Email </h4><?php echo $row["email"] ?>
                         <hr style="height:2px;border-width:0;color:gray;background-color:gray">
-                        <h4>Address  </h4><?php echo $row["addresses"] ?>
+                        <h4>Address </h4><?php echo $row["addresses"] ?>
                         <hr style="height:2px;border-width:0;color:gray;background-color:gray">
-                        <h4>Country  </h4><?php echo $row["country"] ?>
+                        <h4>Country </h4><?php echo $row["country"] ?>
                         <br><br>
                         <li><a href="updateProfile.php">Update Profile</a></li>
                     </div>
@@ -85,7 +83,7 @@ if ($_SESSION["logged"]) {
                 <a id="kart" href="cart.php"><i class="fas fa-shopping-cart fa-4x"></i></a>
             </div>
 
-            
+
         </body>
 
         </html>

@@ -1,19 +1,21 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     background-image: url("../image/19366.jpg");
     background-size: 1400px;
     background-position: center;
     background-position-y: 10px;
 }
-h1{
+
+h1 {
     font-size: 40px;
     text-align: center;
     text-decoration: underline overline;
     color: rgb(55, 32, 65);
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .frmm {
@@ -59,18 +61,19 @@ h1{
     color: rgb(0, 0, 0);
 }
 
-table, th, td{
+table, th, td {
     font-weight: bold;
     margin: auto;
     padding: 5px;
     border: 2.5px solid black;
     width: 100%;
-  }
+}
 
 tr:hover {
     background-color: rgba(233, 71, 71, 0.5);
     text-decoration: solid;
 }
-th,td:hover{
+
+th, td:hover {
     background-color: rgba(110, 88, 88, 0.5);
 }

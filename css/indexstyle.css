@@ -1,9 +1,9 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     background-color: #79d6e2;
     background-image: url("../image/logos3/banner-bg.jpg");
     background-size: contain;
@@ -11,20 +11,22 @@ body{
 
 
 /* HEADER CSS */
-.header{
-    height:450px;
+.header {
+    height: 450px;
     background: #000000;
     background-image: url("../image/logos3/main-bg-img.gif");
-    background-size:cover;
+    background-size: cover;
     overflow: visible;
 }
-#uctxt{
+
+#uctxt {
     height: 350px;
     width: 800px;
     margin-left: 100px;
     text-align: right;
 }
-#logo{
+
+#logo {
     width: 360px;
     height: 300px;
     text-align: left;
@@ -35,7 +37,7 @@ body{
 
 
 /* Navbar */
-.navbar{
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,20 +45,23 @@ body{
     height: 20px;
     padding: 30px 2%;
 }
+
 .actual {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
 }
-.nav_links li{
+
+.nav_links li {
     margin-left: 40px;
     display: inline-flex;
     padding: 10px 20px;
     background-color: aliceblue;
     border-radius: 15px;
 }
-.nav_links li a{
+
+.nav_links li a {
     transition: all 0.3s ease 0s;
     text-decoration: none;
     text-transform: uppercase;
@@ -64,22 +69,26 @@ body{
     font-weight: bold;
     color: rgb(10, 55, 85);
 }
+
 .nav_links li a:hover {
     color: rgb(10, 37, 126);
     padding: 5px;
     cursor: pointer;
 }
-.loginbtn button{
-    background-color:rgb(44, 191, 218);
+
+.loginbtn button {
+    background-color: rgb(44, 191, 218);
     border-radius: 50px;
 }
-.loginbtn img{
+
+.loginbtn img {
     cursor: pointer;
     height: 60px;
     border: none;
     transition: all 0.2s ease 0s;
 }
-.loginbtn img:hover{
+
+.loginbtn img:hover {
     padding: 5px;
 }
 
@@ -127,24 +136,25 @@ body{
 }
 
 
-  /*featured*/
-#featured{
+/*featured*/
+#featured {
     background-color: rgb(189, 236, 226, 0.5);
     border-radius: 10px;
     padding: 30px;
     margin: 10px 100px 20px;
 }
-#featured h2{
-    text-transform:uppercase;
+
+#featured h2 {
+    text-transform: uppercase;
     text-decoration: underline;
     text-decoration: dotted;
     color: rgb(6, 66, 119);
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: auto;
 }
 
-.cards{
-    
+.cards {
+
     margin: 0 auto;
     max-width: 1000px;
     display: grid;
@@ -152,25 +162,27 @@ body{
     gap: 20px;
     font-family: 'Times New Roman', Times, serif;
 }
-.card{
+
+.card {
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
     border: 2px;
     border-color: #000000;
     text-align: center;
 }
-.cards .card img{
+
+.cards .card img {
     width: 100%;
     display: block;
 }
 
-#featured{
+#featured {
     display: grid;
 }
 
 
 /*arrivals*/
 
-#arrivals{
+#arrivals {
     display: grid;
     background-color: rgb(189, 236, 226, 0.4);
     border-radius: 10px;
@@ -178,22 +190,26 @@ body{
     margin: 10px 100px 20px;
     overflow: scroll;
 }
-#arrivals h2{
-    text-transform:uppercase;
+
+#arrivals h2 {
+    text-transform: uppercase;
     text-decoration: underline;
     text-decoration: dotted;
     color: rgb(6, 66, 119);
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: auto;
 }
-#arrivals img{
+
+#arrivals img {
     width: 200px;
 }
-#arrivals .card{
+
+#arrivals .card {
     align-items: initial;
     margin: 30px;
 }
-#arrivals .cards{
+
+#arrivals .cards {
     margin: 0 auto;
     max-width: 1000px;
     display: grid;
@@ -205,93 +221,97 @@ body{
 
 /*footer*/
 
-.footer .box-container{
+.footer .box-container {
     color: #01d5f1;
     margin-bottom: 0px;
     background-color: #171c30;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    gap:3rem;
+    gap: 3rem;
 }
-.footer .box-container .social{
+
+.footer .box-container .social {
     gap: 20px;
     margin-left: 20px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
-.footer .box-container .box h3{
+
+.footer .box-container .box h3 {
     font-size: 20px;
-    color:var(--black);
-    padding:1rem 0;
+    color: var(--black);
+    padding: 1rem 0;
 }
 
-.footer .box-container .box a{
+.footer .box-container .box a {
     display: block;
     font-size: 1.4rem;
-    color:var(--light-color);
-    padding:1rem 0;
+    color: var(--light-color);
+    padding: 1rem 0;
 }
 
-.footer .box-container .box a i{
-    color:var(--green);
+.footer .box-container .box a i {
+    color: var(--green);
     padding-right: .5rem;
 }
 
-.footer .box-container .box a:hover i{
+.footer .box-container .box a:hover i {
     padding-right: 2px;
 }
 
-.footer .box-container .box .map{
-    width:100%;
+.footer .box-container .box .map {
+    width: 100%;
 }
 
-.footer .share{
-    padding:1rem 0;
+.footer .share {
+    padding: 1rem 0;
     text-align: center;
 }
 
-.footer .share a{
+.footer .share a {
     height: 5rem;
     width: 5rem;
     line-height: 5rem;
     font-size: 2rem;
-    color:#fff;
-    background:var(--green);
-    margin:0 .3rem;
-    border-radius: 50%; 
+    color: #fff;
+    background: var(--green);
+    margin: 0 .3rem;
+    border-radius: 50%;
 }
 
-.footer .share a:hover{
-    background:var(--black);
+.footer .share a:hover {
+    background: var(--black);
 }
 
-.footer .credit{
+.footer .credit {
     border-top: var(--border);
     margin-top: 2rem;
-    padding:0 1rem;
+    padding: 0 1rem;
     padding-top: 2.5rem;
     font-size: 2rem;
-    color:var(--light-color);
+    color: var(--light-color);
     text-align: center;
 }
 
-.footer .credit span{
-    color:var(--green);
+.footer .credit span {
+    color: var(--green);
 }
 
-.loader-container{
-    top:0; left: 0;
-    height:100%;
+.loader-container {
+    top: 0;
+    left: 0;
+    height: 100%;
     width: 100%;
     z-index: 10000;
-    background:#f7f7f7;
+    background: #f7f7f7;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.box1{
+
+.box1 {
     /* margin-left: 10px; */
-    
+
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }

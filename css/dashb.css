@@ -6,7 +6,7 @@
 
 
 nav {
-    display:flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: rgb(44, 191, 218);
@@ -46,7 +46,8 @@ nav li a:hover {
     background: white;
     transition: .5s;
 }
-#navbar{
+
+#navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,21 +56,25 @@ nav li a:hover {
     padding: 30px 2%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-#logout{
+
+#logout {
     position: absolute;
     right: 15px;
 }
-.loginbtn button{
+
+.loginbtn button {
     border: none;
-    background-color:rgb(44, 191, 218);
+    background-color: rgb(44, 191, 218);
 }
-.loginbtn img{
+
+.loginbtn img {
     cursor: pointer;
     height: 30px;
     border: none;
     transition: all 0.2s ease 0s;
 }
-.loginbtn img:hover{
+
+.loginbtn img:hover {
     transform: scale(2);
     transition: .3s;
 }

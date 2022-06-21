@@ -1,13 +1,15 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     background-image: url("../image/19366.jpg");
     background-size: 1400px;
     background-position: center;
     background-position-y: 10px;
 }
+
 .btn {
     background-color: rgb(200, 228, 233);
     display: inline-block;
@@ -22,7 +24,7 @@ body{
     font-weight: 400;
 }
 
-#order-btn{
+#order-btn {
     display: flex;
     margin-left: auto;
     margin-right: auto;
@@ -35,7 +37,8 @@ body{
     color: black;
     background-color: rgb(26, 172, 164);
 }
-#order-btn:hover{
+
+#order-btn:hover {
     cursor: pointer;
     background-color: rgba(202, 181, 181, 0.5);
     color: rgb(0, 0, 0);
@@ -48,7 +51,7 @@ body{
     color: rgb(0, 0, 0);
     text-decoration: underline;
     transition: 0.2s;
-    font-weight:bold;
+    font-weight: bold;
 }
 
 
@@ -56,9 +59,9 @@ table, th, td {
     text-align: center;
     padding: 4px;
     border: 2.5px solid black;
-  }
+}
 
-.ordertable{
+.ordertable {
     display: grid;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 40px;

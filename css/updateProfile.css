@@ -1,9 +1,10 @@
-body{
+body {
     background-image: url("../image/istockphoto-1225495890-612x612.jpg");
     background-size: cover;
 }
+
 .frm {
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     margin-top: 10px;
     margin-left: 400px;
     margin-right: 400px;

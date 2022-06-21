@@ -1,21 +1,23 @@
-*{
+* {
     margin: 0;
-    padding:0;
+    padding: 0;
     box-sizing: border-box;
-   
-}
-a{
-    text-decoration: none;
-    
-}
-html,body{
-   background-color: aqua;
-   background-image: url("../image/tp244-bg1-08.jpg");
-   background-size:cover;
-    
+
 }
 
-#review{
+a {
+    text-decoration: none;
+
+}
+
+html, body {
+    background-color: aqua;
+    background-image: url("../image/tp244-bg1-08.jpg");
+    background-size: cover;
+
+}
+
+#review {
     margin: 50px;
     background-color: rgba(47, 141, 170, 0.3);
     border-radius: 30px;
@@ -25,7 +27,8 @@ html,body{
     flex-direction: column;
 
 }
-.review-heading{
+
+.review-heading {
     letter-spacing: 1px;
     margin: 30px 1px;
     padding: 10px 30 px;
@@ -35,17 +38,19 @@ html,body{
     align-items: center;
 
 }
-.review-heading h1{
+
+.review-heading h1 {
     letter-spacing: 10px;
     padding: 30px 200px;
     border-radius: 10px;
-    font-size:45px;
+    font-size: 45px;
     font-weight: 50;
     background-color: rgb(11, 79, 83);
     color: whitesmoke;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-.review-heading span{
+
+.review-heading span {
     font-size: 1.5 rem;
     color: #252525;
     margin-bottom: 10px;
@@ -54,68 +59,78 @@ html,body{
 
 }
 
-.review-box-container{
+.review-box-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
 }
-.review-box{
+
+.review-box {
     width: 500px;
-    box-shadow: 6px 6px 40px rgba(0,0,0,0.1);
-    background-color:rgba(0, 0, 0, 0.3);
+    box-shadow: 6px 6px 40px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 20px;
     padding: 40px;
     margin: 15px;
     cursor: pointer;
-    
+
 }
-.profile-image{
-    width:50px;
-    height:50px;
+
+.profile-image {
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     overflow: hidden;
     margin-right: 10px;
 }
-.profile-image img{
-    width:100%;
+
+.profile-image img {
+    width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
 }
-.profile{
+
+.profile {
     display: flex;
     align-items: center;
 }
-.name-user{
+
+.name-user {
     display: flex;
     flex-direction: column;
 }
-.name-user strong{
+
+.name-user strong {
     text-decoration: underline;
     margin-left: 15px;
     color: #000000;
     font-size: 1.1 rem;
     letter-spacing: 0.5px;
 }
-.name-user span{
+
+.name-user span {
     margin-left: 40px;
     color: #777171;
     font-size: 0.8 rem;
 
 }
-.reviews{
+
+.reviews {
     color: yellowgreen;
 
 }
-.box-top{
+
+.box-top {
     display: flex;
     justify-content: space-between;
     align-items: right;
     margin-bottom: 20px;
 }
-.client-comment p{
+
+.client-comment p {
     font-family: cursive;
     text-transform: uppercase;
     background-color: rgba(0, 0, 0, 0.3);
@@ -124,37 +139,43 @@ html,body{
     font-size: 0.9 rem;
     color: #fff9f9;
 }
-.review-box:hover{
+
+.review-box:hover {
     transform: scale(1.2);
     transition: all ease 0.6s;
 }
-@media (max-width:1060px){
-    .review-box{
-        width:45%;
+
+@media (max-width:1060px) {
+    .review-box {
+        width: 45%;
         padding: 10px;
     }
 }
-@media(max-width:970px)
-{
 
-    .review-box{
-        width:100%
+@media(max-width:970px) {
+
+    .review-box {
+        width: 100%
     }
-    .review-heading h1{
+
+    .review-heading h1 {
         font-size: 1.4 rem;
     }
 }
-@media(max-width:340px){
-    .box-top{
+
+@media(max-width:340px) {
+    .box-top {
         flex-wrap: wrap;
         margin-bottom: 10px;
     }
-    .reviews{
+
+    .reviews {
         margin-top: 10px;
     }
 
 }
-::selection{
+
+::selection {
     color: #fff;
     background-color: #252525;
 }
