@@ -48,6 +48,7 @@ if ($_SESSION["logged"]) {
                         <input type="email" name="email" placeholder="example@example.com">
                         <span>Address:</span>
                         <input type="text" name="addr" placeholder="room - street - locality">
+                        <input type="text" name="ptype" value="offline" readonly style="display: none;">
                         <br><br>
                         <input type="submit" name="chkOutCash" value="Proceed to Checkout" class="submit-btn">
                     </form>
@@ -68,6 +69,7 @@ if ($_SESSION["logged"]) {
                             <input type="email" name="email" placeholder="example@example.com">
                             <span>Address:</span>
                             <input type="text" name="addr" placeholder="room - street - locality">
+                            <input type="text" name="ptype" value="online" readonly style="display: none;">
                             <h3 class="title">Payment</h3>
                             <span>ScreenShot of Payment:</span>
                             <input type="file" name="myFile" onchange="myFnc()">

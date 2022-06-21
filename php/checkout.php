@@ -43,9 +43,10 @@ if ($_SESSION["logged"]) {
                             $ordUid = $CartOut_rowO["usrid"];
                             $ordBid = $CartOut_rowO["bid"];
                             $ordPrice = $CartOut_rowO["price"];
+                            $btype = "book";
 
-                            $OrdOn_sql = "INSERT INTO orders(bid, usrid, full_name, order_address, mob, email, price, p_type, screenshots)
-                            VALUES('$ordBid', '$ordUid', '$ordFlname', '$ordAddr', '$ordMob', '$ordEmail', '$ordPrice', '$ordPtype', '$new_img_name')";
+                            $OrdOn_sql = "INSERT INTO orders(bid, book_type, usrid, full_name, order_address, mob, email, price, p_type, screenshots)
+                            VALUES('$ordBid', '$btype', '$ordUid', '$ordFlname', '$ordAddr', '$ordMob', '$ordEmail', '$ordPrice', '$ordPtype', '$new_img_name')";
                             if ($conn->query($OrdOn_sql)) {
                                 $cartDel_sqlO = "DELETE FROM cart WHERE usrid='$ordUid'";
                                 if ($conn->query($cartDel_sqlO)) {
@@ -85,9 +86,10 @@ if ($_SESSION["logged"]) {
             $ordUid = $CartOut_row["usrid"];
             $ordBid = $CartOut_row["bid"];
             $ordPrice = $CartOut_row["price"];
+            $btype = "book";
 
-            $OrdIn_sql = "INSERT INTO orders(bid, usrid, full_name, order_address, mob, email, price, p_type, screenshots)
-            VALUES('$ordBid', '$ordUid', '$ordFlname', '$ordAddr', '$ordMob', '$ordEmail', '$ordPrice', '$ordPtype', '$ss')";
+            $OrdIn_sql = "INSERT INTO orders(bid, book_type, usrid, full_name, order_address, mob, email, price, p_type, screenshots)
+            VALUES('$ordBid', '$btype', '$ordUid', '$ordFlname', '$ordAddr', '$ordMob', '$ordEmail', '$ordPrice', '$ordPtype', '$ss')";
             if ($conn->query($OrdIn_sql)) {
                 $cartDel_sql = "DELETE FROM cart WHERE usrid='$ordUid'";
                 if ($conn->query($cartDel_sql)) {

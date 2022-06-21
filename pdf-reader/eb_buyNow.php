@@ -32,7 +32,7 @@ if ($_SESSION["logged"]) {
                         <input type="email" name="email" placeholder="example@example.com">
                         <span>Address:</span>
                         <input type="text" name="addr" placeholder="room - street - locality">
-                        <input type="text" name="ptype" value="online" readonly>
+                        <input type="text" name="ptype" value="online" readonly style="display: none;">
                         <input type="text" name="usid" value="<?php echo $usid; ?>" readonly style="display: none;">
                         <input type="text" name="ebid" value="<?php echo $ebid; ?>" readonly style="display: none;">
                         <input type="text" name="price" value="<?php echo $price; ?>" readonly style="display: none;">

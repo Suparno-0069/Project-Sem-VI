@@ -28,9 +28,8 @@ if ($_SESSION["logged"]) {
                 <li><a href="dashboard.php">My Profile</a></li>
                 <li><a href="../pdf-reader/ebooks.php">E-Books</a></li>
                 <li><a href="myOrders.php">My Orders</a></li>
-                
-                <a id="logout" class="loginbtn" href="logout.php"><button><img src="../image/logos2/icons8-logout-66.png"
-                        alt="LOGOUT"></button></a>
+
+                <a id="logout" class="loginbtn" href="logout.php"><button><img src="../image/logos2/icons8-logout-66.png" alt="LOGOUT"></button></a>
             </ul>
         </nav>
         <a id="kart" href="cart.php"><i class="fas fa-shopping-cart fa-3x"></i></a>
@@ -67,7 +66,17 @@ if ($_SESSION["logged"]) {
                                 <input type="text" name="qtty" value="<?php echo $S_row["quantity"]; ?>" readonly style="display: none;">
                                 <input type="text" name="price" value="<?php echo $S_row["price"] ?>" readonly style="display: none;">
                                 <input type="text" name="uid" value="<?php echo $uid ?>" readonly style="display: none;">
-                                <p><button type="submit" name="cart">Add to Cart</button></p>
+                                <?php
+                                if ($S_row["quantity"] == "0") {
+                                ?>
+                                    <p style="color: RED;">Out of stock</p>
+                                <?php
+                                } else {
+                                ?>
+                                    <p><button type="submit" name="cart">Add to Cart</button></p>
+                                <?php
+                                }
+                                ?>
                             </form>
                         </div>
                     <?php
@@ -103,7 +112,17 @@ if ($_SESSION["logged"]) {
                             <input type="text" name="qtty" value="<?php echo $row["quantity"]; ?>" readonly style="display: none;">
                             <input type="text" name="price" value="<?php echo $row["price"] ?>" readonly style="display: none;">
                             <input type="text" name="uid" value="<?php echo $uid ?>" readonly style="display: none;">
-                            <p><button type="submit" name="cart">Add to Cart</button></p>
+                            <?php
+                            if ($row["quantity"] == "0") {
+                            ?>
+                                <p style="color: RED;">Out of stock</p>
+                            <?php
+                            } else {
+                            ?>
+                                <p><button type="submit" name="cart">Add to Cart</button></p>
+                            <?php
+                            }
+                            ?>
                         </form>
                         <!-- <iframe src="view.php" class="view" frameborder="0"></iframe> -->
                     </div>
@@ -112,33 +131,33 @@ if ($_SESSION["logged"]) {
                 ?>
             </div>
         </section>
-        
+
         <section class="footer">
 
             <div class="box-container">
 
                 <div class="box">
                     <div class="social">
-                    <h3>Follow Us</h3>
-                    <br>
-                    <a href="https://www.facebook.com"> <i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.twitter.com"> <i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com"> <i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com"> <i class="fab fa-linkedin"></i></a>
+                        <h3>Follow Us</h3>
+                        <br>
+                        <a href="https://www.facebook.com"> <i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.twitter.com"> <i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com"> <i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com"> <i class="fab fa-linkedin"></i></a>
+                    </div>
                 </div>
-            </div>
-            <div class="box">
-                <h3>Quick Links</h3>
-                <a href="#"> <i class="fas fa-arrow-right"></i> Home </a>
-                <a href="#"> <i class="fas fa-arrow-right"></i> Featured </a>
-                <a href="#"> <i class="fas fa-arrow-right"></i> Arrivals </a>
-                <a href="#"> <i class="fas fa-arrow-right"></i> Reviews </a>
-            </div>
-            <div class="box">
-                <a href="#"> <i class="fas fa-arrow-right"></i> About Us </a>
-                <a href="reviewpage.html"> <i class="fas fa-arrow-right"></i> Review </a>
-                <a href="#"> <i class="fas fa-arrow-right"></i> About Page </a>
-            </div>
+                <div class="box">
+                    <h3>Quick Links</h3>
+                    <a href="#"> <i class="fas fa-arrow-right"></i> Home </a>
+                    <a href="#"> <i class="fas fa-arrow-right"></i> Featured </a>
+                    <a href="#"> <i class="fas fa-arrow-right"></i> Arrivals </a>
+                    <a href="#"> <i class="fas fa-arrow-right"></i> Reviews </a>
+                </div>
+                <div class="box">
+                    <a href="#"> <i class="fas fa-arrow-right"></i> About Us </a>
+                    <a href="reviewpage.html"> <i class="fas fa-arrow-right"></i> Review </a>
+                    <a href="#"> <i class="fas fa-arrow-right"></i> About Page </a>
+                </div>
 
             </div>
         </section>

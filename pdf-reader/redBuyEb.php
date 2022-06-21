@@ -13,6 +13,7 @@ if ($_SESSION["logged"]) {
             $usid = $_POST["usid"];
             $price = $_POST["price"];
             $ebid = $_POST["ebid"];
+            $btype = "book";
 
             $img_name = $_FILES['myFile']['name'];
             $img_size = $_FILES['myFile']['size'];
@@ -34,8 +35,8 @@ if ($_SESSION["logged"]) {
                         $img_upload_path = '../uploads/payments/' . $new_img_name;
                         move_uploaded_file($tmp_name, $img_upload_path);
 
-                        $OrdOn_sql = "INSERT INTO orders(bid, usrid, full_name, order_address, mob, email, price, p_type, screenshots)
-                        VALUES('$ebid', '$usid', '$ordFlname', '$ordAddr', '$ordMob', '$ordEmail', '$price', '$ordPtype', '$new_img_name')";
+                        $OrdOn_sql = "INSERT INTO orders(bid, book_type, usrid, full_name, order_address, mob, email, price, p_type, screenshots)
+                        VALUES('$ebid', '$btype', '$usid', '$ordFlname', '$ordAddr', '$ordMob', '$ordEmail', '$price', '$ordPtype', '$new_img_name')";
                         if ($conn->query($OrdOn_sql)) {
                             $SSql = "INSERT INTO ebusers(usrid, ebid)
                             VALUES('$usid', '$ebid')";
