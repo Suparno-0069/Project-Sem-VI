@@ -32,11 +32,12 @@ if ($_SESSION["logged"]) {
             <!-- nav-bar -->
             <nav id="navbar">
                 <ul>
-
+                    <li><a href="../index.php">Home</a></li>
                     <li><a href="shop.php">Shop</a></li>
                     <li><a href="../html/requestPage.html">Request a Book</a></li>
+                    <li><a href="dashboard.php">My Profile</a></li>
                     <li><a href="myOrders.php">My Orders</a></li>
-                    <li><a href="../pdf-reader/myEbooks.php">My E-Books</a></li>
+                    <li><a id="myebooks" href="../pdf-reader/myEbooks.php">My E-Books</a></li>
                     <?php
                     $RCsql = "SELECT * FROM reviews WHERE uname='$un'";
                     $RCres = $conn->query($RCsql);

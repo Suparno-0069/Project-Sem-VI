@@ -7,7 +7,10 @@ body {
     background-image: url("../image/istockphoto-1225495890-612x612.jpg");
     background-size: cover;
 }
-
+#myebooks{
+    background-color: rgb(29, 58, 155);
+    color: aliceblue;
+}
 #profilecard {
     margin-left: 200px;
     margin-right: 200px;

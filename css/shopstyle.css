@@ -23,14 +23,35 @@ h1 {
 #kart:hover {
     transform: scale(110%);
 }
-
-section #shopbooks, section #searched {
+#ebookbutton{
+    position: fixed;
+    left: 0mm;
+    margin: 5px;
+    color: rgb(4, 67, 240);
+    padding: 10px;
+    background-color: rgba(38, 152, 156, 0.3);
+    border-radius: 15px;
+    
+}
+#ebookbutton img{
+    height: 70px;
+}
+section #shopbooks{
     background-color: rgb(74, 219, 238);
     border-radius: 10px;
     padding: 30px;
     margin: 10px 100px 20px;
 }
 
+#searched{
+    display: flex;
+    background-color: rgba(136, 131, 139, 0.5);
+    padding: 80px;
+    margin:auto;
+    border-top: solid 8px gray;
+    border-bottom: solid 8px gray;
+    overflow: auto;
+}
 section .cards {
     height: 450px;
     margin: 0 auto;
@@ -86,8 +107,7 @@ section .card {
 .view {
     display: none;
 }
-
-#shopbooks, #searched {
+#shopbooks{
     background-color: rgb(189, 236, 226, 0.5);
     border-radius: 10px;
     padding: 30px;
@@ -95,7 +115,6 @@ section .card {
     overflow: auto;
     height: 1000px;
 }
-
 #shopbooks h2, #searched h2 {
     text-transform: uppercase;
     text-decoration: underline;
@@ -133,10 +152,11 @@ section .card {
 section .searchBox {
     background-color: rgb(0, 0, 0);
     border-radius: 10px;
-    padding: 30px;
+    padding: 10px;
     margin: 10px 100px 20px;
     display: flex;
     justify-content: flex-end;
+    
 }
 
 section .searchBox input {

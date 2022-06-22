@@ -15,56 +15,34 @@ if ($_SESSION["logged"]) {
         <title>Reviews - Urban Chapters</title>
         <link rel="stylesheet" href="../css/dashb.css">
         <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="../css/reviewstyle.css">
     </head>
 
     <body>
-        <style>
-            .frm {
-                align-items: center;
-                background-image: url("../image/logos2/tumblr_pu0ndkstCx1uzwgsuo1_400.gif");
-                background-size: cover;
-                margin-top: 100px;
-                margin-left: 200px;
-                margin-right: 600px;
-            }
-
-            .frm span {
-                font-size: large;
-                color: aqua;
-                padding: 7px;
-            }
-
-            .frm input[type=submit],
-            .btn {
-                background-color: rgb(255, 255, 255);
-                display: inline-block;
-                padding: 16px 30px;
-                border-radius: 30px;
-                border: 20px;
-                color: rgb(8, 20, 129);
-                width: 150px;
-                text-align: center;
-                margin-left: 110px;
-                margin-bottom: 0px;
-                text-decoration: none;
-                font-size: 16px;
-                font-weight: 400;
-            }
-
-            .frm input[type=submit]:hover,
-            .btn:hover {
-                cursor: pointer;
-                background-color: #73b1eb5b;
-                color: aqua;
-            }
-        </style>
         <nav>
             <ul>
-                <li><a href="dashboard.php">Back To dash</a></li>
-                <li><a href="logout.php">Logout</a></li>
+                    <li><a href="shop.php">Shop</a></li>
+                    <li><a href="../html/requestPage.html">Request a Book</a></li>
+                    <li><a href="myOrders.php">My Orders</a></li>
+                    <li><a href="../pdf-reader/myEbooks.php">My E-Books</a></li>
+                    <?php
+                    $RCsql = "SELECT * FROM reviews WHERE uname='$un'";
+                    $RCres = $conn->query($RCsql);
+                    if ($RCres->num_rows > 0) {
+                    ?>
+                    <?php
+                    } else {
+                    ?>
+                        <li><a href="reviews.php">Review</a></li>
+                    <?php
+                    }
+                    ?>
+                    <a id="logout" class="loginbtn" href="logout.php"><button><img src="../image/logos2/icons8-logout-66.png" alt="LOGOUT"></button></a>
+
             </ul>
 
         </nav>
+        <h1>Add Review</h1>
         <form action="" method="post" class="frm">
             <?php
             $R_sql = "SELECT * FROM users WHERE uname='$un'";
@@ -72,8 +50,6 @@ if ($_SESSION["logged"]) {
             $R_row = $R_res->fetch_assoc();
 
             ?>
-            <span>Full Name:</span>
-            <input type="text" value="<?php echo $R_row["fname"] . $R_row["lname"]; ?>" readonly> <br> <br>
             <span>User Name:</span>
             <input type="text" name="uname" value="<?php echo $R_row["uname"]; ?>" readonly> <br> <br>
             <span>Write your Review:</span>

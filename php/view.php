@@ -19,6 +19,7 @@ if ($_SESSION["logged"]) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Book - Urban Chapters</title>
         <link rel="stylesheet" href="../css/dashb.css">
+        <link rel="stylesheet" href="../css/viewstyle.css">
     </head>
 
     <body>
@@ -27,7 +28,8 @@ if ($_SESSION["logged"]) {
                 <li><a href="dashboard.php">Home</a></li>
                 <li><a href="shop.php">Back to Shop</a></li>
                 <li><a href="../html/requestPage.html">Request a Book</a></li>
-                <li><a href="logout.php">Logout</a></li>
+                <a id="logout" class="loginbtn" href="logout.php"><button><img src="../image/logos2/icons8-logout-66.png" alt="LOGOUT"></button></a>
+
             </ul>
 
         </nav>
@@ -35,41 +37,59 @@ if ($_SESSION["logged"]) {
         $sql = "SELECT * FROM books WHERE bid='$bid'";
         $res = $conn->query($sql);
         ?>
-        <table>
-            <thead>
-                <tr>
-                    <th>Book Name</th>
-                    <th>Author Name</th>
-                    <th>Publisher Name</th>
-                    <th>Price</th>
-                    <th>Rating</th>
-                    <th>Genre</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                while ($row = $res->fetch_assoc()) {
-                ?>
-                    <tr>
-                        <td><?php echo $row["book_name"]; ?></td>
-                        <td><?php echo $row["author_name"]; ?></td>
-                        <?php
-                        $pid = $row["pid"];
-                        $sql2 = "SELECT p_name FROM publishers WHERE pid='$pid'";
-                        $res2 = $conn->query($sql2);
-                        $rPid = $res2->fetch_assoc();
-                        $pname = $rPid["p_name"]
-                        ?>
-                        <td><?php echo $pname; ?></td>
-                        <td><?php echo $row["price"]; ?></td>
-                        <td><?php echo $row["rating"]; ?></td>
-                        <td><?php echo $row["genre"]; ?></td>
-                    </tr>
-                <?php
-                }
-                ?>
-            </tbody>
-        </table>
+
+        <section>
+            <div class="card">
+                <div class="classcontents">
+                    <?php
+                    while ($row = $res->fetch_assoc()) {
+                    ?>
+                            <div class="bookimage">
+                                <img src="../uploads/thumbnails/<?php echo $row["thumbnail"]; ?>" alt="??" height="70px">
+                            </div>
+                            <div class="bookdetails">
+                                <div class="bookname">
+                                    <?php echo $row["book_name"]; ?>
+                                </div>
+                                <div class="authorname">
+                                    <p>Author - </p><?php echo $row["author_name"]; ?>
+                                </div>
+                                <div>
+                                    <?php
+                                    $pid = $row["pid"];
+                                    $sql2 = "SELECT p_name FROM publishers WHERE pid='$pid'";
+                                    $res2 = $conn->query($sql2);
+                                    $rPid = $res2->fetch_assoc();
+                                    $pname = $rPid["p_name"]
+                                    ?>
+                                </div>                       
+                                <div  class="publishername">
+                                    <?php echo $pname; ?>
+                                </div>
+                                <div class="price">
+                                    <h3>Rs .</h3><?php echo $row["price"]; ?>
+                                </div>
+                                <div class="rating">
+                                    <p>Rating - </p><?php echo $row["rating"]; ?>
+                                </div>
+                                <br>
+                                <div class="genre">
+                                    <h3>Genre -</h3><?php echo $row["genre"]; ?>
+                                </div>
+                                <div class="buttons">
+                                    <button type="submit" name="cart">Add to Cart</button>
+                                    <button type="submit" name="view">View</button>
+                                </div>
+                                
+                            </div>
+                            
+                    <?php
+                    }
+                    ?>
+                </div>
+            </div>
+                
+        </section>
 
     </body>
 

@@ -21,15 +21,17 @@ if ($_SESSION["logged"]) {
 
     <body>
 
-        <nav>
+        <nav id="navbar">
             <ul>
-
+                <li><a href="../index.php">Home</a></li>
                 <li><a href="shop.php">Shop</a></li>
                 <li><a href="../html/requestPage.html">Request a Book</a></li>
                 <li><a href="dashboard.php">My Profile</a></li>
+                
+                <li><a href="myOrders.php">My Orders</a></li>
+
                 <a id="logout" class="loginbtn" href="logout.php"><button><img src="../image/logos2/icons8-logout-66.png" alt="LOGOUT"></button></a>
             </ul>
-
         </nav>
         <a id="kart" href="cart.php"><i class="fas fa-shopping-cart fa-3x"></i></a>
         <h1 id="myorder">My Orders</h1>
