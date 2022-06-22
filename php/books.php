@@ -62,16 +62,16 @@ if ($_SESSION["adlogged"]) {
                 <br>
                 <label>Published Date : </label><input type="date" name="pdate"><br>
                 <br>
-                <label>Genre : </label><input type="checkbox" name="genre[]" value="genre1"><span style="color: aqua;">Fantasy</span>
-                <input type="checkbox" name="genre[]" value="genre2"><span style="color: aqua;">Science Fiction</span>
-                <input type="checkbox" name="genre[]" value="genre3"><span style="color: aqua;">Adventure</span>
-                <input type="checkbox" name="genre[]" value="genre4"><span style="color: aqua;">Romance</span>
-                <input type="checkbox" name="genre[]" value="genre5"><span style="color: aqua;">Mystery</span>
-                <input type="checkbox" name="genre[]" value="genre6"><span style="color: aqua;">Horror</span>
-                <input type="checkbox" name="genre[]" value="genre7"><span style="color: aqua;">Thriller</span>
-                <input type="checkbox" name="genre[]" value="genre8"><span style="color: aqua;">Memoir & Autobiography</span>
-                <input type="checkbox" name="genre[]" value="genre9"><span style="color: aqua;">Business & Money</span>
-                <input type="checkbox" name="genre[]" value="genre10"><span style="color: aqua;">Educational</span>
+                <label>Genre : </label><input type="checkbox" name="genre[]" value="Fantasy"><span style="color: aqua;">Fantasy</span>
+                <input type="checkbox" name="genre[]" value="ScienceFiction"><span style="color: aqua;">Science Fiction</span>
+                <input type="checkbox" name="genre[]" value="Adventure"><span style="color: aqua;">Adventure</span>
+                <input type="checkbox" name="genre[]" value="Romance"><span style="color: aqua;">Romance</span>
+                <input type="checkbox" name="genre[]" value="Mystery"><span style="color: aqua;">Mystery</span>
+                <input type="checkbox" name="genre[]" value="Horror"><span style="color: aqua;">Horror</span>
+                <input type="checkbox" name="genre[]" value="Thriller"><span style="color: aqua;">Thriller</span>
+                <input type="checkbox" name="genre[]" value="MemoirAutobiography"><span style="color: aqua;">Memoir & Autobiography</span>
+                <input type="checkbox" name="genre[]" value="BusinessMoney"><span style="color: aqua;">Business & Money</span>
+                <input type="checkbox" name="genre[]" value="Educational"><span style="color: aqua;">Educational</span>
                 <br><br>
                 <br><br>
                 <input type="submit" value="Submit">
@@ -217,16 +217,16 @@ if ($_SESSION["adlogged"]) {
                     <br>
                     <label>Published Date : </label><input type="date" name="pdate"><br>
                     <br>
-                    <label>Genre : </label><input type="checkbox" name="genre[]" value="genre1"><span style="color: aqua;">Fantasy</span>
-                    <input type="checkbox" name="genre[]" value="genre2"><span style="color: aqua;">Science Fiction</span>
-                    <input type="checkbox" name="genre[]" value="genre3"><span style="color: aqua;">Adventure</span>
-                    <input type="checkbox" name="genre[]" value="genre4"><span style="color: aqua;">Romance</span>
-                    <input type="checkbox" name="genre[]" value="genre5"><span style="color: aqua;">Mystery</span>
-                    <input type="checkbox" name="genre[]" value="genre6"><span style="color: aqua;">Horror</span>
-                    <input type="checkbox" name="genre[]" value="genre7"><span style="color: aqua;">Thriller</span>
-                    <input type="checkbox" name="genre[]" value="genre8"><span style="color: aqua;">Memoir & Autobiography</span>
-                    <input type="checkbox" name="genre[]" value="genre9"><span style="color: aqua;">Business & Money</span>
-                    <input type="checkbox" name="genre[]" value="genre10"><span style="color: aqua;">Educational</span> <br>
+                    <label>Genre : </label><input type="checkbox" name="genre[]" value="Fantasy"><span style="color: aqua;">Fantasy</span>
+                    <input type="checkbox" name="genre[]" value="ScienceFiction"><span style="color: aqua;">Science Fiction</span>
+                    <input type="checkbox" name="genre[]" value="Adventure"><span style="color: aqua;">Adventure</span>
+                    <input type="checkbox" name="genre[]" value="Romance"><span style="color: aqua;">Romance</span>
+                    <input type="checkbox" name="genre[]" value="Mystery"><span style="color: aqua;">Mystery</span>
+                    <input type="checkbox" name="genre[]" value="Horror"><span style="color: aqua;">Horror</span>
+                    <input type="checkbox" name="genre[]" value="Thriller"><span style="color: aqua;">Thriller</span>
+                    <input type="checkbox" name="genre[]" value="MemoirAutobiography"><span style="color: aqua;">Memoir & Autobiography</span>
+                    <input type="checkbox" name="genre[]" value="BusinessMoney"><span style="color: aqua;">Business & Money</span>
+                    <input type="checkbox" name="genre[]" value="Educational"><span style="color: aqua;">Educational</span> <br>
                     <br>
                     <label>URL : </label><input type="text" name="eburl"><br>
                     <br>
