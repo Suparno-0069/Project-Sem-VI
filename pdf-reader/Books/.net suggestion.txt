@@ -1,0 +1,25 @@
+HTML
+evolution of WWW .
+
+different types of Configuration files in .Net Framework
+->three types of configuration files: machine, application, and security.
+
+events used in the life cycle of a web Application
+->In a web application, events can occur at 3 levels
+1. At the Application Level(Example: Application Start)
+2. At the Page Level(Example: Page Load)
+3. At the Control Level (Example: Button Click)
+
+Syntax Input Controls and Table Controls of HTML Server Controls
+major components of the .Net framework
+->The two major components of .NET Framework are the Common Language Runtime (CLR) and the .NET Framework Class Library. The CLR is the execution engine that handles running applications. The Class Library provides a set of APIs and types for common functionality. 
+
+web browser. features of various web browsers.
+A web browser is an appliaction used to access and view websites.
+
+Protocols. Html.
+Object Oriented Features in .Net. differences between overloading
+& overriding.
+program for structured and unstructured exception handling in .Net.history and evolution of Internet.
+HTML form asking for user specifications.
+VB.NET, MSIL.
