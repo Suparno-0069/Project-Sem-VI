@@ -241,6 +241,7 @@ if ($_SESSION["adlogged"]) {
             <div id="ebooks-table"></div>
         </div>
 
+        <script src="../js/script2.js"></script>
         <script>
             const form_box = document.getElementById('book-form');
             const compact_table = document.getElementById('book-table-compact');

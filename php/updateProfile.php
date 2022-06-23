@@ -14,6 +14,7 @@ if ($_SESSION["logged"]) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>UPDATE</title>
         <link rel="stylesheet" href="../css/dashb.css">
+        <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="../css/updateProfile.css">
     </head>
 
@@ -21,8 +22,7 @@ if ($_SESSION["logged"]) {
         <nav>
             <ul>
                 <li><a href="dashboard.php">My Profile</a></li>
-                <a id="logout" class="loginbtn" href="logout.php"><button><img src="../image/logos2/icons8-logout-66.png"
-                        alt="LOGOUT"></button></a>
+                <a id="logout" class="loginbtn" href="logout.php"><button><img src="../image/logos2/icons8-logout-66.png" alt="LOGOUT"></button></a>
             </ul>
 
         </nav>
