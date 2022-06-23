@@ -44,6 +44,18 @@ include "./php/dbconn.php";
             </div>
             <!-- <a href="./php/dashboard.php"><i class="fas fa-user"></i></a> -->
         <?php
+        } elseif (isset($_SESSION["adlogged"])) {
+        ?>
+            <div class="dropdown">
+                <!-- <button class="dropbtn"><i class="fas fa-chevron-circle-down"></i></button> -->
+                <button class="dropbtn"><i class="fas fa-user-circle fa-3x"></i></button>
+                <div class="dropdown-content">
+                    <a href="./php/adminDashboard.php"><i class="fas fa-user" title="Dashboard"></i></a>
+                    <a href="./php/logout.php"><i class="fas fa-sign-out-alt" title="LogOut"></i></a>
+                </div>
+            </div>
+            <!-- <a href="./php/dashboard.php"><i class="fas fa-user"></i></a> -->
+        <?php
         } else {
             session_unset();
             session_destroy();
@@ -66,7 +78,7 @@ include "./php/dbconn.php";
     <section id="featured">
         <h2>Featured</h2>
         <?php
-        $sql = "SELECT * FROM books";
+        $sql = "SELECT * FROM books LIMIT 8";
         $res = $conn->query($sql);
         ?>
         <div class="cards">
@@ -88,7 +100,7 @@ include "./php/dbconn.php";
     <section id="arrivals">
         <h2>Arrivals</h2>
         <?php
-        $sql2 = "SELECT * FROM books ORDER BY bid DESC LIMIT 2";
+        $sql2 = "SELECT * FROM books ORDER BY bid DESC LIMIT 10";
         $res2 = $conn->query($sql2);
         ?>
         <?php

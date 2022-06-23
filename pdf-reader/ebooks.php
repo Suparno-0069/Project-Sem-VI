@@ -24,14 +24,13 @@ if ($_SESSION["logged"]) {
             <ul>
                 <li><a href="../php/dashboard.php">Home</a></li>
                 <li><a href="../html/requestPage.html">Request a Book</a></li>
-                <li><a href="../php/cart.php"><i class="fas fa-shopping-cart"></i></a></li>
                 <li><a href="../php/myOrders.php">My Orders</a></li>
                 <li><a href="../php/shop.php">Shop</a></li>
-                <li><a href="../php/logout.php">Logout</a></li>
+                <a id="logout" class="loginbtn" href="logout.php"><button><img src="../image/logos2/icons8-logout-66.png" alt="LOGOUT"></button></a>
             </ul>
 
         </nav>
-        <section id="featured">
+        <section id="shopbooks">
             <div class="cards">
                 <?php
                 $sql = "SELECT * FROM ebooks";
@@ -60,7 +59,7 @@ if ($_SESSION["logged"]) {
             </div>
         </section>
 
-        <script src="../js/script2.js"></script>
+        
     </body>
 
     </html>

@@ -39,7 +39,7 @@ if ($_SESSION["logged"]) {
 
 
                         <h3 class="title">Payment</h3>
-                        <span>ss of payment:</span>
+                        <span>Screen Shot of payment:</span>
                         <input type="file" name="myFile" onchange="myFnc()">
                         <input type="submit" name="chkOutOnline" value="proceed to checkout" class="submit-btn" id="chkOutOnline" disabled>
                     </form>
