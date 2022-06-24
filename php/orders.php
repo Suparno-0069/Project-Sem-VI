@@ -32,7 +32,7 @@ if ($_SESSION["adlogged"]) {
 
         </nav>
         <div class="headbutton">
-            <button class="btn" id="order-btn">Offline Orders</button>
+            <button class="btn" id="order-btn">Online Orders</button>
         </div>
 
         <div id="online-orders" class="ordertable">
@@ -192,12 +192,12 @@ if ($_SESSION["adlogged"]) {
                     offOrd.style.display = 'block';
                     onOrd.style.display = 'none';
 
-                    btn.textContent = 'Online Orders';
+                    btn.textContent = 'Onffline Orders';
                 } else {
                     offOrd.style.display = 'none';
                     onOrd.style.display = 'block';
 
-                    btn.textContent = 'Offline Orders';
+                    btn.textContent = 'Online Orders';
                 }
             })
         </script>
