@@ -44,7 +44,7 @@ if ($_SESSION["logged"]) {
                         <input type="submit" name="chkOutOnline" value="proceed to checkout" class="submit-btn" id="chkOutOnline" disabled>
                     </form>
                 </div>
-                <a id="backtocart" href="cart.php">Cancel payment and return to Cart</a>
+                <a id="backtocart" href="../php/cart.php">Cancel payment and return to Cart</a>
             </div>
 
             <script>
