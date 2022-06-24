@@ -32,6 +32,7 @@ if ($_SESSION["logged"]) {
                 <a id="logout" class="loginbtn" href="logout.php"><button><img src="../image/logos2/icons8-logout-66.png" alt="LOGOUT"></button></a>
             </ul>
         </nav>
+        <h1>My E-Books</h1>
         <section id="featured">
             <div class="cards">
                 <?php
