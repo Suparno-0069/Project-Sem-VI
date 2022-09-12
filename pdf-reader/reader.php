@@ -23,7 +23,7 @@
     <button class="btn" id="nxt-page"> Next Page</button>
 
 
-    <script src="./build/pdf.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
     <script>
         <?php include "reader-sc.php"; ?>
     </script>

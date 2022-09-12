@@ -14,8 +14,8 @@ if ($_SESSION["logged"]) {
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Shop - Urban Chapters</title>
-        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
-        <link rel="stylesheet" href="../font-awesome/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <!-- <link rel="stylesheet" href="../font-awesome/css/all.min.css"> -->
         <link rel="stylesheet" href="../css/dashb.css">
         <link rel="stylesheet" href="../css/shopstyle.css">
         <link rel="shortcut icon" href="../image/favicon.ico" type="image/x-icon">
